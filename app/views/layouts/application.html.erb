@@ -14,11 +14,36 @@
   <body>
     <div class="nav">
       <h1 class="logo">LOGO WITH</h1>
-      <div>
-          <h1>Menu</h1>
-          <h1>Education</h1>
-          <h1>Community</h1>
-          <h1>Login</h1>
+      <div class="nav-menu-box">
+          <a class="nav-menu" href="/">
+            <img src="/assets/main.svg">
+            <h1>Main</h1>
+          </a>
+          <a class="nav-menu" href="/education/index">
+            <img src="/assets/book.svg">
+            <h1>Education</h1>
+          </a>
+          <a class="nav-menu" href="/posts/index">
+            <img src="/assets/community1.svg" style="top:3px;height: 60px;">
+            <h1 style="top:-17px">Community</h1>
+          </a>
+           <a class="nav-menu" href="/posts/index">
+            <img src="/assets/counsel.svg" style="height:55px;">
+            <h1 style="top:-14px">Counsel</h1>
+          </a>
+          <% if user_signed_in? %>
+          <a class="nav-menu" >
+            <img src="/assets/account.svg">
+            <h1>Logout</h1>     
+          </a>
+          <% else %>
+           <a class="nav-menu" href="/users/sign_in" >
+            <img src="/assets/account.svg">
+            <h1>Login</h1>     
+          </a>
+          <% end %>
+          
+          
       </div>
     </div>
     <p class="notice"><%= notice %></p>

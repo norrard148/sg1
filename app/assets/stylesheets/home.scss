@@ -17,14 +17,20 @@ html,body {
     overflow-x: hidden;
 }
 
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, a {
     font-family: 'Nanum Barun Gothic', sans-serif;
     color: rgb(56, 56, 56);
+    text-shadow: 0px 0px 2.5px rgba(65, 65, 65, 0.342);
+  
 }
+a {
+    text-decoration: none;
+}
+
 
 /*nav*/
 .nav {
-    height: 80px;
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -42,23 +48,42 @@ p, h1, h2, h3, h4 {
     font-size: 30px;
 }
 
-.nav div {
-    width: 25%;
+.nav-menu-box {
+    width: 35%;
+    height:100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-right: 10px;
 }
 
-.nav div h1 {
-    font-size: 18px;
+.nav-menu {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.nav-menu img {
+    position: relative;
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu h1 {
+    font-size: 15px;
+    position:relative;
+    background-color: white;
+    top: -6px;
+}
 
 /*top-button*/
 .top-button {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-color:  rgb(255, 255, 255);
     border-radius: 50%;
     position: fixed;
@@ -74,7 +99,7 @@ p, h1, h2, h3, h4 {
 }
 
 .top-button h1 {
-    font-size: 15px;
+    font-size: 12px;
     z-index: 1000;
 }
 
@@ -370,10 +395,74 @@ p, h1, h2, h3, h4 {
     font-size: 16px;
 }
 
+/*main-4-0*/
+.main-4-0 {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background: #54345f;
+}
+
+.main-4-0:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    transform: scaleX(-1);
+    background: url("빗금.png") 0 0 repeat;
+    background-size: 20% auto; 
+    opacity: 0.3;
+}
+
+/*main-4-1*/
+.main-4-1 {
+    width: 100%;
+    height: 23%;
+    background-color: #ff84bb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-4-1-button {
+    margin-top: 20px;
+    width: 80px;
+    height: 29px;
+    border-radius: 25px;
+    border: 2px solid rgb(103, 28, 107);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-4-1 h1 {
+    font-size: 18px;
+    font-weighT: 500;
+    color: rgb(121, 39, 126);
+}
+
+.main-4-1 h2 {
+    margin-top: 3px;
+    font-size: 19px;
+    font-weighT: 600;
+    color: rgb(103, 28, 107);
+    margin-bottom: 22px;
+}
+
+.main-4-1-button h1 {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(103, 28, 107);
+}
+
 /*main-5*/
 .main-5 {
     width: 100%;
-    height: 93%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -382,8 +471,9 @@ p, h1, h2, h3, h4 {
 }
 
 .main-5-container {
+    margin-top: 7%;
     width: 95%;
-    height: 90%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -391,7 +481,7 @@ p, h1, h2, h3, h4 {
 }
 
 .main-5-container-post-box {
-    width: 60%;
+    width: 65%;
     margin-top: 50px;
     display: flex;
     flex-direction: row;

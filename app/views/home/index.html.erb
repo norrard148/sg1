@@ -2,8 +2,8 @@
 
 
 <div class="top-button" onclick="movetop()">
-    <img src="assets/up.svg" alt="" style="width: 50px;height:50px;z-index:1000;">
-    <h1 style="top:-5px; font-weight: 400; top:-16px; position:relative;">Top</h1>
+    <img src="assets/up.svg" alt="" style="width: 37px;height:37px;z-index:1000;">
+    <h1 style=" font-weight: 400; top:-12px; position:relative;">Top</h1>
 </div>
   
 <div class="main-1">
@@ -109,16 +109,30 @@
             <div class="main-4-container-explain">
                 <h1>자격 요건 | 성지식에 능통한 당신이라면!</h1>
             </div>
-            <h4 style="font-size: 14px; margin-top: 20px; color:#28939c;">* 아이디 가입하지 않아도 돼요!</h4>
+            <h4 style="font-size: 16px; margin-top: 20px; color:#28939c;">* 아이디 가입하지 않아도 돼요!</h4>
     </div>
+</div>
+
+
+<div class="main-4-0">
+
+</div>
+
+<div class="main-4-1">
+    <div class="main-4-1-button">
+        <h1>Point !</h1>
+    </div>
+    <h1>성에 대한 우리의 지식과 생각</h1>
+    <h2>같을 수도 다를 수도 틀릴 수도 있다는 것!<h2>
+    <div style="width: 22px;border-bottom:2px solid rgb(103, 28, 107);"></div>
 </div>
       
 <div class="main-5">
     <img src="/assets/left.svg" alt="" style="width:50px; height:50px; transform:rotate(180deg); margin-left:20px;">
     <div class="main-5-container">  
         <div>
-            <h2 style="color:white;">가장 핫한 성교글 총정리!</h2>
-            <h1 style="color: white; font-size: 70px; ">Popular Community Post TOP 6</h1>
+            <h2 style="color:white;">가장 핫한 성교글!</h2>
+            <h1 style="color: white; font-size: 70px;">Popular Community Post TOP 6</h1>
         </div>
         
         <div class="main-5-container-post-box">
@@ -168,6 +182,15 @@
                         </div>
                     
                 </div>
+                <div class="comment-box" onclicked="toggle_comment()">
+                        <div class="post-profile">
+
+                        </div>
+                        <div class="comment">
+                            <h1>Jang Young Jae Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!</h1>
+                        </div>
+                    
+                </div>
                 
                 
             
@@ -178,20 +201,13 @@
     <img src="/assets/left.svg" alt="" style="width:50px; height:50px; margin-right:20px;">
 </div>
 
-<div class="main-6">
-
-
-</div>
-
-
-
 <script>
     function movetop() {
         $('html, body').animate({scrollTop : 0}, 900);
     }
     function movequiz() {
         var offset = $(".main-4").offset();
-        $('html, body').animate({scrollTop : offset.top-50}, 800);
+        $('html, body').animate({scrollTop : offset.top-100}, 800);
     }
     function toggle_comment() {
         $('.comment-box h1').css({'white-space': 'initial' })
@@ -209,15 +225,4 @@
     })(jQuery);
 </script>
 
-<!-->
-<h1>메인 페이지</h1>
 
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  </li>
-<% end %>
