@@ -1,6 +1,4 @@
 
-
-
 <div class="top-button" onclick="movetop()">
     <img src="assets/up.svg" alt="" style="width: 37px;height:37px;z-index:1000;">
     <h1 style=" font-weight: 400; top:-12px; position:relative;">Top</h1>
@@ -152,7 +150,9 @@
                     </div>
                     <img src="/assets/3dot.svg" alt="" class="dot">
                 </div>
-                <h1 class="post-content">Excellent!Excllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellent!</h1>
+                
+                 <h1 class="post-content">Excellent!Excllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellent!</h1>
+               
             </div>
             <div class="main-5-container-comment">
                 <div class="comment-box" onclicked="toggle_comment()">
@@ -191,38 +191,36 @@
                         </div>
                     
                 </div>
-                
-                
-            
-
             </div>
             </div>
         </div>    
     <img src="/assets/left.svg" alt="" style="width:50px; height:50px; margin-right:20px;">
 </div>
 
-<script>
-    function movetop() {
-        $('html, body').animate({scrollTop : 0}, 900);
-    }
-    function movequiz() {
-        var offset = $(".main-4").offset();
-        $('html, body').animate({scrollTop : offset.top-100}, 800);
-    }
-    function toggle_comment() {
-        $('.comment-box h1').css({'white-space': 'initial' })
-    }
-</script>
 
 <script>
-    (function($){
-        $(window).on("load",function(){
-            $(".post-content").mCustomScrollbar({
-                axis: "y",
-                theme: "dark-3"
-            });
+
+function movetop() {
+    $('html, body').animate({scrollTop : 0}, 900);
+}
+function movequiz() {
+    var offset = $(".main-4").offset();
+    $('html, body').animate({scrollTop : offset.top-100}, 800);
+}
+function toggle_comment() {
+    $('.comment-box h1').css({'white-space': 'initial' })
+}
+
+$(window).load(function() {
+(function($){
+    $(window).on("load",function(){
+        $(".post-content").mCustomScrollbar({
+            axis: "y",
+            theme: "dark-3"
         });
-    })(jQuery);
+    });
+})(jQuery);
+})
+
+
 </script>
-
-
