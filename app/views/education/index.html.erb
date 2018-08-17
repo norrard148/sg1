@@ -1,0 +1,123 @@
+<h1>Education</h1>
+<p>이 곳은 교육페이지 입니다</p>
+
+<p>Categories</p>
+<a href="/education/venereal">성병</a>
+<a href="/education/contraception">피임</a>
+<a href="/education/genderequality">젠더평등</a>
+<style>
+  
+    .collapse-box {
+        position:relative;
+        width: 950px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        background-color: white;
+        border-radius: 5px;  
+        height: 50px;   
+        overflow: hidden;
+        transition: all 0.5s ease-in 0s;
+        padding: 15px;
+        border: 1px solid rgb(224, 224, 224);
+    }
+    .collapse-intro {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between; 
+        width: 900px;
+    }
+    .collapse1, .collapse2, .collapse3 {
+        position: absolute;
+        top: 80px;
+        width: 900px;
+        height: 300px;
+        border: 1px solid rgb(235, 235, 235);
+        border-radius: 5px;
+        padding: 15px;
+        display: none;
+        box-sizing: border-box;
+     
+
+    }
+    .click {
+        border: 1px solid rgb(212, 212, 212);
+        border-radius: 4px;
+        width: 170px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="collapse-box">
+        <div class="collapse-intro">
+                <h1>This is a collapse-box</h1>
+                <div class="click show1">Click Please 1</div>
+                <div class="click show2">Click Please 2</div>
+                <div class="click show3">Click Please 3</div>
+        </div>
+       
+        <div class="collapse collapse1">
+            <h3>Frist, I am a person! I want to play game! Congratulation!</h3>
+        </div>
+        <div class="collapse collapse2">
+                <h3>Second, I am a human! I want to play game! Congratulation!</h3>
+        </div>
+        <div class="collapse collapse3">
+                <h3>Third, I am an animal! I want to play game! Congratulation!</h3>
+        </div>
+    </div>
+</body>
+<script>
+    var token=false;
+    $(".show1").click(function() {
+        if (token === false) {
+            token = true;
+            $(".collapse1").css({'display': 'block'});
+            $(".collapse-box").css({'height': '400px'});
+        } else {
+            {
+                token =false;
+               
+                $(".collapse-box").css({'height': '50px'});
+                $(".collapse").css({'display': 'none'});
+            }
+        }
+       
+    })
+    $(".show2").click(function() {
+        if (token === false) {
+            token = true;
+            $(".collapse2").css({'display': 'block'});
+            $(".collapse-box").css({'height': '400px'});
+        } else {
+            {
+                token =false;
+               
+                $(".collapse-box").css({'height': '50px'});
+                $(".collapse").css({'display': 'none'});
+            }
+        }
+       
+    })
+    $(".show3").click(function() {
+        if (token === false) {
+            token = true;
+            $(".collapse3").css({'display': 'block'});
+            $(".collapse-box").css({'height': '400px'});
+        } else {
+            {
+                token =false;
+               
+                $(".collapse-box").css({'height': '50px'});
+                $(".collapse").css({'display': 'none'});
+            }
+        }
+       
+    })
+</script>

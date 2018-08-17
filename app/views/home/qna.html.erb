@@ -1,0 +1,239 @@
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    box-sizing: border-box;
+}
+
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.nav-box {
+    position:fixed;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-box h1 {
+    margin-left: 20px;
+    color: white;
+}
+
+.nav {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content:space-between;
+    
+}
+
+.nav h2 {
+    font-size: 20px; 
+}
+
+.quiz-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.quiz-intro {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.quiz-intro button {
+    
+    border: none;
+    width:100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(255, 94, 0);
+    color: white;
+}
+
+.quiz-one {
+    width: 500%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quiz-item {
+    position:relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+
+}
+
+.quiz {
+    width: 35%;
+    height: 35%;
+    background-color: rgb(2, 158, 2);
+    margin-bottom: 20px;
+}
+.answer {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items:  center;
+}
+.yes, .no {
+    border-radius: 25px;
+    width: 8%;
+    height: 100%;
+    font-size: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items:  center;
+    margin: 20px;
+   
+}
+.yes {
+    background-color: rgb(252, 91, 86);
+    color: white;
+}
+
+.no {
+    background-color:  blueviolet;
+    color: rgb(11, 114, 11);
+}
+</style>
+
+<div class="">
+
+    <div class="nav-box">
+        <h1>性敎</h1>
+        <div class="nav">
+            <h2>Menu</h2>
+            <h2>Education</h2>
+            <h2>Counseling</h2>
+            <h2>Commnuity</h2>
+        </div>
+    </div>    
+
+    <div class="quiz-box ">
+        <div class="quiz-intro flex-column-center">
+                <button onclick="fnMove()" style="margin-top: 500px">Start!</button>
+        </div>
+        
+        <div id="div2" class="quiz-one">
+            <div class="quiz-item">
+                
+                <div class="quiz">
+                    <h2 class="left" onclick="leftMove()" style="cursor:pointer;">left</h2>
+                    <h2 class="right" onclick="rightMove()">right</h2>
+                    <h2>콘돔의 피임 확률은 100%이다.</h2>
+                </div>
+              
+                <div class="answer">
+                    <div class="yes">
+                    <h2>Yes!</h2>
+                    <h2>100% 맞다!</h2>
+                    </div>
+                    <div class="no">
+                        <h2>No!</h2>
+                        <h2>100%는 아니다!</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                
+                    <div class="quiz">
+                        <h2 class="left" onclick="leftMove()" style="cursor:pointer;">left</h2>
+                        <h2 class="right" onclick="rightMove()">right</h2>
+                        <h2>콘돔의 피임 확률은 100%이다.</h2>
+                    </div>
+                  
+                    <div class="answer">
+                        <div class="yes">
+                        <h2>Yes!</h2>
+                        <h2>100% 맞다!</h2>
+                        </div>
+                        <div class="no">
+                            <h2>No!</h2>
+                            <h2>100%는 아니다!</h2>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="quiz-item">
+                
+                    <div class="quiz">
+                        <h2 class="left" onclick="leftMove()" style="cursor:pointer;">left</h2>
+                        <h2 class="right" onclick="rightMove()">right</h2>
+                        <h2>콘돔의 피임 확률은 100%이다.</h2>
+                    </div>
+                  
+                    <div class="answer">
+                        <div class="yes">
+                        <h2>Yes!</h2>
+                        <h2>100% 맞다!</h2>
+                        </div>
+                        <div class="no">
+                            <h2>No!</h2>
+                            <h2>100%는 아니다!</h2>
+                        </div>
+                    </div>
+            </div>
+             
+
+        </div>
+    </div>
+   
+        
+            
+
+</div>
+
+<script>
+    function fnMove() {
+
+         $('.quiz-box').animate({top : -window.innerHeight}, 400);
+    }
+
+    function leftMove() {
+
+        $('.quiz-one').animate({left : `+=${window.innerWidth}`}, 400);
+    }
+
+    function rightMove() {
+
+        $('.quiz-one').animate({left : `-=${window.innerWidth}`}, 400);
+    }
+    f
+</script>
+    
+    
+

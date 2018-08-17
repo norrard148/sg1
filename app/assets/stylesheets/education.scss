@@ -1,0 +1,77 @@
+// Place all the styles related to the education controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+.symtom-box {
+    margin-left: 20%;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+   h2 {
+       margin-bottom: 20px;
+   }
+}
+.symtom {
+    margin: 10px;
+    border: 0.5px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    width: 200px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: auto;
+    }
+    h2 {
+        position: absolute;
+        font-size: 20px;
+    }
+}
+
+.diagnosis {
+    margin-left: 20%;
+    margin-top: 30px;
+    width: 80%;
+    min-height: 500px;
+    padding: 5%;
+}
+
+.disease {
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.table-content {
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 12, 63);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        margin: 20px;
+        color: white;
+    }
+}
