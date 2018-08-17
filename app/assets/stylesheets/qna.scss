@@ -1,3 +1,126 @@
-// Place all the styles related to the qna controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+.quiz-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.quiz-1 {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.quiz-1 button {
+    
+    border: none;
+    width:100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(255, 94, 0);
+    color: white;
+}
+
+.quiz-2 {
+    width: 500%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quiz-2-container {
+    margin-top:1%;
+    position:relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    background-image: url("빗금.png");
+    background-size: 30% auto;
+}
+
+.quiz-2-container-box {
+    width:60%;
+    height: 60%;
+    background-color: rgb(255, 242, 65);
+    margin-bottom: 20px;
+    box-shadow: 5px 7px 20px #2929293d;
+    position: relative;
+    z-index: 999;
+}
+
+.quiz-2-container::after {
+    content: '';
+    display: block;
+
+    
+    position: absolute;
+    border-radius: 50%;
+    width: 15%;
+    height: 150px;
+    top: -75px;
+    left: 42.5%;
+    z-index: 1;
+    background-color:rgb(180, 39, 39);
+} 
+
+.quiz-2-container-answer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items:  center;
+}
+
+
+
+.yes, .no {
+    box-shadow: 5px 7px 20px #2929293d;
+    border-radius: 15px;
+    width: 13%;
+    height: 100%;
+    font-size: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items:  center;
+    margin: 0 80px 0 80px;
+   
+}
+
+.yes {
+    background-color: rgb(252, 91, 86);
+    color: white;
+}
+
+.yes h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+
+.no {
+    background-color:  blueviolet;
+    color: rgb(11, 114, 11);
+}
+
+.no h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
