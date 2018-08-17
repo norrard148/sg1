@@ -4,44 +4,81 @@
         <button onclick="startMove()" style="margin-top: 500px">Start!</button>
     </div>
     <div class="quiz-2">
-    <%i = 0%>
-    <%while i < 5 do%>
+        <img class="quiz-left" src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(90deg);position:absolute;z-index:999;left:19%;top:50%;display:none;" onclick="leftMove()">
+        <img class="quiz-right" src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(270deg);position:absolute;z-index:999;left: 77%;top:50%;" onclick="rightMove()">
         <div class="quiz-2-container">
-            <img src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(90deg);position:absolute;z-index:999;left:18%" onclick="leftMove()">
-            <img src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(270deg);position:absolute;z-index:999;left: 78%;" onclick="rightMove()"> 
-            <div class="quiz-2-container-box">
-                <h2>콘돔의 피임 확률은 100%이다.</h2>
-            </div>
-            <div class="quiz-2-container-answer">
-                <div class="yes">
-                    <h2>Yes!</h2>
-                    <h2>100% 맞다!</h2>
+        <%i = 0%>
+        <%while i < 15 do%>
+            <div class="quiz-2-container-content">
+                <div id="quiz-<%=i+1%>" class="quiz-2-container-content-box">
+                    <h2>콘돔의 피임 확률은 100%이다.</h2>
                 </div>
-                <div class="no">
-                    <h2>No!</h2>
-                    <h2>100%는 아니다!</h2>
+                <div class="quiz-2-container-answer">
+                    <div class="yes">
+                        <h2>Yes!</h2>
+                        <h2>100% 맞다!</h2>
+                    </div>
+                    <div class="no">
+                        <h2>No!</h2>
+                        <h2>100%는 아니다!</h2>
+                    </div>
                 </div>
             </div>
+        <%i+=1%>
+        <%end%> 
         </div>
-    <%i+=1%>
-    <%end%> 
     </div>
 </div>
    
 <script>
+   
+    var i = 1;
+    var quiz_css = [];
+    while ( i < 16 ) {
+        quiz_css.push(`#quiz-${i}:after { content: '${i}' }`);
+        console.log(quiz_css);
+        i +=1;
+    }
+    var quiz_css_submit = "<style>" + quiz_css.join(' ') + "</style>";
+    console.log(quiz_css_submit);
+    $(`${quiz_css_submit}`).appendTo("head");
+       
+    
+
+    var scroll = $("body").width()*0.6;
+    $(".quiz-2-container-content").css({"width": `${scroll}`});
+    var quiz_number=1;
+
     function startMove() {
         var offset = $(".quiz-2").offset();
         $('html, body').animate({scrollTop : offset.top}, 800);
     }
-    
-    var scroll = $("body").width();
 
     function leftMove() {
-        $('.quiz-2').animate({left : `+=${scroll}`}, 400);
+        if (quiz_number == 15) {
+            $(".quiz-right").css({"display": "block"});
+        }
+          if (quiz_number == 2) {
+            $(".quiz-left").css({"display": "none"});
+        }
+        if (quiz_number > 1) {
+            quiz_number-=1
+            $('.quiz-2-container').animate({left : `+=${scroll}`}, 400);
+        }
+    
     }
 
     function rightMove() {
-        $('.quiz-2').animate({left : `-=${scroll}`}, 400);
+         if (quiz_number == 1) {
+            $(".quiz-left").css({"display": "block"});
+        }
+         if (quiz_number == 14) {
+            $(".quiz-right").css({"display": "none"});
+        }
+        if (quiz_number < 15) {
+            quiz_number +=1
+            $('.quiz-2-container').animate({left : `-=${scroll}`}, 400);
+        }
     }
     
 </script>
