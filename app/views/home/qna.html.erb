@@ -3,13 +3,13 @@
     <div class="quiz-1 flex-column-center">
         <button onclick="startMove()" style="margin-top: 500px">Start!</button>
     </div>
-    <div id="div2" class="quiz-2">
+    <div class="quiz-2">
     <%i = 0%>
     <%while i < 5 do%>
         <div class="quiz-2-container">
+            <img src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(90deg);position:absolute;z-index:999;left:18%" onclick="leftMove()">
+            <img src="/assets/arrow3.svg" style="width:70px;height:70px;transform:rotate(270deg);position:absolute;z-index:999;left: 78%;" onclick="rightMove()"> 
             <div class="quiz-2-container-box">
-                <h2 class="left" onclick="leftMove()" style="cursor:pointer;">left</h2>
-                <h2 class="right" onclick="rightMove()">right</h2>
                 <h2>콘돔의 피임 확률은 100%이다.</h2>
             </div>
             <div class="quiz-2-container-answer">
@@ -23,22 +23,25 @@
                 </div>
             </div>
         </div>
-    </div>
     <%i+=1%>
     <%end%> 
+    </div>
 </div>
-
+   
 <script>
     function startMove() {
-         $('.quiz-box').animate({top : -window.innerHeight}, 400);
+        var offset = $(".quiz-2").offset();
+        $('html, body').animate({scrollTop : offset.top}, 800);
     }
+    
+    var scroll = $("body").width();
 
     function leftMove() {
-        $('.quiz-2').animate({left : `+=${window.innerWidth}`}, 400);
+        $('.quiz-2').animate({left : `+=${scroll}`}, 400);
     }
 
     function rightMove() {
-        $('.quiz-2').animate({left : `-=${window.innerWidth}`}, 400);
+        $('.quiz-2').animate({left : `-=${scroll}`}, 400);
     }
     
 </script>

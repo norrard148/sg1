@@ -4,10 +4,6 @@
     align-items: center;
 }
 
-html, body {
-    overflow: hidden;
-}
-
 .quiz-box {
     width: 100%;
     height: 100%;
@@ -21,7 +17,6 @@ html, body {
 }
 
 .quiz-1 button {
-    
     border: none;
     width:100px;
     height: 35px;
@@ -33,15 +28,14 @@ html, body {
 .quiz-2 {
     width: 500%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     position: relative;
+    
 }
 
 .quiz-2-container {
-    margin-top:1%;
-    position:relative;
+    position: relative;
     width: 20%;
     height: 100%;
     float: left;
@@ -49,34 +43,50 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items:  center;
-    background-image: url("빗금.png");
+}
+
+.quiz-2-container::before {
+    content: '';
+    display: block;
+    width:100%;
+    height: 100%;
+    // background-image: url("빗금.png");
     background-size: 30% auto;
+    z-index:-2;
+    position:absolute;
 }
 
 .quiz-2-container-box {
-    width:60%;
-    height: 60%;
+    margin: 5% 0 2.0% 0;
+    width:50%;
+    height: 57%;
     background-color: rgb(255, 242, 65);
-    margin-bottom: 20px;
     box-shadow: 5px 7px 20px #2929293d;
-    position: relative;
-    z-index: 999;
+    position:relative;
 }
 
-.quiz-2-container::after {
-    content: '';
+.quiz-2-container-box::after {
+    content: '01';
     display: block;
-
-    
+    text-align: center;
+    padding-top: 6px;
     position: absolute;
+    font-size: 18px;
     border-radius: 50%;
-    width: 15%;
-    height: 150px;
-    top: -75px;
-    left: 42.5%;
-    z-index: 1;
+    font-weight: 500;
+    color: white;
+    width: 80px;
+    height: 80px;
+    top: -35px;
+    left: 45%;
+    z-index: -1;
     background-color:rgb(180, 39, 39);
 } 
+
+.left, .right {
+    z-index: 999;
+    cursor: pointer;
+}
 
 .quiz-2-container-answer {
     width: 100%;
@@ -91,15 +101,15 @@ html, body {
 
 .yes, .no {
     box-shadow: 5px 7px 20px #2929293d;
-    border-radius: 15px;
-    width: 13%;
+    border-radius: 50px;
+    width: 18%;
     height: 100%;
     font-size: 8px;
     display: flex;
     flex-direction: column;
     justify-content:  center;
     align-items:  center;
-    margin: 0 80px 0 80px;
+    margin: 0 2% 0 2%;
    
 }
 
