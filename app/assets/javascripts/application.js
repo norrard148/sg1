@@ -14,3 +14,6 @@
 //= require turbolinks
 //= require_tree .
 
+var height = window.innerHeight-100;
+$(".main-1").css({"height" : height});
+$(".login-session").css({"height" : height});

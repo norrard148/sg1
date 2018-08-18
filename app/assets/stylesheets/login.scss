@@ -1,6 +1,8 @@
 .login-session {
     width: 100%;
+    box-sizing: border-box;
     height: 100%;
+    padding-top: 100px;
     background: rgb(255, 182, 87) url("login.png") 100% 100% repeat;
     display:flex;
     flex-direction: column;
@@ -8,17 +10,20 @@
     align-items: center;
 }
 
+.login-session-error {
+    position: absolute;
+}
+
 .login-session-container {
-    margin-top:5%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 600px;
+    width: 60vh;
+    height: 60vh;
     border-radius: 50%;
     background-color: rgb(245, 210, 169);
-    margin-bottom:10px;
+    margin-bottom:1vh;
     box-shadow: 5px 7px 20px #2929293d;
 }
 
@@ -26,37 +31,47 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top:40px;
+    margin-top:4vh;
 }
 .login-session-container form .field {
-    width:  300px;
-    height: 80px;
-    margin-bottom: 40px;
+    width:  25vh;
+    height: 7vh;
+    margin-bottom: 3vh;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    input {
-        font-size: 20px;
-        width: 100%;
-        height: 40px; 
-        border: none;
-        border-bottom: 1px solid black;
-        background-color: transparent;
-    }   
+    font-size: 2vh;
+}
+
+.login-session-container form .field input {
+    font-size: 2vh;
+    width: 100%;
+    height: 4vh; 
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
 }
 
 .login-session-container form .field-1 {
-    width:  300px;
-    height: 50px;
-    margin-bottom:20px;
+    width:  25vh;
+    height: 3vh;
+    margin-bottom:2vh;
+    font-size: 1.5vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-session-container form .field-1 input {
+    width: 1.5vh;
+    height: 1.5vh;
 }
 
 .login-session-container form input[type=submit] {
     color: white;
-    font-size: 20px;
-    width:  130px;
-    height: 50px;
-    border-radius: 25px;
+    font-size: 2vh;
+    width:  13vh;
+    height: 5vh;
+    border-radius: 4vh;
     background-color: blueviolet;
     border: none;
     box-shadow: 3px 3px 10px #2929293d;
@@ -64,15 +79,17 @@
 
 
 .login-session-forget {
-    width: 250px;
-    height: 50px;
+    width: 30vh;
+    height: 5vh;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    a {
-        margin: 0 15px 0 15px;
-    }
+}
+
+.login-session-forget a {
+    font-size: 2vh;
+    margin: 0 2vh 0 2vh;
 }
 
 .login-session-explain {
@@ -83,22 +100,16 @@
     flex-direction: column;
     align-items: flex-end;
     padding-right: 1%;
-    top: 92%;
+    top: 93%;
     left:0;
 }
 
 .login-session-explain > h1, h2 {
-    font-size : 25px;
+    font-size: 2vh;
 }
-
 
 #login-session-password-find {
-    width: 400px;
-    margin-top:20px;
+    width: 40vh;
+    margin-top:2vh;
 }
 
-
-.login-session-error {
-    position: absolute;
-    
-}

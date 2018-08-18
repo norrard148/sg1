@@ -35,7 +35,7 @@
         background: url("dogsay.png") no-repeat;
         transform: rotate(10deg);
         background-size: 100% 100%;
-        animation: toggle-animation 1.5s linear infinite;
+        animation: toggle-animation1 1.2s linear infinite;
     }
 
     @keyframes  toggle-animation1{
@@ -76,13 +76,15 @@
     background-color: rgb(255, 94, 0);
     cursor: pointer;
     box-shadow: 10px 10px 20px rgba(95, 77, 77, 0.205);
-    h1 {
-        color: white;
-        font-size: 23px;
-        font-weight: 500;
-        z-index: 999;
-        position: relative;
-    }
+   
+}
+
+.quiz-1 button h1 {
+    color: white;
+    font-size: 23px;
+    font-weight: 500;
+    z-index: 999;
+    position: relative;
 }
 
 .quiz-1 button:after {
@@ -94,11 +96,16 @@
     height: 100%;
     top: 0;
     left: 0;
-    animation: pulse-animation 1s ease-in infinite;
+    animation: pulse-animation1 1s ease-in infinite;
     background-color:rgb(255, 94, 0);
     
 }
 
+@keyframes  pulse-animation1{
+    0%{opacity:0.25;transform:scale(1)}
+    50%{opacity:0;transform:scale(1.3)}
+    100%{opacity:0;transform:scale(1.5)}
+}
 
 .quiz-2 {
     width: 100%;
