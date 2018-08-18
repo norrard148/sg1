@@ -2,6 +2,6 @@ class HomeController < ApplicationController
     def index
     end
 
-    def qna
+    def quiz
     end
 end

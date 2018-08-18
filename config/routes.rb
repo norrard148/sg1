@@ -15,8 +15,10 @@ Rails.application.routes.draw do
 
   get 'home/education'
 
-  get 'home/qna'
+  get 'home/quiz'
 
   root "home#index"
+
+  get 'counsel/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
