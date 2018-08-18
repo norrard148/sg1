@@ -1,123 +1,113 @@
-<h1>Education</h1>
-<p>이 곳은 교육페이지 입니다</p>
 
-<p>Categories</p>
-<a href="/education/venereal">성병</a>
-<a href="/education/contraception">피임</a>
-<a href="/education/genderequality">젠더평등</a>
-<style>
-  
-    .collapse-box {
-        position:relative;
-        width: 950px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;   
-        background-color: white;
-        border-radius: 5px;  
-        height: 50px;   
-        overflow: hidden;
-        transition: all 0.5s ease-in 0s;
-        padding: 15px;
-        border: 1px solid rgb(224, 224, 224);
-    }
-    .collapse-intro {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        justify-content: space-between; 
-        width: 900px;
-    }
-    .collapse1, .collapse2, .collapse3 {
-        position: absolute;
-        top: 80px;
-        width: 900px;
-        height: 300px;
-        border: 1px solid rgb(235, 235, 235);
-        border-radius: 5px;
-        padding: 15px;
-        display: none;
-        box-sizing: border-box;
-     
-
-    }
-    .click {
-        border: 1px solid rgb(212, 212, 212);
-        border-radius: 4px;
-        width: 170px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-</style>
-<body>
-    <div class="collapse-box">
-        <div class="collapse-intro">
-                <h1>This is a collapse-box</h1>
-                <div class="click show1">Click Please 1</div>
-                <div class="click show2">Click Please 2</div>
-                <div class="click show3">Click Please 3</div>
-        </div>
-       
-        <div class="collapse collapse1">
-            <h3>Frist, I am a person! I want to play game! Congratulation!</h3>
-        </div>
-        <div class="collapse collapse2">
-                <h3>Second, I am a human! I want to play game! Congratulation!</h3>
-        </div>
-        <div class="collapse collapse3">
-                <h3>Third, I am an animal! I want to play game! Congratulation!</h3>
+<div class="education-main">
+    <div class="education-main-chart-box">
+        <div class="education-main-chart">
+            <div class="education-main-chart-item-box">
+                <h1 class="chart-title" >Sex</h1>
+                <div class="education-main-chart-item">
+                    <div class="education-main-chart-item-each" onclick="move_contraception()">
+                        <h1>피임</h1>
+                        
+                    </div>
+                    <div class="education-main-chart-item-each"  onclick="move_disease()">
+                        <h1>성질환</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="education-main-chart-item-box">
+                <h1 class="chart-title">Gender</h1>
+                <div class="education-main-chart-item">
+                    <div class="education-main-chart-item-each" onclick="move_genderequality()">
+                        <h1>언어</h1>
+                    </div>
+                    <div class="education-main-chart-item-each" onclick="move_genderequality()">
+                        <h1>미디어</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="education-main-chart-item-box">
+                <h1 class="chart-title">Others</h1>
+                <div class="education-main-chart-item">
+                    <div class="education-main-chart-item-each" onclick="move_qna()">
+                        <h1>참고</h1>
+                    </div>
+                    <div class="education-main-chart-item-each"  onclick="move_qna()">
+                        <h1>질문게시판</h1>
+                    </div>
+                    <div class="education-main-chart-item-each">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</body>
+    <div class="education-main-box-content">
+        <div id="pin-1" class="airpin">
+            <div id="disease" class="education-main-box">
+                
+                <img src="/assets/고민3.png">
+                <button>피임법 알아보기!</button>
+            </div>
+        </div>
+       <div id="pin-2" class="airpin">
+            <div id="contraception" class="education-main-box">
+                <img src="/assets/고민.png">
+                <button>성질환 진단하기!</button>
+            </div>
+       </div>
+        <div id="pin-3" class="airpin">
+            <div id="genderequality"  class="education-main-box">
+                 <img src="/assets/젠더.png">
+                 <button>싸운 이유 보기!</button>
+            </div>
+        </div>
+        <div id="pin-4" class="airpin">
+            <div id="media"  class="education-main-box">
+                <img src="/assets/미디어.png">
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    var token=false;
-    $(".show1").click(function() {
-        if (token === false) {
-            token = true;
-            $(".collapse1").css({'display': 'block'});
-            $(".collapse-box").css({'height': '400px'});
-        } else {
-            {
-                token =false;
-               
-                $(".collapse-box").css({'height': '50px'});
-                $(".collapse").css({'display': 'none'});
-            }
+
+    var scroll_position;
+    $("body").css({"overflow-x": "hidden"})
+    window.onload =function() {
+    window.scrollTo(0,0);
+    }
+   
+    
+    $(window).scroll(function() {
+        scroll_position =  $(window).scrollTop();
+        if (scroll_position > $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
+            $("#disease").css({"position":"fixed"});
+            $("#contraception").css({"position":"relative", top: "0"});
+        } else if (scroll_position > $("#pin-2").offset().top-$(window).height()*0.09 && scroll_position  < $("#pin-3").offset().top-$(window).height()*0.09) {
+            $("#contraception").css({"position":"fixed", top: "9vh"});
+            $("#genderequality").css({"position":"relative",top: "0"});
+        }  else if (scroll_position > $("#pin-3").offset().top-$(window).height()*0.09 && scroll_position < $("#pin-4").offset().top-$(window).height()*0.09) {
+            $("#genderequality").css({"position":"fixed", top: "9vh"});
+            $("#media").css({"position":"relative",top: "0"});
+        } else if (scroll_position >= $("#pin-4").offset().top-$(window).height()*0.09) {
+            $("#media").css({"position":"fixed", top: "9vh"});
         }
-       
     })
-    $(".show2").click(function() {
-        if (token === false) {
-            token = true;
-            $(".collapse2").css({'display': 'block'});
-            $(".collapse-box").css({'height': '400px'});
-        } else {
-            {
-                token =false;
-               
-                $(".collapse-box").css({'height': '50px'});
-                $(".collapse").css({'display': 'none'});
-            }
-        }
-       
-    })
-    $(".show3").click(function() {
-        if (token === false) {
-            token = true;
-            $(".collapse3").css({'display': 'block'});
-            $(".collapse-box").css({'height': '400px'});
-        } else {
-            {
-                token =false;
-               
-                $(".collapse-box").css({'height': '50px'});
-                $(".collapse").css({'display': 'none'});
-            }
-        }
-       
-    })
+
+    function move_contraception() {
+    var offset = $("#pin-1").offset().top-window.height*0.095;
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+     function move_disease() {
+    var offset = $("#pin-2").offset().top-window.height*0.095;
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+     function move_genderequality() {
+    var offset = $("#pin-3").offset().top-window.height*0.095;
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+    function move_qna() {
+    var offset = $("#pin-4").offset().top-window.height*0.095;
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
 </script>

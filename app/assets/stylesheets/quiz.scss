@@ -62,6 +62,7 @@
             font-size: 3.5vh;
             font-weight: 600;
             color: #a13b46;
+            color: #772a31;
             margin-bottom: 2vh;
             text-shadow: none;
 }
@@ -100,7 +101,7 @@
 }
 
 @keyframes  pulse-animation1{
-    0%{opacity:0.25;transform:scale(1)}
+    0%{opacity:0.4;transform:scale(1)}
     50%{opacity:0;transform:scale(1.3)}
     100%{opacity:0;transform:scale(1.5)}
 }

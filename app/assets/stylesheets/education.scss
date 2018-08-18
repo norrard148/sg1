@@ -2,6 +2,244 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* 메인페이지 */
+
+.education-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.education-main-chart-box {
+    width: 20%;
+    height: 100%;
+    
+}
+.education-main-chart {
+    position: fixed;
+    padding-top: 9vh;
+    width: 20%;
+    height: 100%;
+    background-color: #1c182f;
+    box-shadow: 2vh 0vh 3vh rgba(61, 61, 61, 0.137);
+    z-index: 500;
+}
+
+.education-main-chart-item-box {
+    width: 100%;
+    
+}
+
+.education-main-chart-item-box h1 {
+    color: white;
+    
+}
+
+.chart-title {
+    margin-top:1.5vw;
+    margin-bottom:0.5vw;
+    margin-left: 2vw;
+    font-size: 3.4vh;
+    cursor: pointer;
+}
+
+.education-main-chart-item {
+    width: 100%;
+}
+
+.education-main-chart-item-each {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.education-main-chart-item-each h1 {
+    font-size: 2vh;
+    margin-left: 4vw;
+}
+
+.education-main-chart-item-each:hover {
+    background-color: #080518;
+}
+
+
+.education-main-box-content {
+    width:80%;
+    height: 100%;
+}
+
+.education-main-box {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    position:relative;
+    top: 0;
+}
+
+.airpin {
+    width: 100%;
+    height: 100%;
+}
+
+#education-category {
+    
+
+}
+
+#disease {
+    background: #ffe26f url("교육바탕.png") 100% 100% repeat;
+    height: 100vh;
+    padding-top: 9vh;
+    position:relative;
+    img {
+        width: 26vh;
+        height: 28vh;
+    }
+    button {
+        margin-top: 0.5vh;
+        width: 38vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #563761;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+#disease::before {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:27%;
+    left:55%;
+    background-image: url("피임질문.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#contraception {
+    background: #f3825f url("교육바탕.png") 30% 30% repeat;
+    img {   
+        width: 34vh;
+        height: 26vh;
+        margin-top: 3vh;
+    }
+    button {
+        margin-top: 4vh;
+        width: 35vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #a7425c;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+
+#contraception::before {
+    content: '';
+    width: 20vh;
+    height: 20vh;
+    position:absolute;
+    top:18%;
+    left:55%;
+    background-image: url("성병.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#pin-2, #contraception {
+    height: 91vh;
+}
+
+#genderequality {
+    background: #a7425c url("빗금.png") 0 0 repeat;
+    background-size: 35% auto;
+    a {
+        color: #ffe26f;
+        font-size: 5vh;
+    }
+    img {
+        width: 30vh;
+        height: 26vh;
+    }
+    button {
+        margin-top: 0.7vh;
+        width: 37vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color:#5a1727;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color:white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+
+}
+
+
+#genderequality::after {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:22%;
+    left:58%;
+    background-image: url("예민.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+#genderequality::before {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:28%;
+    left:27%;
+    background-image: url("이해.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+#pin-3, #genderequality {
+    height:91vh;
+}
+
+#media {
+    background-color: #563761;
+    // background-color: #122533;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 25vh;
+        height: 40vh;
+    }
+}
+
+#pin-, #media  {
+    height: 91vh;
+}
+
 .symtom-box {
     margin-left: 20%;
     width: 80%;
