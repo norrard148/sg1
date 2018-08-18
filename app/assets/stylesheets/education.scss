@@ -224,8 +224,24 @@
 }
 
 #media {
+    background-color: #ffbc01;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 35vh;
+        height: 17vh;
+    }
+}
+
+#pin-4, #media  {
+    height: 91vh;
+}
+
+#reference {
     background-color: #563761;
-    // background-color: #122533;
+    background-color: #122533;
     a {
         color: #f3825f;
         font-size: 5vh;
@@ -236,70 +252,7 @@
     }
 }
 
-#pin-, #media  {
+#pin-5, #reference  {
     height: 91vh;
 }
 
-.symtom-box {
-    margin-left: 20%;
-    width: 80%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
-   h2 {
-       margin-bottom: 20px;
-   }
-}
-.symtom {
-    margin: 10px;
-    border: 0.5px solid rgb(160, 160, 160);
-    border-radius: 5px;
-    width: 200px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    img {
-        height: 100%;
-        width: auto;
-    }
-    h2 {
-        position: absolute;
-        font-size: 20px;
-    }
-}
-
-.diagnosis {
-    margin-left: 20%;
-    margin-top: 30px;
-    width: 80%;
-    min-height: 500px;
-    padding: 5%;
-}
-
-.disease {
-    h2 {
-        margin-bottom: 20px;
-    }
-}
-
-.table-content {
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    left: 0;
-    top: 0;
-    background-color: rgb(26, 12, 63);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-        margin: 20px;
-        color: white;
-    }
-}

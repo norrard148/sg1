@@ -5,11 +5,11 @@
             <div class="education-main-chart-item-box">
                 <h1 class="chart-title" >Sex</h1>
                 <div class="education-main-chart-item">
-                    <div class="education-main-chart-item-each" onclick="move_contraception()">
+                    <div id="category-1" class="education-main-chart-item-each" onclick="move_contraception()">
                         <h1>피임</h1>
                         
                     </div>
-                    <div class="education-main-chart-item-each"  onclick="move_disease()">
+                    <div id="category-2" class="education-main-chart-item-each"  onclick="move_disease()">
                         <h1>성질환</h1>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
             <div class="education-main-chart-item-box">
                 <h1 class="chart-title">Gender</h1>
                 <div class="education-main-chart-item">
-                    <div class="education-main-chart-item-each" onclick="move_genderequality()">
+                    <div id="category-3" class="education-main-chart-item-each" onclick="move_genderequality()">
                         <h1>언어</h1>
                     </div>
                     <div class="education-main-chart-item-each" onclick="move_genderequality()">
@@ -61,8 +61,13 @@
                  <button>싸운 이유 보기!</button>
             </div>
         </div>
-        <div id="pin-4" class="airpin">
+         <div id="pin-4" class="airpin">
             <div id="media"  class="education-main-box">
+                <img src="/assets/미디어1.png">
+            </div>
+        </div>
+        <div id="pin-5" class="airpin">
+            <div id="reference"  class="education-main-box">
                 <img src="/assets/미디어.png">
             </div>
         </div>
@@ -82,15 +87,19 @@
         scroll_position =  $(window).scrollTop();
         if ($("#pin-1").length) {
 
-            if (scroll_position > $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
+            if (scroll_position >= $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
                 $("#disease").css({"position":"fixed"});
+                $("#category-1").css({"background-color":"white"});
                 $("#contraception").css({"position":"relative", top: "0"});
             } else if (scroll_position > $("#pin-2").offset().top-$(window).height()*0.09 && scroll_position  < $("#pin-3").offset().top-$(window).height()*0.09) {
                 $("#contraception").css({"position":"fixed", top: "9vh"});
+                 $("#category-2").css({"background-color":"white"});
                 $("#genderequality").css({"position":"relative",top: "0"});
             }  else if (scroll_position > $("#pin-3").offset().top-$(window).height()*0.09 && scroll_position < $("#pin-4").offset().top-$(window).height()*0.09) {
                 $("#genderequality").css({"position":"fixed", top: "9vh"});
+                  $("#category-3").css({"background-color":"white"});
                 $("#media").css({"position":"relative",top: "0"});
+               
             } else if (scroll_position >= $("#pin-4").offset().top-$(window).height()*0.09) {
                 $("#media").css({"position":"fixed", top: "9vh"});
             }
