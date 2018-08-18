@@ -20,6 +20,8 @@
     padding: 0;
     margin: 0;
     font-weight: 200;
+    box-sizing: border-box;
+    outline: none;
 }
 
 html,body {
@@ -42,7 +44,7 @@ a {
 
 /*nav*/
 .nav {
-    height: 100px;
+    height: 9vh;
     width: 100%;
     position: fixed;
     top: 0;
@@ -57,19 +59,17 @@ a {
 }
 
 .logo {
-    margin-left: 50px;
     display: flex;
     align-items:  center;
 }
 
 .logo h1 {
-    
-    font-size: 45px;
+    font-size: 5vh;
 }
 
 .logo h2 {
-    font-size: 20px;
-    margin-left:10px;
+    font-size: 3vh;
+    margin-left:1vh;
 }
 
 .logo-1 {
@@ -84,9 +84,9 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 1vh;
     position: relative;
-    left:-30px;
+    left:-2vh;
 }
 
 .nav-menu {
@@ -101,25 +101,25 @@ a {
 
 .nav-menu img {
     position: relative;
-    height: 40px;
+    height: 4vh;
     width: auto;
 }
 
 .nav-menu h1 {
-    font-size: 15px;
+    font-size: 1.5vh;
     position:relative;
     background-color: white;
-    top: -6px;
+    top: -1vh;
 }
 
 /*top-button*/
 .top-button {
-    width: 50px;
-    height: 50px;
+    width: 7vh;
+    height: 7vh;
     background-color:  rgb(255, 255, 255);
     border-radius: 50%;
     position: fixed;
-    top: 89%;
+    top: 88%;
     left: 93%;
     z-index: 999;
     box-shadow: 3px 5px 20px #2929293d;
@@ -131,7 +131,7 @@ a {
 }
 
 .top-button h1 {
-    font-size: 12px;
+    font-size: 1.5vh;
     z-index: 1000;
 }
 
