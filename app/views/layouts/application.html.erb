@@ -9,7 +9,24 @@
  
 
   </head>
-
+  <style>
+    @media only screen and (min-width:0) {
+        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+            width: 140vh;
+        }
+        .nav {
+          position: absolute;
+        }
+    }
+    @media only screen and (min-width: 140vh) {
+        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+            width: 100%;
+        }
+         .nav {
+          position: fixed;
+        }
+    }
+  </style>
   <body>
     <div class="nav">
       <div class="logo">

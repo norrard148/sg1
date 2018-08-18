@@ -9,11 +9,13 @@
     width: 100%;
     height: 100%;
     position: relative;
+    
 }
 
 .quiz-1 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    padding-top: 9vh;
     background-color: #c94a58;
 }
 
@@ -116,8 +118,9 @@
 
 .quiz-2 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .quiz-2-container {
@@ -127,11 +130,14 @@
     position:absolute;
     display:flex;
     align-items: center;
+   
 }
 .quiz-2-container-content {
+    padding-top: 9vh;
     position: relative;
     align-items: center;
-    height: 100%;
+    height: 50vw;
+    width: 60vw;
     float: left;
     display: flex;
     flex-direction: column;
@@ -140,27 +146,26 @@
 }
 
 .quiz-2-container-content-box {
-    width: 80%;
+    width: 70%;
     height: 60%;
     background-color: rgb(255, 255, 255);
-    box-shadow: 7px 7px 20px #2929293d;
+    box-shadow: 1vh 1vh 4vh #2929293d;
     position:relative;
-    margin-top:10%;
 }
 
 .quiz-2-container-content-box::after {
     display: block;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 0.5vh;
     position: absolute;
-    font-size: 18px;
+    font-size: 2.5vh;
     border-radius: 50%;
     font-weight: 500;
     color: white;
-    width: 55px;
-    height: 50px;
-    top: -30px;
-    left: 45%;
+    width: 4vw;
+    height: 7vh;
+    top: -4vh;
+    left: 18vw;
     z-index: -1;
     background-color:rgb(180, 39, 39);
 } 
@@ -188,10 +193,10 @@
 
 .yes, .no {
     box-shadow: 5px 7px 20px #2929293d;
-    border-radius: 50px;
-    width: 30%;
-    height: 100%;
-    font-size: 8px;
+    border-radius: 5vh;
+    width: 15vw;
+    height: 4vw;
+    font-size: 20vh;
     display: flex;
     flex-direction: column;
     justify-content:  center;
@@ -206,7 +211,7 @@
 }
 
 .yes h2 {
-    font-size: 25px;
+    font-size: 2.5vh;
     font-weight: 500;
     color: white;
 }
@@ -217,7 +222,7 @@
 }
 
 .no h2 {
-    font-size: 25px;
+    font-size: 2.5vh;
     font-weight: 500;
     color: white;
 }
