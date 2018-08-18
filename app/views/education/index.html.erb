@@ -80,18 +80,22 @@
     
     $(window).scroll(function() {
         scroll_position =  $(window).scrollTop();
-        if (scroll_position > $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
-            $("#disease").css({"position":"fixed"});
-            $("#contraception").css({"position":"relative", top: "0"});
-        } else if (scroll_position > $("#pin-2").offset().top-$(window).height()*0.09 && scroll_position  < $("#pin-3").offset().top-$(window).height()*0.09) {
-            $("#contraception").css({"position":"fixed", top: "9vh"});
-            $("#genderequality").css({"position":"relative",top: "0"});
-        }  else if (scroll_position > $("#pin-3").offset().top-$(window).height()*0.09 && scroll_position < $("#pin-4").offset().top-$(window).height()*0.09) {
-            $("#genderequality").css({"position":"fixed", top: "9vh"});
-            $("#media").css({"position":"relative",top: "0"});
-        } else if (scroll_position >= $("#pin-4").offset().top-$(window).height()*0.09) {
-            $("#media").css({"position":"fixed", top: "9vh"});
+        if ($("#pin-1").length) {
+
+            if (scroll_position > $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
+                $("#disease").css({"position":"fixed"});
+                $("#contraception").css({"position":"relative", top: "0"});
+            } else if (scroll_position > $("#pin-2").offset().top-$(window).height()*0.09 && scroll_position  < $("#pin-3").offset().top-$(window).height()*0.09) {
+                $("#contraception").css({"position":"fixed", top: "9vh"});
+                $("#genderequality").css({"position":"relative",top: "0"});
+            }  else if (scroll_position > $("#pin-3").offset().top-$(window).height()*0.09 && scroll_position < $("#pin-4").offset().top-$(window).height()*0.09) {
+                $("#genderequality").css({"position":"fixed", top: "9vh"});
+                $("#media").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-4").offset().top-$(window).height()*0.09) {
+                $("#media").css({"position":"fixed", top: "9vh"});
+            }
         }
+
     })
 
     function move_contraception() {
