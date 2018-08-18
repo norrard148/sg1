@@ -1,6 +1,7 @@
 .flex-column-center {
     display: flex;
     flex-direction: column;
+    justify-content:center;
     align-items: center;
 }
 
@@ -13,17 +14,91 @@
 .quiz-1 {
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #c94a58;
+    img {
+        width: 400px;
+        height: auto;
+        transform:scaleX(-1);
+    }
+    .dog {
+        position: relative;
+        margin-top: 100px;
+    }
+    .dog::before {
+        content: '';
+        width: 130px;
+        height:100px;
+        position:absolute;
+        top:-8%;
+        left:85%;
+        z-index:999;
+        background: url("dogsay.png") no-repeat;
+        transform: rotate(10deg);
+        background-size: 100% 100%;
+        animation: toggle-animation 1.5s linear infinite;
+    }
+
+    @keyframes  toggle-animation1{
+        0%{transform:rotate(10deg)}
+        25%{transform:rotate(7deg)}
+        50%{transform:rotate(10deg)}
+        75%{transform:rotate(13deg)}
+        100%{transform:rotate(10deg)}
+    }
+
+    .message {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        h1 {
+            font-size: 35px;
+            font-weight: 600;
+            color: #a13b46;
+            margin-bottom: 13px;
+            text-shadow: none;
+        }
+        h2 {
+            margin-bottom: 13px;
+            font-size: 20px;
+            color: rgb(122, 30, 53);
+            font-weight:300;
+        }
+    }
 }
 
 .quiz-1 button {
+    margin-top:30px;
+    position:relative;
     border: none;
-    width:100px;
-    height: 35px;
-    border-radius: 20px;
+    width:200px;
+    height: 60px;
+    border-radius: 60px;
     background-color: rgb(255, 94, 0);
-    color: white;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(95, 77, 77, 0.205);
+    h1 {
+        color: white;
+        font-size: 23px;
+        font-weight: 500;
+        z-index: 999;
+        position: relative;
+    }
 }
+
+.quiz-1 button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 60px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: pulse-animation 1s ease-in infinite;
+    background-color:rgb(255, 94, 0);
+    
+}
+
 
 .quiz-2 {
     width: 100%;
@@ -54,7 +129,7 @@
     width: 80%;
     height: 60%;
     background-color: rgb(255, 255, 255);
-    box-shadow: 5px 7px 20px #2929293d;
+    box-shadow: 7px 7px 20px #2929293d;
     position:relative;
     margin-top:10%;
 }
@@ -75,6 +150,10 @@
     z-index: -1;
     background-color:rgb(180, 39, 39);
 } 
+
+.quiz-left, .quiz-right {
+    cursor: pointer;
+}
 
 .left, .right {
     z-index: 999;

@@ -1,8 +1,11 @@
 <div class="login-session">
+  <div class="login-session-error">
+    <%= devise_error_messages! %>
+  </div>
   <div class="login-session-container">
     <h2 style="font-size:30px;">Sign up</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+   
 
       <div class="field">
         <%= f.label :email %><br />
