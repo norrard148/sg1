@@ -20,7 +20,7 @@
                     <div id="category-3" class="education-main-chart-item-each" onclick="move_genderequality()">
                         <h1>언어</h1>
                     </div>
-                    <div class="education-main-chart-item-each" onclick="move_genderequality()">
+                    <div id="category-4" class="education-main-chart-item-each" onclick="move_media()">
                         <h1>미디어</h1>
                     </div>
                 </div>
@@ -28,11 +28,11 @@
             <div class="education-main-chart-item-box">
                 <h1 class="chart-title">Others</h1>
                 <div class="education-main-chart-item">
-                    <div class="education-main-chart-item-each" onclick="move_qna()">
+                    <div id="category-5" class="education-main-chart-item-each" onclick="move_reference()">
                         <h1>참고</h1>
                     </div>
-                    <div class="education-main-chart-item-each"  onclick="move_qna()">
-                        <h1>질문게시판</h1>
+                    <div id="category-6" class="education-main-chart-item-each"  onclick="move_qna()">
+                        <h1>Q&A</h1>
                     </div>
                     <div class="education-main-chart-item-each">
                         <h1></h1>
@@ -71,6 +71,11 @@
                 <img src="/assets/미디어.png">
             </div>
         </div>
+        <div id="pin-6" class="airpin">
+            <div id="qna"  class="education-main-box">
+                
+            </div>
+        </div>
     </div>
 </div>
 
@@ -87,40 +92,67 @@
         scroll_position =  $(window).scrollTop();
         if ($("#pin-1").length) {
 
-            if (scroll_position >= $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(window).height()*0.09) {
+            if (scroll_position >= $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(".nav").height()) {
                 $("#disease").css({"position":"fixed"});
-                $("#category-1").css({"background-color":"white"});
+                $("#category-1").css({"background-color":"black"});
+                $("#category-2").css({"background-color":"transparent"});
                 $("#contraception").css({"position":"relative", top: "0"});
-            } else if (scroll_position > $("#pin-2").offset().top-$(window).height()*0.09 && scroll_position  < $("#pin-3").offset().top-$(window).height()*0.09) {
+            } else if (scroll_position > $("#pin-2").offset().top-$(".nav").height() && scroll_position  < $("#pin-3").offset().top-$(".nav").height()) {
                 $("#contraception").css({"position":"fixed", top: "9vh"});
-                 $("#category-2").css({"background-color":"white"});
+                $("#category-2").css({"background-color":"black"});
+                $("#category-1").css({"background-color":"transparent"});
+                $("#category-3").css({"background-color":"transparent"});
                 $("#genderequality").css({"position":"relative",top: "0"});
-            }  else if (scroll_position > $("#pin-3").offset().top-$(window).height()*0.09 && scroll_position < $("#pin-4").offset().top-$(window).height()*0.09) {
+            }  else if (scroll_position > $("#pin-3").offset().top-$(".nav").height() && scroll_position < $("#pin-4").offset().top-$(".nav").height()) {
                 $("#genderequality").css({"position":"fixed", top: "9vh"});
-                  $("#category-3").css({"background-color":"white"});
+                $("#category-3").css({"background-color":"black"});
+                $("#category-2").css({"background-color":"transparent"});
+                $("#category-4").css({"background-color":"transparent"});
                 $("#media").css({"position":"relative",top: "0"});
-               
-            } else if (scroll_position >= $("#pin-4").offset().top-$(window).height()*0.09) {
+            } else if (scroll_position >= $("#pin-4").offset().top-$(".nav").height() && scroll_position < $("#pin-5").offset().top-$(".nav").height()) {
                 $("#media").css({"position":"fixed", top: "9vh"});
+                $("#category-4").css({"background-color":"black"});
+                $("#category-3").css({"background-color":"inherit"});
+                $("#category-5").css({"background-color":"inherit"});
+                $("#reference").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-5").offset().top-$(".nav").height() && scroll_position < $("#pin-6").offset().top-$(".nav").height()) {
+                $("#reference").css({"position":"fixed", top: "9vh"});
+                $("#category-5").css({"background-color":"black"});
+                $("#category-4").css({"background-color":"inherit"});
+                $("#category-6").css({"background-color":"inherit"});
+                $("#qna").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-6").offset().top-$(".nav").height()) {
+                $("#qna").css({"position":"fixed", top: "9vh"});
+                $("#category-6").css({"background-color":"black"});
+                $("#category-5").css({"background-color":"transparent"});
             }
+
         }
 
     })
 
     function move_contraception() {
-    var offset = $("#pin-1").offset().top-window.height*0.095;
+    var offset = $("#pin-1").offset().top-$(".nav").height();
     $('html, body').animate({scrollTop : offset}, 800);
     }
      function move_disease() {
-    var offset = $("#pin-2").offset().top-window.height*0.095;
+    var offset = $("#pin-2").offset().top-$(".nav").height();
     $('html, body').animate({scrollTop : offset}, 800);
     }
      function move_genderequality() {
-    var offset = $("#pin-3").offset().top-window.height*0.095;
+    var offset = $("#pin-3").offset().top-$(".nav").height();
     $('html, body').animate({scrollTop : offset}, 800);
     }
-    function move_qna() {
-    var offset = $("#pin-4").offset().top-window.height*0.095;
+    function move_media() {
+    var offset = $("#pin-4").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+    function move_reference() {
+    var offset = $("#pin-5").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+     function move_qna() {
+    var offset = $("#pin-6").offset().top-$(".nav").height();
     $('html, body').animate({scrollTop : offset}, 800);
     }
 </script>

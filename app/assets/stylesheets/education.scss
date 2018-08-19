@@ -59,11 +59,6 @@
     margin-left: 4vw;
 }
 
-.education-main-chart-item-each:hover {
-    background-color: #080518;
-}
-
-
 .education-main-box-content {
     width:80%;
     height: 100%;
@@ -161,7 +156,7 @@
 }
 
 #pin-2, #contraception {
-    height: 91vh;
+    height: 91.4vh;
 }
 
 #genderequality {
@@ -220,7 +215,7 @@
 
 
 #pin-3, #genderequality {
-    height:91vh;
+    height:91.4vh;
 }
 
 #media {
@@ -230,13 +225,13 @@
         font-size: 5vh;
     }
     img {
-        width: 35vh;
+        width: 40vh;
         height: 17vh;
     }
 }
 
 #pin-4, #media  {
-    height: 91vh;
+    height: 91.4vh;
 }
 
 #reference {
@@ -253,6 +248,31 @@
 }
 
 #pin-5, #reference  {
-    height: 91vh;
+    height: 91.4vh;
 }
 
+
+#qna {
+    background-color: #563761;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 25vh;
+        height: 40vh;
+    }
+}
+
+#pin-6, #qna  {
+    height: 91.4vh;
+}
+
+
+#category-1:hover, #category-2:hover, #category-3:hover, #category-4:hover,#category-5:hover,#category-6:hover {
+    background: rgb(12, 6, 34) url("블루.png") repeat;
+    h1 {
+        font-size: 2.2vh;
+        color: rgb(248, 255, 183);
+    }
+}
