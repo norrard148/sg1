@@ -27,7 +27,7 @@
 
 .education-main-chart-item-box {
     width: 100%;
-    padding: 1.3vh 0vh 0vh 0vh;
+    padding: 1.7vh 0vh 0vh 0vh;
     
 }
 
@@ -70,6 +70,13 @@
     margin-left: 0.5vw;
 }
 
+.education-main-chart-item-each h2 {
+    font-size: 1.5vh;
+    color:rgb(80, 67, 102);
+    margin-left:1vh;
+    font-weighT: 300;
+}
+
 .education-main-box-content {
     width:80%;
     height: 100%;
@@ -85,7 +92,12 @@
     top: 0;
 }
 
-
+#category- {
+    h1 {
+        font-weighT: 500;
+        color: rgb(82, 79, 94);
+    }
+}
 
 .airpin {
     width: 100%;
@@ -238,6 +250,31 @@
         width: 40vh;
         height: 17vh;
     }
+    button {
+        margin-top: 4vh;
+        width: 37vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color:#5a1727;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color:white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+#media::before {
+    content: '';
+    width: 20vh;
+    height: 14vh;
+    position:absolute;
+    top:21%;
+    left:54%;
+    background-image: url("자극적.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 #pin-4, #media  {
@@ -254,6 +291,21 @@
     img {
         width: 25vh;
         height: 40vh;
+        margin-left:9vh;
+        margin-top:7vh;
+    }
+    button {
+        margin-top: 6vh;
+        width: 38vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #266268;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(39, 39, 39, 0.205);
+        cursor: pointer;
     }
 }
 

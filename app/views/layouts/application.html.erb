@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sg1</title>
+    <title>성교 | 숨겨진 성지식 찾지 말고 만들자1</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
- 
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
 
   </head>
   <style>
@@ -51,10 +51,10 @@
             <h1 style="top:-1.4vh">Counsel</h1>
           </a>
           <% if user_signed_in? %>
-          <a class="nav-menu" >
-            <img src="/assets/account.svg">
-            <h1>Logout</h1>     
-          </a>
+            <%= link_to destroy_user_session_path, method: :delete, :class => "nav-menu" do%>    
+              <img src="/assets/account.svg">
+              <h1>Logout</h1>
+            <%end%>
           <% else %>
            <a class="nav-menu" href="/users/sign_in" >
             <img src="/assets/account.svg">

@@ -21,6 +21,7 @@
                     <div id="category-" class="education-main-chart-item-each"  onclick="move_disease()">
                         <img src="/assets/arrow4.svg">
                         <h1>성생활</h1>
+                        <h2>콘텐츠 준비중</h2>
                     </div>
                 </div>
             </div>
@@ -29,7 +30,7 @@
                 <div class="education-main-chart-item">
                     <div id="category-3" class="education-main-chart-item-each" onclick="move_genderequality()">
                         <img src="/assets/arrow4.svg">
-                        <h1>언어</h1>
+                        <h1>젠더 다양성</h1>
                     </div>
                     <div id="category-4" class="education-main-chart-item-each" onclick="move_media()">
                         <img src="/assets/arrow4.svg">
@@ -38,24 +39,22 @@
                      <div id="category-" class="education-main-chart-item-each" onclick="move_media()">
                         <img src="/assets/arrow4.svg">
                         <h1>데이트</h1>
+                        <h2>콘텐츠 준비중</h2>
                     </div>
                 </div>
             </div>
             <div class="education-main-chart-item-box">
-                <h1 class="chart-title" ><img src="/assets/media.svg" style="position:relative;top:0.2vh;width: 3vh;height:3vh;margin-right: 1vh;">Media</h1>
+                <h1 class="chart-title" ><img src="/assets/etc.svg" style="position:relative;top:0.2vh;width: 3vh;height:3vh;margin-right: 1.6vh;margin-left:0.5vh">Etc.</h1>
                 <div class="education-main-chart-item">
                     <div id="category-5" class="education-main-chart-item-each" onclick="move_reference()">
                         <img src="/assets/arrow4.svg">
-                        <h1>참고</h1>
+                        <h1>구경거리</h1>
                     </div>
                     <div id="category-6" class="education-main-chart-item-each"  onclick="move_qna()">
                         <img src="/assets/arrow4.svg">
                         <h1>Q&A</h1>
                     </div>
-                    <div id="category-" class="education-main-chart-item-each"  onclick="move_qna()">
-                        <img src="/assets/arrow4.svg">
-                        <h1>커뮤니티</h1>
-                    </div>
+                 
                 </div>
             </div>
         </div>
@@ -72,28 +71,30 @@
        <div id="pin-2" class="airpin">
             <div id="contraception" class="education-main-box">
                 <img src="/assets/고민.png">
-                <button>성질환 진단하기!</button>
+                <button>성병 진단하기!</button>
             </div>
        </div>
         <div id="pin-3" class="airpin">
             <div id="genderequality"  class="education-main-box">
-                 <img src="/assets/젠더.png">
-                 <button>싸운 이유 보기!</button>
+                <img src="/assets/젠더.png">
+                <button>싸운 이유 보기!</button>
             </div>
         </div>
          <div id="pin-4" class="airpin">
             <div id="media"  class="education-main-box">
                 <img src="/assets/미디어1.png">
+                <button>미디어 파헤치기!</button>
             </div>
         </div>
         <div id="pin-5" class="airpin">
             <div id="reference"  class="education-main-box">
                 <img src="/assets/미디어.png">
+                <button>구경거리 보러가기!</button>   
             </div>
         </div>
         <div id="pin-6" class="airpin">
             <div id="qna"  class="education-main-box">
-                
+                <img src="/assets/banana.gif">
             </div>
         </div>
     </div>
@@ -103,7 +104,7 @@
 
     scroll_position =  $(window).scrollTop();
     if (scroll_position ==0) {
-        $("#category-1").css({"background-color":"black"});
+        $("#category-1").css({"background-color":"#292445"});
     }
     $("body").css({"overflow-x": "hidden"})
     

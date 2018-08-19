@@ -16,7 +16,8 @@
     width: 100%;
     height: 100vh;
     padding-top: 9vh;
-    background-color: #c94a58;
+    background: #c94a58 url("교육바탕.png") 0 0 repeat;
+    background-size: 70% 70%;
 }
 
 .quiz-1 img {
@@ -56,6 +57,7 @@
         display: flex;
         flex-direction: column;
         align-items:  center;
+        background-color: #c94a58;
 }
 
 .quiz-1 .message h1 {
