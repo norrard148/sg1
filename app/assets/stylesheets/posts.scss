@@ -36,37 +36,106 @@
     box-shadow: 2vh 3vh 5vh rgba(19, 1, 1, 0.342);
 }
 
-
 .post-index-container {
     position: absolute;
     top: 0;
     margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+    padding: 0 2vh 0 2vh;
     left: 23vw;
     width:70vw;
-    height: 200vh;
+    min-height: 70vh;
     background-color: rgb(245, 245, 245);
     border-radius:0.5vh;
     box-shadow: 3vh 4vh 8vh rgba(19, 1, 1, 0.342);
+
 }
 
 .post-index-container-top {
+    display: flex;
+    padding: 4vh;
+    margin-bottom: 7vh;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 5vw;
+    height: 15vh;
+    border-bottom: 1px solid rgb(226, 226, 226);
 }
 
-.post-index-container-search {
-    width: 100%;
-    height: 4vw;
+.post-search {
+    display:flex;align-items:center;
+    h1 {
+        font-size: 2vh;
+        margin-right: 2vh;
+    }
+    input {
+        width: 15vw;
+        height: 3vh;
+        border: none;
+        padding-left: 0.5vw;
+    }
 }
 
-.post-index-container-table {
+.post-index-container-top2 {
     width: 100%;
-    height: 10vw;
+    display: flex;
+    margin-bottom: 4vh;
+    padding: 0 4vh 0 4vh;
+    justify-content: space-between;
+}
+
+.category-name {
+    padding-top:0.8vh;
+    
+    margin-right: 2vh;
+   font-size: 2vh;
+   width: 10vh;
+   height: 4vh;
+   background-color: rgb(245, 245, 245);
+   border: 1px solid rgb(206, 206, 206);
+   border-radius: 0.3vh;
+   text-align: center;
+   box-shadow: 1vh 1vh 2vh rgba(201, 201, 201, 0.096);
+}
+
+.new-post {
+    padding-top:0.8vh;
+    font-size: 2vh;
+    width: 15vh;
+    height: 4vh;
+    background-color: rgb(219, 143, 43);
+    border: 1px solid rgb(206, 206, 206);
+    color: white;
+    border-radius: 0.3vh;
+    text-align: center;
 }
 
 .post-index-container-box {
     width: 100%;
     text-align: center;
+    border-collapse: collapse;
+    .td1, .td2, .td3, .td4, .td5 {
+        border-bottom:1px solid rgb(235, 235, 235);
+        font-size: 1.5vh;
+    }
+    .td1 {
+        width: 40%;
+    }
+    .td2 {
+        width: 30%;
+    }
+    .td3, .td4, .td5 {
+        width: 10%;
+    }
+    .tr1, .tr2 {
+        height: 4vh;
+    }
 }
 
+
+
+
+
+.post-new {
+
+}
