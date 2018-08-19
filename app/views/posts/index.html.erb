@@ -1,6 +1,6 @@
 
 <div class="post-index">
-  
+  <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
         <img class="post-index-profile-img" src="/assets/banana.gif">
         <h1>Jang Young Jae</h1>
@@ -8,19 +8,31 @@
   </div>
 
   <div class="post-index-container">
-    
-
-    <p id="notice"><%= notice %></p>
-    <h1>Posts</h1>
-    <%= link_to 'New Post', new_post_path %>
-    <input id = "myInput" type = "text" placeholder = "Search..">
-
+    <div class="post-index-container-top">
+      <h1>Posts</h1>
+       <%= link_to 'New Post', new_post_path %>
+    </div>
+    <div class="post-index-container-table">
+      <thead>
+          <tr>
+            <th>학습게시판</th>
+            <th>연애</th>
+            <th></th>
+            <th>젠더</th>
+            <th></th>
+          </tr>
+      </thead>
+     
+    </div>
+    <div class="post-index-container-search">
+      <input id = "myInput" type = "text" placeholder = "Search..">
+    </div>
     <table class="post-index-container-box">
       <thead>
         <tr>
           <th>Title</th>
           <th>Content</th>
-          <th colspan="3"></th>
+          <th colspan="3">접속</th>
         </tr>
       </thead>
 
@@ -41,7 +53,7 @@
 
 <script>
 
-  $("body").css({"background-color": "rgb(100, 33, 33)"})
+  $("body").css({"background-color": "rgb(100, 33, 33)"});
 
 
   $(document).ready(function(){
