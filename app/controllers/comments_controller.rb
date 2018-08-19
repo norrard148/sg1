@@ -4,12 +4,13 @@ class CommentsController < ApplicationController
     @comment.post_id=params[:post_id]
     @comment.save
 
-    redirect_to '/'
+    redirect_to "/posts/#{params[:post_id]}"
   end
 
   def destroy
     @comment=Comment.find(params[:id])
-    @comment.destory
+    @comment.destroy
+    redirect_to "/posts/#{params[:post_id]}"
   end
 
   def comment_params

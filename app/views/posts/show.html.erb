@@ -1,26 +1,53 @@
-<div class="post-show">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div class="post-new">
+  <p id="notice"><%= notice %></p>
+  <div class="post-index-profile">
+        <img class="post-index-profile-img" src="/assets/banana.gif">
+        <h1>Jang Young Jae</h1>
+        <h1>I am the one!</h1>
+  </div>
+  <div class="post-index-container">
+    <div class="post-index-container-top">
+      <div style="display:flex;align-items:center;">
+        <h1 style="font-size: 6vh">커뮤니티</h1>
+        <h2 style="font-size: 3vh">글보기</h1>
+      </div>
+      <div class="post-search" style="">
+      <%= link_to 'Edit', edit_post_path(@post) %> 
+      <%= link_to 'Back', posts_path %>
+        <h1 style="margin-right: 0">뒤로 가기</h1>
+      </div>
+    </div>
+    
+    <div class="post-show-content">
+      <h1><%= @post.title %></h>
+      <h1><%= @post.content %></h1>
+    </div>
 
-<%=form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
-<%=f.label "댓글"%>
-<%=f.text_field :content%><br>
-<%=f.submit '작성'%>
-<% end%>
+    <%=form_for Comment.new, url:post_comments_path(@post.id), :html =>{:class=> "post-show-new-comment"} do |f|%>
+    <%=f.text_field :content%>
+    <%=f.submit :'작성', class: "post-show-new-comment-input"%>
+    <% end%>
+    <%@post.comments.each do |comment|%>
+    <div class="post-show-comments">
+        <h1><%=comment.content%></h1>
+        <%=link_to '삭제', post_comment_path(@post.id, comment.id), method:'delete'%>
+    </div>
+    <% end%>
 
-<%@post.comments.each do |comment|%>
-  <%=comment.content%><%=link_to '삭제', post_comment_path(@post.id, comment.id), method:'delete'%><br>
-<% end%>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      
+    </div>
+  </div>
 </div>
+
+<script>
+ $("body").css({"background-color": "rgb(100, 33, 33)"});
+
+
+
+
+</script>
+  
