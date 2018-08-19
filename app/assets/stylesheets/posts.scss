@@ -3,10 +3,53 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.post-main, .post-new, .post-show {
+.post-new, .post-show {
     width: 100%;
     height: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.post-index {
+    padding-top: 9vh;
+}
+
+.post-index-profile {
+    width: 20vw;
+    height: 90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.post-index-profile h1 {
+    color: white;
+}
+
+.post-index-profile-img {
+    width: 15vw;
+    height: 15vw;
+    border-radius:0.5vh;
+    box-shadow: 2vh 3vh 5vh rgba(19, 1, 1, 0.342);
+}
+
+
+.post-index-container {
+    position: absolute;
+    top: 0;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    left: 25vw;
+    width:70vw;
+    height: 200vh;
+    background-color: rgb(245, 245, 245);
+    border-radius:0.5vh;
+    box-shadow: 3vh 4vh 8vh rgba(19, 1, 1, 0.342);
+}
+
+.post-index-container-box {
+    width: 100%;
 }

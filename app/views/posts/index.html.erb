@@ -1,36 +1,49 @@
-<br><br>
-<div class="post-main">
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="post-index">
+  
+  <div class="post-index-profile">
+        <img class="post-index-profile-img" src="/assets/banana.gif">
+        <h1>Jang Young Jae</h1>
+        <h1>I am the one!</h1>
+  </div>
 
-  <input id = "myInput" type = "text" placeholder = "Search..">
-  <br><br>
+  <div class="post-index-container">
+    
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <p id="notice"><%= notice %></p>
+    <h1>Posts</h1>
+    <%= link_to 'New Post', new_post_path %>
+    <input id = "myInput" type = "text" placeholder = "Search..">
 
-  <tbody id = "myTable">
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table class="post-index-container-box">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Content</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
+      <tbody id = "myTable">
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= post.content %></td>
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <script>
+
+  $("body").css({"background-color": "rgb(100, 33, 33)"})
+
+
   $(document).ready(function(){
     $("#myInput").on("keyup", function(){
       var value = $(this).val();
@@ -40,10 +53,6 @@
     });
   });
 
+
+
 </script>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
-
-</div>
