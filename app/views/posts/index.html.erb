@@ -1,6 +1,11 @@
+<br><br>
+<div class="post-main">
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
+
+  <input id = "myInput" type = "text" placeholder = "Search..">
+  <br><br>
 
 <table>
   <thead>
@@ -11,7 +16,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id = "myTable">
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
@@ -24,6 +29,21 @@
   </tbody>
 </table>
 
+
+<script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function(){
+      var value = $(this).val();
+        $("#myTable > tr").filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+  });
+
+</script>
+
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+</div>

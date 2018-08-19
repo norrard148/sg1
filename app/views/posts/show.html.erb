@@ -1,3 +1,4 @@
+<div class="post-show">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +11,16 @@
   <%= @post.content %>
 </p>
 
+<%=form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
+<%=f.label "댓글"%>
+<%=f.text_field :content%><br>
+<%=f.submit '작성'%>
+<% end%>
+
+<%@post.comments.each do |comment|%>
+  <%=comment.content%><%=link_to '삭제', post_comment_path(@post.id, comment.id), method:'delete'%><br>
+<% end%>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>
