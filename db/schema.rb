@@ -14,10 +14,7 @@ ActiveRecord::Schema.define(version: 20180819142749) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
-<<<<<<< HEAD
     t.integer "author_id"
-=======
->>>>>>> 79b045965f4a46a12f68590486cada6cd33bb5ea
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,12 +29,9 @@ ActiveRecord::Schema.define(version: 20180819142749) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
-<<<<<<< HEAD
     t.integer "author_id"
     t.string "time"
     t.integer "in"
-=======
->>>>>>> 79b045965f4a46a12f68590486cada6cd33bb5ea
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
