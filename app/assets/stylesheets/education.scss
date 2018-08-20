@@ -1,0 +1,342 @@
+// Place all the styles related to the education controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 메인페이지 */
+
+.education-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.education-main-chart-box {
+    width: 20%;
+    height: 100%;
+    
+}
+.education-main-chart {
+    position: fixed;
+    padding-top: 9vh;
+    width: 20%;
+    height: 100%;
+    background-color: #1c182f;
+    box-shadow: 2vh 0vh 3vh rgba(34, 34, 34, 0.137);
+    z-index: 500;
+}
+
+.education-main-chart-item-box {
+    width: 100%;
+    padding: 1.7vh 0vh 0vh 0vh;
+    
+}
+
+.education-main-chart-item-box h1 {
+    color: white;
+    
+}
+
+.chart-title {
+    margin-left: 2vh;
+    font-size: 2.5vh;
+    cursor: pointer;
+    padding-bottom: 1.3vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+.education-main-chart-item {
+    width: 100%;
+}
+
+.education-main-chart-item-each {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    img {
+        position:relative;
+        top:0.2vh;
+        margin-left: 3vw;
+        width: 2.5vh;
+        height: 2.5vh;
+    }
+}
+.education-main-chart-item-each h1 {
+    font-size: 1.8vh;
+    margin-left: 0.5vw;
+}
+
+.education-main-chart-item-each h2 {
+    font-size: 1.5vh;
+    color:rgb(80, 67, 102);
+    margin-left:1vh;
+    font-weighT: 300;
+}
+
+.education-main-box-content {
+    width:80%;
+    height: 100%;
+}
+
+.education-main-box {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    position:relative;
+    top: 0;
+}
+
+#category- {
+    h1 {
+        font-weighT: 500;
+        color: rgb(82, 79, 94);
+    }
+}
+
+.airpin {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#disease {
+    background: #ffe26f url("교육바탕.png") 100% 100% repeat;
+    height: 100vh;
+    padding-top: 9vh;
+    position:relative;
+    img {
+        width: 26vh;
+        height: 28vh;
+        background-color: #ffe26f;
+    }
+    button {
+        margin-top: 0.5vh;
+        width: 38vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #563761;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+#disease::before {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:27%;
+    left:55%;
+    background-image: url("피임질문.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#contraception {
+    background: #f3825f url("교육바탕.png") 30% 30% repeat;
+    img {   
+        width: 34vh;
+        height: 26vh;
+        margin-top: 3vh;
+        background-color: #f3825f;
+    }
+    button {
+        margin-top: 4vh;
+        width: 35vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #a7425c;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+
+#contraception::before {
+    content: '';
+    width: 20vh;
+    height: 20vh;
+    position:absolute;
+    top:18%;
+    left:55%;
+    background-image: url("성병.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#pin-2, #contraception {
+    height: 91.4vh;
+}
+
+#genderequality {
+    background: #a7425c url("빗금.png") 0 0 repeat;
+    background-size: 35% auto;
+    a {
+        color: #ffe26f;
+        font-size: 5vh;
+    }
+    img {
+        width: 30vh;
+        height: 26vh;
+    }
+    button {
+        margin-top: 0.7vh;
+        width: 37vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color:#5a1727;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color:white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+
+}
+
+
+#genderequality::after {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:22%;
+    left:58%;
+    background-image: url("예민.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+#genderequality::before {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:28%;
+    left:27%;
+    background-image: url("이해.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+#pin-3, #genderequality {
+    height:91.4vh;
+}
+
+#media {
+    background-color: #ffbc01;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 40vh;
+        height: 17vh;
+    }
+    button {
+        margin-top: 4vh;
+        width: 37vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color:#5a1727;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color:white;
+        box-shadow: 1vh 1vh 3vh rgba(82, 82, 82, 0.205);
+        cursor: pointer;
+    }
+}
+
+#media::before {
+    content: '';
+    width: 20vh;
+    height: 14vh;
+    position:absolute;
+    top:21%;
+    left:54%;
+    background-image: url("자극적.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#pin-4, #media  {
+    height: 91.4vh;
+}
+
+#reference {
+    background-color: #563761;
+    background-color: #122533;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 25vh;
+        height: 40vh;
+        margin-left:9vh;
+        margin-top:7vh;
+    }
+    button {
+        margin-top: 6vh;
+        width: 38vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #266268;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(39, 39, 39, 0.205);
+        cursor: pointer;
+    }
+}
+
+#pin-5, #reference  {
+    height: 91.4vh;
+}
+
+
+#qna {
+    background-color: #563761;
+    a {
+        color: #f3825f;
+        font-size: 5vh;
+    }
+    img {
+        width: 25vh;
+        height: 40vh;
+    }
+}
+
+#pin-6, #qna  {
+    height: 91.4vh;
+}
+
+
+#category-1:hover, #category-2:hover, #category-3:hover, #category-4:hover,#category-5:hover,#category-6:hover {
+    background: #221c38 url("블루.png") repeat;
+    h1 {
+        font-size: 2.2vh;
+        color: rgb(248, 255, 183);
+    }
+}

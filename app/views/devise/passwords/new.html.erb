@@ -1,0 +1,22 @@
+<div class="login-session">
+  <div class="login-session-error">
+  <%= devise_error_messages! %>
+  </div>
+  <div class="login-session-container">
+    <h2 style="font-size:3vh;">Forgot your password?</h2>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+        <%= f.submit "Send me reset password instructions!", :id => 'login-session-password-find'%>
+    <% end %>
+  </div>
+  <div class="login-session-forget">
+    <%= render "devise/shared/links" %>
+  </div>
+  <div class="login-session-explain">
+        <h1>[ 성 교 ]</h1>
+        <h2>KU UNIVERSITY</h2>
+  </div>
+</div>

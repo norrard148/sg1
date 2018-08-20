@@ -1,0 +1,69 @@
+
+
+<%# <div class="flex-column-center">
+
+  
+    <div class="login flex-column-center">
+        <h1>Login</h1>
+        <h2>Email</h2>
+        <input type="text">
+        <h2>Password</h2>
+        <input type="text">
+        <button>Submit!</button>
+    </div>
+
+    <div style="display:flex; font-size: 11px;color: white;cursor:pointer;">
+        <h2>아이디</h2>
+        <h2>&nbsp;|&nbsp; </h2>
+        <h2> 비밀번호 찾기</h2>
+    </div>
+
+    <div class="footer">
+        <h2>[성교]</h2>
+        <h2>KU University</h2>
+    </div>
+
+</div> %>
+
+<div class="login-session">
+    <div class="login-session-container">
+        <h1 style="font-size:4vh;">Login</h1>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+                <%= f.label :email %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="field">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+            <% if devise_mapping.rememberable? -%>
+                <div class="field-1 ">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                </div>
+            <% end -%>
+            <%= f.submit "Submit!" %>
+        <% end %>
+    </div>
+
+    
+    <style>
+        .abcRioButton abcRioButtonLightBlue {
+            width: 500px;
+            heighT: 500px;
+        }
+    </style>
+
+    <div class="g-signin2" data-onsuccess="onSignin"></div>
+
+
+    <div class="login-session-forget">
+    <%= render "devise/shared/links" %>
+    </div>
+    <div class="login-session-explain">
+        <h1>[ 성 교 ]</h1>
+        <h2>KU UNIVERSITY</h2>
+    </div>
+</div>
+
