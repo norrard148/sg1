@@ -3,8 +3,79 @@
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
         <img class="post-index-profile-img" src="/assets/banana.gif">
-        <h1>Jang Young Jae</h1>
+        <h1 class="post-username" >Jang Young Jae</h1>
         <h1>I am the one!</h1>
+        <div class="post-index-profile-box">
+          <div class="post-index-popular"> 
+            <h1>인기 검색어</h1>
+            <img src="/assets/3dot.svg">
+          </div>
+          <div class="popular">
+            <h1>1</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>2</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>3</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>4</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>5</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>6</h1>
+            <h1>데이트</h1>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-menu">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+         <div class="post-index-menu">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        
   </div>
   <div class="post-index-container">
     <div class="post-index-container-top">
@@ -45,7 +116,8 @@
             <td class="td2"><%= post.content %></td>
             <td class="td3"><%= link_to 'Show', post %></td>
             <td class="td4"><%= link_to 'Edit', edit_post_path(post) %></td>
-            <td class="td5"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+               
           </tr>
         <% end %>
       </tbody>
