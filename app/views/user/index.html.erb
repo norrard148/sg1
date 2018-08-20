@@ -10,3 +10,7 @@
         display: none;
     }
 </style>
+<%=@user = User.all%>
+<%@user.each do |post| %>
+<h1><%=post.email%></h1>
+<%end%>
