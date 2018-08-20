@@ -103,9 +103,9 @@
     <table class="post-index-container-box">
         <tr class="tr1">
           <th class="td1">Title</th>
-          <th class="td2">Content</th>
-          <th class="td3">접속</th>
-          <th class="td4">접속</th>
+          <th class="td2">Author</th>
+          <th class="td3">작성 날짜</th>
+          <th class="td4">조회수</th>
           <th class="td5">접속</th>
         </tr>
 
@@ -113,11 +113,14 @@
         <% @posts.each do |post| %>
           <tr class="tr2">
             <td class="td1"><%= post.title %></td>
-            <td class="td2"><%= post.content %></td>
-            <td class="td3"><%= link_to 'Show', post %></td>
-            <td class="td4"><%= link_to 'Edit', edit_post_path(post) %></td>
-            <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' } %></td>
-               
+            <td class="td2"><%@usernumber=post.user_id.to_i()%><%user=User.find_by_id(@usernumber)%><%=user.email%></td>
+            <td class="td3"><%=post.time%></td> 
+            <td class="td4"><%=post.in%></td>
+            
+            <td class="td5"><%= link_to 'Show', post   %></td>
+               <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' }%></td>
+              <%# # <%= link_to 'Edit', edit_post_path(post) %> 
+              
           </tr>
         <% end %>
       </tbody>
