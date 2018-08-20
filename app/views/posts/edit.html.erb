@@ -7,7 +7,7 @@
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
         <img class="post-index-profile-img" src="/assets/banana.gif">
-        <h1 class="post-username" ><%=User.find_by_id(current_user.id).email%></h1>
+        <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
         <h1>환영합니다!</h1>
   </div>
   <div class="post-index-container">
@@ -17,7 +17,7 @@
         <h2 style="font-size: 3vh">수정하기</h1>
       </div>
       <div class="post-search" style="">
-        <%= link_to '메인으로', @post %>    
+        <%= link_to '뒤로', @post %>    
         
       </div>
     </div>
