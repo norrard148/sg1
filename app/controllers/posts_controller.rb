@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post.author_id = current_user.id
     @post.time = Time.now
     @post.in = 0
     respond_to do |format|
@@ -57,16 +57,14 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-      if @post.user_id.to_i() == current_user.id
+      if @post.author_id == current_user.id
+        @post.comments.destroy_all
         @post.destroy
         respond_to do |format|
-        format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-        format.json { head :no_content }
+          format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+          format.json { head :no_content }
         end
-      else
-        redirect_to "/posts"
       end
-    
   end
 
   private

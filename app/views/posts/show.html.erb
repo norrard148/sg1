@@ -6,28 +6,28 @@
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
         <img class="post-index-profile-img" src="/assets/banana.gif">
-        <h1 class="post-username" >Jang Young Jae</h1>
-        <h1>I am the one!</h1>
+        <h1 class="post-username" ><%=User.find_by_id(current_user.id).email%></h1>
+        <h1>환영합니다!</h1>
   </div>
-  <div class="post-index-container">
+  <div class="post-index-container post-show">
     <div class="post-index-container-top">
       <div style="display:flex;align-items:center;">
-        <h1 style="font-size: 6vh">커뮤니티</h1>
+        <a href="/posts" style="font-size: 6vh">커뮤니티</a>
         <h2 style="font-size: 3vh">글보기</h1>
       </div>
       <div class="post-search" style="">
-      <%= link_to 'Edit', edit_post_path(@post) %> 
-      <%= link_to 'Back', posts_path %>
-        <h1 style="margin-right: 0">뒤로 가기</h1>
+     
+      <%= link_to '수정', edit_post_path(@post), :class=>"holy"%> 
+      <%= link_to '삭제', @post, method: 'delete', data: { confirm: 'Are you sure?' }%>
       </div>
     </div>
    
-    <%=@post.in = @post.in + 1%>
+    <%@post.in = @post.in + 1%>
     <%@post.save%>
 
     <div class="post-show-content">
-      <h1><%= @post.title %></h>
-      <h1><%= @post.content %></h1>
+      <h1><%= @post.title %></h1>
+      <h2><%= @post.content %></h2>
     </div>
 
     <%=form_for Comment.new, url:post_comments_path(@post.id), :html =>{:class=> "post-show-new-comment"} do |f|%>
@@ -37,7 +37,7 @@
     <%@post.comments.each do |comment|%>
     <div class="post-show-comments">
         <h1><%=comment.content%></h1>
-        <h1><%@usernumber=comment.user_id.to_i()%><%user=User.find_by_id(@usernumber)%><%=user.email%></h1>
+        <h2><%@usernumber=comment.author_id.to_i()%><%user=User.find_by_id(@usernumber)%><%=user.email%></h2>
         <%=link_to '삭제', post_comment_path(@post.id, comment.id), method:'delete'%>
     </div>
     <% end%>
