@@ -8,7 +8,7 @@
         <h1 class="category" >게임 목록</h1>
             <div class="gender-game-menu-category on1">
             <h1>학교</h1>
-            <h2 class="on"><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
+            <h2 class="on"><img src="/assets/arrow4.svg"> 1. 아침 등교 시...</h2>
             <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
             <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
             <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
@@ -33,7 +33,15 @@
     </div>
     <div class="gender-game-content">
          <div class="gender-top">
+            <img class="game-logo" src="/assets/game.svg">
+            <div class="game-top-text" style="">
             <h1>연애 시뮬레이션 게임</h1>
+            <h2>게임을 통해 젠더평등 배워보자</h2>
+            <h3>Made By @KU Seung Aae</h3>
+            <h4> parctie needed!parctie needed!</h4>
+            </div>
+            <img src="/assets/share.svg" style="position:absolute;top: 1.5vh;right:2vh;">
+            <img src="/assets/세팅.svg" style="position:absolute;top: 2vh;right:7vh;width:3vh;height:3vh">
         </div>
         <div class="gender-main-game">
         <img class="back" src="/assets/play.gif">
@@ -72,7 +80,7 @@
             </div>
             <div class="game-nav" >
                 <h1>1. 아침 등교 시간! 그런데...</h1>
-                <img src="/assets/3dot.svg">
+                <img src="/assets/3dot1.svg">
             </div>
         </div>
         <div class="next-play" onclick="play_scene_1()" ><h1>Start!</h1></div>   
@@ -112,7 +120,9 @@
 
      function play_scene_1_1 () {
         return new Promise(function(resolve, reject) {
-           audio.play();
+          
+  
+            audio.play();
              $(".game-nav").addClass("opacity");
                $(".play").attr("src","/assets/pause.svg");
             $(".game-back").css({"display": "block"});
@@ -292,6 +302,7 @@
             $(".game-nav").removeClass("opacity");
              $(".play").attr("src","/assets/play.svg");
             playtoggle=false;
+            
         },30000)
     };
     
