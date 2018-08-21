@@ -2,10 +2,10 @@
     width: 100%;
     height: 100%;
     background-color: #1874d2;
-    display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    display: flex;
     h1 {
         color: white;
         font-weight: 500;
@@ -18,13 +18,19 @@
     width: 100%;
     height: 100%;
     background-color: rgb(165, 22, 22);
-
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .gender-main-game {
     width: 100vh;
     height: 70vh;
     background-color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -32,12 +38,15 @@
     width: 10vh;
     height: 10vh;
     background-color: grey;
+    z-index: 2;
+    position: absolute;
 }
 
-.a {
+.students {
     position:absolute;
     left: 300px;
-    
+    top: 400px;
+    z-index:1;
 
 }
 
@@ -49,4 +58,32 @@
 .move-right {
     left:200px;
     transition: left 2s ease-in 0s;
+}
+
+.teacher  {
+     width: 200px;
+     height: 200px;
+     background: yellow;
+     transition: height 2s ease-in 0s, width 2s ease-in 0s;
+}
+
+.teacher-expand {
+    height: 25  0px;
+    width: 250px;
+
+}
+
+.game-back {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -5%;
+    width: 100%;
+    height: 110%;
+
+}
+
+.game-back-move {
+    top: 0%;
+    transition: top 2.5s ease-in 0s;
 }

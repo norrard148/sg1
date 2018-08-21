@@ -4,60 +4,101 @@
 
 <div class="gender-main">
     <div class="gender-main-game">
-
+        <img class="game-back" src="">
+        <img class="students" src="/assets/고민.png">
+        <div class="next-play" onclick="play_scene_1()" >
+        
+        </div>    
+        <div class="teacher">
+        teacher
+        </div>
     </div>
+
 </div>
 
 
-<embed src="/assets/등교사운드.mp3" autostart="true" loop="true" width="280" height="45" hidden="true">
 
-<img class="a" src="/assets/고민.png">
 
-<div class="next-play" onclick="play_scene_1()" >
-</div>
 
 <script>
 
     var toggle =false;
- 
+    var playtoggle = false;
 
     function play_scene_1 () {
-        play_scene_1_1().then(play_scene_1_2())
+        if (!playtoggle) {
+            playtoggle = true;
+            play_scene_1_1().then(play_scene_1_2()).then(play_scene_1_3())
+        }
+        
     }
     
      function play_scene_1_1 () {
         return new Promise(function(resolve, reject) {
-            $(".a").addClass("move-left")
-            var a = setInterval(function () {
-            if (!toggle) { $(".a").attr("src", "/assets/click.png"); toggle=true;} else {$(".a").attr("src", "/assets/고민.png"); toggle=false;}
-            },100)
-            setTimeout(function() {
-                clearInterval(a);
-                $(".a").removeClass("move-left")
-                },
-            2000)
+
+            var audio = new Audio('/assets/등교사운드.mp3');audio.play();
+            $(".game-back").addClass("game-back-move");
+            $(".game-back").attr("src", "/assets/학교.png");
+           
+            /*아래 숫자는 이 씬의 종료 타임*/
+            
             
         });
     }
         
     function play_scene_1_2 () {
             return new Promise(function(resolve, reject) {
+                
                 setTimeout(function () {
                     toggle =false;
-                    $(".a").addClass("move-right");
-                    var a = setInterval(function () {
-                    if (!toggle) { $(".a").attr("src", "/assets/미디어.png"); toggle=true;} else {$(".a").attr("src", "/assets/미디어1.png"); toggle=false;}
-                      },100)
+                    $(".a").addClass("move-left");
+                    $(".game-back").attr("src", "/assets/빗금.png");
+                 
                     setTimeout(function() {
-                    clearInterval(a);
-                    $(".a").removeClass("move-left");
-                    $(".a").removeClass("move-right");
+                        ㄴclearInterval(a);
+                        $(".a").removeClass("move-left");
+                        $(".a").removeClass("move-right");
+                        
+                       
+
                     },
-            2000)
+                    /*아래 숫자는 이 씬의 플레이 타임*/
+                    2000)
+                    /*아래 숫자는 이 씬의 시작 타임*/
                 }, 2000)
             });
-        }
+    }
     
+    function play_scene_1_3 () {
+        setTimeout(function () {
+                $(".teacher").addClass("teacher-expand");
+        /*아래 숫자는 이 씬의 시작 타임*/
+
+        setTimeout(function() {
+            clearInterval();
+
+            },
+            /*아래 숫자는 이 씬의 종료 타임*/
+            2000)
+        /*아래 숫자는 이 씬의 시작 타임*/
+        },4000)
+    }
+
+    
+    function play_scene_1_4 () {
+        setTimeout(function () {
+                $(".teacher").addClass("teacher-expand");
+        /*아래 숫자는 이 씬의 시작 타임*/
+
+        setTimeout(function() {
+            clearInterval();
+            playtoggle = false;
+            },
+            /*아래 숫자는 이 씬의 종료 타임*/
+            2000)
+        /*아래 숫자는 이 씬의 시작 타임*/
+        },4000)
+    }
 
 
 
