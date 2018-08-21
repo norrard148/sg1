@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get 'user/index'
 
+
   root "home#index"
     resources :posts do
       resources :comments, only: [:create, :destroy]

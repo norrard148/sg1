@@ -1,0 +1,107 @@
+.venereal {
+    margin-top: 20px;
+    background-image: linear-gradient(white, white, #fff3de);
+}
+
+.vene-top {
+    background: #1179a8 url("빗금.png") 0 repeat;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background-size: 35% auto;
+    text-align: center;
+    position: relative;
+    .vene-title h1{
+        color: #fab844;
+        position: relative;
+    }
+    .vene-subtitle h1{
+        font-size: 11px;
+        color: white;
+    }
+}
+
+.vene-mid {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    .vene-mid-1{
+        margin-right: 8px;
+    }
+    .vene-mid-2{
+        margin-left: 8px;
+    }
+    
+}
+
+.vene-bottom{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    .imjil{
+        margin-bottom: 55px;
+        border-top-color: #ed4f3e;
+        border-top-style: solid;
+        border-bottom-color: #fab844;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .maedok{
+        margin-bottom: 55px;
+        border-top-color: #fab844;
+        border-top-style: solid;
+        border-bottom-color: #ed4f3e;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .herpes{
+        margin-bottom: 55px;
+        border-top-color: #ed4f3e;
+        border-top-style: solid;
+        border-bottom-color: #fab844;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .gon{
+        margin-bottom: 55px;
+        margin-bottom: 55px;
+        border-top-color: #fab844;
+        border-top-style: solid;
+        border-bottom-color: #ed4f3e;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #imjil:hover, #maedok:hover, #herpes:hover, #gon:hover{
+        background-color: rgba(255, 255, 255, 0.24) url("main-4-back.png") repeat repeat;
+        h1 {
+            font-size: 2.2vh;
+            color: rgb(248, 255, 183);
+        }
+    }
+
+
+}
+
+.vene-index {
+    position: fixed;
+    z-index: 5;
+}
