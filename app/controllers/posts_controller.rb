@@ -24,6 +24,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    if user_signed_in?
+    else
+      redirect_to_"/posts"
+    end  
   end
 
   # POST /posts
