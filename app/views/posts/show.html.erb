@@ -16,9 +16,15 @@
         <h2 style="font-size: 3vh">글보기</h1>
       </div>
       <div class="post-search" style="">
-     
+     <%if user_signed_in? then if @post.author_id == current_user.id %>
       <%= link_to '수정', edit_post_path(@post), :class=>"holy"%> 
-      <%= link_to '삭제', @post, method: 'delete', data: { confirm: 'Are you sure?' }%>
+      
+      <%= link_to '삭제', @post, method: 'delete',:class=>"holy", data: { confirm: 'Are you sure?' }%>
+      <%end%>
+      <%else%>
+      
+      <%end%>
+      <a href="/posts">메인으로</a>
       </div>
     </div>
    

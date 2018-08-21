@@ -15,7 +15,11 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    if user_signed_in? 
     @post = Post.new
+    else
+    redirect_to "/users/sign_in"
+    end
   end
 
   # GET /posts/1/edit
@@ -57,6 +61,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    if user_signed_in?
       if @post.author_id == current_user.id
         @post.comments.destroy_all
         @post.destroy
@@ -65,6 +70,8 @@ class PostsController < ApplicationController
           format.json { head :no_content }
         end
       end
+    redirect_to "/posts"
+    end
   end
 
   private
