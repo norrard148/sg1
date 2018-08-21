@@ -12,3 +12,41 @@
     }
 }
 
+
+
+.gender-main {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(165, 22, 22);
+
+}
+
+.gender-main-game {
+    width: 100vh;
+    height: 70vh;
+    background-color: white;
+}
+
+
+.next-play {
+    width: 10vh;
+    height: 10vh;
+    background-color: grey;
+}
+
+.a {
+    position:absolute;
+    left: 300px;
+    
+
+}
+
+.move-left {
+    left:500px;
+    transition: left 2s ease-in 0s;
+}
+
+.move-right {
+    left:200px;
+    transition: left 2s ease-in 0s;
+}

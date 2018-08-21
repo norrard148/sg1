@@ -1,4 +1,64 @@
-<div class="education-gend">
-<img src="/assets/whale1.gif" style="width: 400px; height: 400px;">
-<h1>콘텐츠 준비중</h1>
+
+<%# <img src="/assets/whale1.gif" style="width: 400px; height: 400px;"> %>
+
+
+<div class="gender-main">
+    <div class="gender-main-game">
+
+    </div>
 </div>
+
+
+<embed src="/assets/등교사운드.mp3" autostart="true" loop="true" width="280" height="45" hidden="true">
+
+<img class="a" src="/assets/고민.png">
+
+<div class="next-play" onclick="play_scene_1()" >
+</div>
+
+<script>
+
+    var toggle =false;
+ 
+
+    function play_scene_1 () {
+        play_scene_1_1().then(play_scene_1_2())
+    }
+    
+     function play_scene_1_1 () {
+        return new Promise(function(resolve, reject) {
+            $(".a").addClass("move-left")
+            var a = setInterval(function () {
+            if (!toggle) { $(".a").attr("src", "/assets/click.png"); toggle=true;} else {$(".a").attr("src", "/assets/고민.png"); toggle=false;}
+            },100)
+            setTimeout(function() {
+                clearInterval(a);
+                $(".a").removeClass("move-left")
+                },
+            2000)
+            
+        });
+    }
+        
+    function play_scene_1_2 () {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function () {
+                    toggle =false;
+                    $(".a").addClass("move-right");
+                    var a = setInterval(function () {
+                    if (!toggle) { $(".a").attr("src", "/assets/미디어.png"); toggle=true;} else {$(".a").attr("src", "/assets/미디어1.png"); toggle=false;}
+                      },100)
+                    setTimeout(function() {
+                    clearInterval(a);
+                    $(".a").removeClass("move-left");
+                    $(".a").removeClass("move-right");
+                    },
+            2000)
+                }, 2000)
+            });
+        }
+    
+
+
+
+</script>
