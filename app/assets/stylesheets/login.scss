@@ -8,12 +8,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .login-session-error {
     position: absolute;
+    top: 10vh;
+    display:flex;
+    justify-content: center;
+    
 }
-
+.alert {position: absolute;min-width:50vh;;display:flex;justify-content:center;}
 .login-session-container {
     display:flex;
     flex-direction: column;

@@ -26,6 +26,12 @@
 </div> %>
 
 <div class="login-session">
+    <div class="login-session-error">
+        <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message,  class: "alert alert-#{message_type}", role: "alert") %>
+        <% end %>
+            
+    </div>
     <div class="login-session-container">
         <h1 style="font-size:4vh;">Login</h1>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
