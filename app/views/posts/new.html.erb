@@ -1,0 +1,32 @@
+
+<div class="post-new">
+  <p id="notice"><%= notice %></p>
+  <div class="post-index-profile">
+        <img class="post-index-profile-img" src="/assets/banana.gif">
+         <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
+        <h1>환영합니다!</h1>
+  </div>
+  <div class="post-index-container">
+    <div class="post-index-container-top">
+      <div style="display:flex;align-items:center;">
+        <h1 style="font-size: 6vh">커뮤니티</h1>
+        <h2 style="font-size: 3vh">새글 쓰기</h1>
+      </div>
+      <div class="post-search" style="">
+       <%= link_to '메인으로', posts_path %>
+       
+      </div>
+    </div>
+  
+    <%= render 'form', post: @post %>
+
+   
+        
+  </div>
+</div>
+
+<script>
+ $("body").css({"background-color": "rgb(100, 33, 33)"});
+
+
+</script>

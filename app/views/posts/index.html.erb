@@ -1,0 +1,145 @@
+
+<div class="post-index">
+  <p id="notice"><%= notice %></p>
+  <div class="post-index-profile">
+        <img class="post-index-profile-img" src="/assets/banana.gif">
+          <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
+        <h1>환영합니다!</h1>
+        <div class="post-index-profile-box">
+          <div class="post-index-popular"> 
+            <h1>인기 검색어</h1>
+            <img src="/assets/3dot.svg">
+          </div>
+          <div class="popular">
+            <h1>1</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>2</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>3</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>4</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>5</h1>
+            <h1>데이트</h1>
+          </div>
+          <div class="popular">
+            <h1>6</h1>
+            <h1>데이트</h1>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-celebrate">
+          <img src="/assets/banana.gif">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        <div class="post-index-menu">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+         <div class="post-index-menu">
+          <div class="post-index-celebrate-content"> 
+            <h1>Choi yeoun hyee</h1>
+            <h2>She is awesome!</h2>
+          </div>
+        </div>
+        
+  </div>
+  <div class="post-index-container">
+    <div class="post-index-container-top">
+      <div style="display:flex;align-items:center;">
+        <h1 style="font-size: 6vh">커뮤니티</h1>
+        <h2 style="font-size: 3vh">Main</h1>
+      </div>
+      <div class="post-search" style="">
+        <h1>검색 :</h1>
+        
+        <input id = "myInput" type = "text" placeholder = "Search..">
+      </div>
+    </div>
+    <div class="post-index-container-top2">
+      <div style="display:Flex;">
+      <h1 class="category-name" style="background-color: rgb(78, 11, 11);color:white;">메인</h1>
+      <h1 class="category-name">연애</h1>
+      <h1 class="category-name">성고민</h1>
+      <h1 class="category-name">성생활</h1>
+      </div>
+      <%= link_to '새글쓰기', new_post_path, :class => "new-post" %> 
+    </div>
+    
+    
+    <table class="post-index-container-box">
+        <tr class="tr1">
+          <th class="td1">제목</th>
+          <th class="td2">작성자</th>
+          <th class="td3">작성 날짜</th>
+          <th class="td4">조회수</th>
+        </tr>
+
+      <tbody id = "myTable">
+        <% @posts.each do |post| %>
+          <tr class="tr2">
+            <td class="td1"><%= link_to post.title, post %></td>
+            <td class="td2"><%@usernumber=post.author_id%><%user=User.find_by_id(@usernumber)%><%=user.email%></td>
+            <td class="td3"><%=post.time%></td> 
+            <td class="td4"><%=post.in%></td>
+            <%# <td class="td5"><%= link_to 'Show', post   %>
+               <%# <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' }%>
+              <%# # <%= link_to 'Edit', edit_post_path(post) %> 
+              
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+
+  $("body").css({"background-color": "rgb(100, 33, 33)"});
+
+
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function(){
+      var value = $(this).val();
+        $("#myTable > tr").filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+  });
+
+
+
+</script>

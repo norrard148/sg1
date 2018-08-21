@@ -1,0 +1,105 @@
+
+<%# <img src="/assets/whale1.gif" style="width: 400px; height: 400px;"> %>
+
+
+<div class="gender-main">
+    <div class="gender-main-game">
+        <img class="game-back" src="">
+        <img class="students" src="/assets/고민.png">
+        <div class="next-play" onclick="play_scene_1()" >
+        
+        </div>    
+        <div class="teacher">
+        teacher
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    var toggle =false;
+    var playtoggle = false;
+
+    function play_scene_1 () {
+        if (!playtoggle) {
+            playtoggle = true;
+            play_scene_1_1().then(play_scene_1_2()).then(play_scene_1_3())
+        }
+        
+    }
+    
+     function play_scene_1_1 () {
+        return new Promise(function(resolve, reject) {
+
+            var audio = new Audio('/assets/등교사운드.mp3');audio.play();
+            $(".game-back").addClass("game-back-move");
+            $(".game-back").attr("src", "/assets/학교.png");
+           
+            /*아래 숫자는 이 씬의 종료 타임*/
+            
+            
+        });
+    }
+        
+    function play_scene_1_2 () {
+            return new Promise(function(resolve, reject) {
+                
+                setTimeout(function () {
+                    toggle =false;
+                    $(".a").addClass("move-left");
+                    $(".game-back").attr("src", "/assets/빗금.png");
+                 
+                    setTimeout(function() {
+                        ㄴclearInterval(a);
+                        $(".a").removeClass("move-left");
+                        $(".a").removeClass("move-right");
+                        
+                       
+
+                    },
+                    /*아래 숫자는 이 씬의 플레이 타임*/
+                    2000)
+                    /*아래 숫자는 이 씬의 시작 타임*/
+                }, 2000)
+            });
+    }
+    
+    function play_scene_1_3 () {
+        setTimeout(function () {
+                $(".teacher").addClass("teacher-expand");
+        /*아래 숫자는 이 씬의 시작 타임*/
+
+        setTimeout(function() {
+            clearInterval();
+
+            },
+            /*아래 숫자는 이 씬의 종료 타임*/
+            2000)
+        /*아래 숫자는 이 씬의 시작 타임*/
+        },4000)
+    }
+
+    
+    function play_scene_1_4 () {
+        setTimeout(function () {
+                $(".teacher").addClass("teacher-expand");
+        /*아래 숫자는 이 씬의 시작 타임*/
+
+        setTimeout(function() {
+            clearInterval();
+            playtoggle = false;
+            },
+            /*아래 숫자는 이 씬의 종료 타임*/
+            2000)
+        /*아래 숫자는 이 씬의 시작 타임*/
+        },4000)
+    }
+
+
+
+</script>

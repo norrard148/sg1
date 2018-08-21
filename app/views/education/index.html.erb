@@ -1,0 +1,204 @@
+
+<div class="education-main">
+    <div class="education-main-chart-box">
+        <div class="education-main-chart">
+            
+            <h1 style="color:white;font-size: 3.5vh;padding:3.5vh 2vh 3.5vh 2.5vh;width:100%;display:block;background-color:#2e284d">카테고리</h1>
+            <div class="education-main-chart-item-box">
+                
+                <h1 class="chart-title" ><img src="/assets/sex1.svg" style="position:relative;top:0.2vh;width: 3.5vh;height:3.5vh;margin-right:0.8vh;">Sex</h1>
+               
+                <div class="education-main-chart-item">
+                    <div id="category-1" class="education-main-chart-item-each" onclick="move_contraception()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>피임</h1>
+                    </div>
+                    <div id="category-2" class="education-main-chart-item-each"  onclick="move_disease()" >
+                        <img src="/assets/arrow4.svg">
+                        <h1>성병</h1>
+                    </div>
+                    <div id="category-" class="education-main-chart-item-each"  onclick="move_disease()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>성생활</h1>
+                        <h2>콘텐츠 준비중</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="education-main-chart-item-box">
+                <h1 class="chart-title" ><img src="/assets/gender.svg" style="position:relative;top:0.2vh;width: 4vh;height:4vh;margin-right:1vh;">Gender</h1>
+                <div class="education-main-chart-item">
+                    <div id="category-3" class="education-main-chart-item-each" onclick="move_genderequality()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>젠더 다양성</h1>
+                    </div>
+                    <div id="category-4" class="education-main-chart-item-each" onclick="move_media()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>미디어</h1>
+                    </div>
+                     <div id="category-" class="education-main-chart-item-each" onclick="move_media()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>데이트</h1>
+                        <h2>콘텐츠 준비중</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="education-main-chart-item-box">
+                <h1 class="chart-title" ><img src="/assets/etc.svg" style="position:relative;top:0.2vh;width: 3vh;height:3vh;margin-right: 1.6vh;margin-left:0.5vh">Etc</h1>
+                <div class="education-main-chart-item">
+                    <div id="category-5" class="education-main-chart-item-each" onclick="move_reference()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>구경거리</h1>
+                    </div>
+                    <div id="category-6" class="education-main-chart-item-each"  onclick="move_qna()">
+                        <img src="/assets/arrow4.svg">
+                        <h1>Q&A</h1>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="education-main-box-content">
+        <div id="pin-1" class="airpin">
+            <div id="disease" class="education-main-box">
+                
+                <img src="/assets/고민3.png">
+                <button>피임법 알아보기!</button>
+            </div>
+        </div>
+       <div id="pin-2" class="airpin">
+            <div id="contraception" class="education-main-box">
+                <img src="/assets/고민.png">
+                <a href="/education/venereal">
+                <button>성병 진단하기!</button>
+                </a>
+            </div>
+       </div>
+        <div id="pin-3" class="airpin">
+            <div id="genderequality"  class="education-main-box">
+                <img src="/assets/젠더.png">
+                <a href="/education/genderequality"> <button>싸운 이유 보기!</button></a>
+            </div>
+        </div>
+         <div id="pin-4" class="airpin">
+            <div id="media"  class="education-main-box">
+                <img src="/assets/미디어1.png">
+                <button>미디어 파헤치기!</button>
+            </div>
+        </div>
+        <div id="pin-5" class="airpin">
+            <div id="reference"  class="education-main-box">
+                <img src="/assets/미디어.png">
+                <button>구경거리 보러가기!</button>   
+            </div>
+        </div>
+        <div id="pin-6" class="airpin">
+            <div id="qna"  class="education-main-box">
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    scroll_position =  $(window).scrollTop();
+    if (scroll_position ==0) {
+        $("#category-1").css({"background-color":"#292445"});
+    }
+    $("body").css({"overflow-x": "hidden"})
+    
+    $(window).scroll(function() {
+        scroll_position =  $(window).scrollTop();
+        if ($("#pin-1").length) {
+            if (scroll_position >= $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(".nav").height()) {
+                
+                $("#disease").css({"position":"fixed"});
+                $("#category-1").css({"background-color":"#292445"});
+                $("#category-1").parent().css({"background-color":"#211d38 "});
+                $("#category-3").parent().css({"background-color":"initial "});
+                $("#category-1").parent().parent().css({"background-color":"#25203e "});
+                $("#category-3").parent().parent().css({"background-color":"initial"});
+                $("#category-2").css({"background-color":"transparent"});
+                $("#contraception").css({"position":"relative", top: "0"});
+            } else if (scroll_position > $("#pin-2").offset().top-$(".nav").height() && scroll_position  < $("#pin-3").offset().top-$(".nav").height()) {
+                $("#contraception").css({"position":"fixed", top: "9vh"});
+                $("#category-2").css({"background-color":"#292445"});
+                $("#category-1").css({"background-color":"transparent"});
+                $("#category-3").css({"background-color":"transparent"});
+                $("#category-1").parent().css({"background-color":"#211d38 "});
+                $("#category-3").parent().css({"background-color":"initial "});
+                $("#category-1").parent().parent().css({"background-color":"#25203e "});
+                $("#category-3").parent().parent().css({"background-color":"initial"});
+                $("#genderequality").css({"position":"relative",top: "0"});
+            }  else if (scroll_position > $("#pin-3").offset().top-$(".nav").height() && scroll_position < $("#pin-4").offset().top-$(".nav").height()) {
+                $("#genderequality").css({"position":"fixed", top: "9vh"});
+                $("#category-3").css({"background-color":"#292445"});
+                $("#category-2").css({"background-color":"transparent"});
+                $("#category-4").css({"background-color":"transparent"});
+                $("#category-3").parent().css({"background-color":"#211d38 "});
+                $("#category-1").parent().css({"background-color":"initial "});
+                $("#category-5").parent().css({"background-color":"initial "});
+                $("#category-3").parent().parent().css({"background-color":"#25203e "});
+                $("#category-1").parent().parent().css({"background-color":"initial"});
+                $("#category-5").parent().parent().css({"background-color":"initial"});
+                $("#media").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-4").offset().top-$(".nav").height() && scroll_position < $("#pin-5").offset().top-$(".nav").height()) {
+                $("#media").css({"position":"fixed", top: "9vh"});
+                $("#category-4").css({"background-color":"#292445"});
+                $("#category-3").css({"background-color":"inherit"});
+                $("#category-5").css({"background-color":"inherit"});
+                $("#category-3").parent().css({"background-color":"#211d38 "});
+                $("#category-1").parent().css({"background-color":"initial "});
+                $("#category-5").parent().css({"background-color":"initial "});
+                $("#category-3").parent().parent().css({"background-color":"#25203e "});
+                $("#category-1").parent().parent().css({"background-color":"initial"});
+                $("#category-5").parent().parent().css({"background-color":"initial"});
+                $("#reference").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-5").offset().top-$(".nav").height() && scroll_position < $("#pin-6").offset().top-$(".nav").height()) {
+                $("#reference").css({"position":"fixed", top: "9vh"});
+                $("#category-5").css({"background-color":"#292445 "});
+                $("#category-5").parent().parent().css({"background-color":"#25203e "});
+                $("#category-3").parent().parent().css({"background-color":"initial"});
+                $("#category-5").parent().css({"background-color":"#211d38 "});
+                $("#category-3").parent().css({"background-color":"initial "});
+                $("#category-4").css({"background-color":"inherit"});
+                $("#category-6").css({"background-color":"inherit"});
+                $("#qna").css({"position":"relative",top: "0"});
+            } else if (scroll_position >= $("#pin-6").offset().top-$(".nav").height()) {
+                $("#qna").css({"position":"fixed", top: "9vh"});
+                $("#category-6").css({"background-color":"#292445 "});
+                $("#category-5").css({"background-color":"transparent"});
+            }
+
+        }
+
+    })
+
+    function move_contraception() {
+    var offset = $("#pin-1").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+     function move_disease() {
+    var offset = $("#pin-2").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+
+    }
+     function move_genderequality() {
+    var offset = $("#pin-3").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+    function move_media() {
+    var offset = $("#pin-4").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+    function move_reference() {
+    var offset = $("#pin-5").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+     function move_qna() {
+    var offset = $("#pin-6").offset().top-$(".nav").height();
+    $('html, body').animate({scrollTop : offset}, 800);
+    }
+</script>

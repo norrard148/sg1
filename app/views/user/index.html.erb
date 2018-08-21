@@ -1,0 +1,49 @@
+<div class="data">
+    <p>Profile Details</p>
+    <img id="pic" class="img-circle" width="100" height="100"/>
+    <p>Email Address</p>
+    <p id="email" class="alert alert-danger"></p>
+    <button onclick="signOut()" class="btn btn-danger">Signout</button>
+</div>
+<style>
+    .data {
+        display: none;
+    }
+</style>
+
+
+<div class="user">
+    <div class="user-profile">
+        <img class="user-profile-backimg" src="https://mediaslide-europe.storage.googleapis.com/eastwest/pictures/2038/8528/large-1511786157-bdf535c0ed070ecb167f0936503bd22a.jpg">
+        
+        
+        <div class="user-profile-content">
+            <h1><%=if current_user.age ==nil then "18"  else current_user.age end%></h1>
+            
+            <h2><%=if current_user.age ==nil then "Young Jae"  else current_user.sumnail end%></h2>
+            <h3><%=if current_user.age ==nil then "norrard@naver.com"  else current_user.email end%></h3>
+        
+        
+        </div>
+        <div class="user-profile-content-box">
+            <div class="modi">
+                <h1>Settings</h1>
+            </div>
+            <div class="like">
+            <img src="/assets/heart.svg">
+            </div>
+        </div>
+    </div>
+    <div class="user-profile-action">
+    </div>
+    <div class="user-profile-mypost">
+    </div>
+    <div class="user-profile-tagpost">
+    </div>
+</div>
+
+
+<script>
+  $("body").css({"background-color": "rgb(100, 33, 33)"});
+
+  </script>
