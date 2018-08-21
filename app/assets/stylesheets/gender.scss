@@ -272,7 +272,6 @@
 
 }
 
-
 .game-back {
     position: absolute;
     z-index: 1;
@@ -382,4 +381,13 @@ top: 10%;
 .talk11 {
     left: 25%;
     top: 15%;
+    top: -5%;
+    width: 100%;
+    height: 110%;
+
+}
+
+.game-back-move {
+    top: 0%;
+    transition: top 2.5s ease-in 0s;
 }
