@@ -91,7 +91,6 @@
       <% b = @post.likeauthor_id.split("/")%>
       var a = <%= b.length %> 
       document.getElementById('like').innerHTML = `${a}`;
-      event.stopPropagation();
    
     });
  
