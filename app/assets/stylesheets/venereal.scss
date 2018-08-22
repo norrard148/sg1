@@ -1,26 +1,40 @@
 .venereal {
-    margin-top: 20px;
-    background-image: linear-gradient(white, white, #fff3de);
+  
+    // background-image: linear-gradient(white, white, #fff3de);
     display:flex;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .vene-top {
-    background: #1179a8 url("빗금.png") 0 repeat;
-    padding-top: 10%;
-    padding-bottom: 5%;
-    background-size: 35% auto;
+    background: #294052;
+    background: #294052 url("빗금.png") 0 0 repeat;
+    padding-top: 9vh;
+    background-size: 30% 50%;
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    width :100%;
+    height: 100vh;
     .vene-title h1{
         color: #fab844;
         position: relative;
+        font-size: 5vh;
+        font-weight: 400;
+        
+        
     }
     .vene-subtitle h1{
-        font-size: 11px;
+        line-height: 3.5vh;
+        margin-top: 2vh;
+        font-size: 2.2vh;
         color: white;
+       
     }
 }
 
@@ -110,12 +124,30 @@
     z-index: 5;
 }
 
+.vene-select {
+    display: flex;
+    margin-top:4vh;
+    h1 {
+        text-align: center;
+        width: 20vh;
+        font-size: 2vh;
+        height: 6vh;
+        padding-top:1.7vh;
+        margin:2vh;
+        background-color :#447294;
+        font-weight: 300;
+        color:white;
+        border-radius: 0.3vh;
+        box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.226);
+    }
+}
+
 .vene-man, .vene-woman {
     width: 40vh;
     overflow: hidden;
     height: 40vh;
     border-radius: 0.7vh;
-    box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.123);
+    box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.226);
     margin: 0 5vh 0 5vh;
     position: relative;
     display:flex;
@@ -123,12 +155,14 @@
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    transition: color 0.3s linear 0s;
+    
     h1, h2 {
         z-index: 5;
-        opacity: 1;
+        opacity: 0;
         position: relative;
         color: white;
+        font-weight: 400;
+        transition: opacity 0.3s linear 0s;
     }
     h2 {
         font-size: 4vh;
@@ -144,77 +178,128 @@
 .human-shadow {
     width: 100%;
     height: 100%;
-    box-shadow: inset 0vh 0vh 4vh rgba(0, 0, 0, 0.205);
+    box-shadow: inset 0vh 0vh 4vh rgba(0, 0, 0, 0.212);
     position: absolute;
     background-color: rgba(0, 0, 0, 0.329);
-    opacity: 1;
+    opacity: 0;
     z-index: 4;
     transition: opacity 0.3s linear 0s;
    
 }
 
-.human-shadow:hover {
-    opacity :0;
- 
+
+.human-shadow:hover  { 
+    opacity: 1;
+   
+}
+.human-text:hover {
+     opacity: 1;
 }
 .vene-human {
     display:flex;
    justify-content: center;
     margin-top: 10vh;
-    margin-bottom: 10vh;
+ 
 }
 .vene-woman {
-   
+   top: -30vh;
     img {
         height: auto;
         width: 100%;
         position: absolute;
-        top: 0;
+        top: 0vh;
         left: 0;
         z-index:1;
     }
 }
 .vene-man {
+    top: -30vh;
     img {
         height: auto;
         width: 100%;
         position: absolute;
-        top: 0;
+        top: 0vh;
         z-index: 1;
         left: 0;
     }
 }
 
+.vene-human-box {
+   
+    width: 100vw;
+    height: 70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .vene-human-see {
-    width: 140vh;
-    height: 100vh;
-    background-color: yellow;
+    width: 130vh;
+    height: 30vh;
     position: relative;
+    top: 0;
+    left: 0;
+   
 }
 
 
 .vene-human-see-pic {
-width: 50vh;
-height: 50vh;
-border-radius: 0.8vh;
+width: 75vh;
+height: 60vh;
+
+border-radius: 0.4vh 0 0vh 0.4vh ;
 position: absolute;
-top: 20vh;
-left: 15vh;
+top: -30vh;
+left: 0;
 z-index:3;
+overflow: hidden;
+box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.226);
+display:flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(247, 247, 247);
 img {
+
     width: 100%;
-    height: 100%;
+    height: 105%;
     position:relative;
    
 }
 }
 
 .vene-human-see-content {
-    width: 130vh;
+    width: 55vh;
     height: 70vh;
-    background-color: white;
+    background-color: #153450;
     border-radius:0.5vh;
     position: absolute;
-    top: 25vh;
-    left: 5vh;
+    top: -35vh;
+    right: 0;
+    z-index: 4;
+    box-shadow: 1vh 1vh 5vh rgba(0, 0, 0, 0.322);
+   
+}
+
+.vene-human-see-content-box {
+    width:55vh;
+    height: 30vh;
+    padding: 5.5vh;
+    position: relative;
+    border-radius:0.8vh;
+    h1 {
+        color: white;
+        font-size: 4vh;
+        padding-bottom: 3vh;
+        
+    }
+    h2 {
+        line-height: 4vh;
+        margin-top: 3vh;
+        font-size: 2.2vh;
+        color:white;
+    }
 }

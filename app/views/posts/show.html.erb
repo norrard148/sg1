@@ -75,6 +75,7 @@
      
      
      $(".like").click(function(event) {
+       <% if user_signed_in? %>
       <% if @post.likeauthor_id == nil %>
          <% @post.likeauthor_id = current_user.id.to_s() %>
          <% @post.save %>
@@ -85,8 +86,9 @@
       <% @post.likeauthor_id = @post.likeauthor_id + "/" + current_user.id.to_s()%>
       <% @post.save %>
       <% end %>
-      <% end%>
-       <% b = @post.likeauthor_id.split("/")%>
+      <% end %>
+      <% end %>
+      <% b = @post.likeauthor_id.split("/")%>
       var a = <%= b.length %> 
       document.getElementById('like').innerHTML = `${a}`;
       event.stopPropagation();
