@@ -14,13 +14,30 @@
     </div>
     <div class="quiz-2">
         <img class="quiz-left" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:20%;top:50%;display:none;" onclick="leftMove()">
-        <img class="quiz-right" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 77%;top:50%;" onclick="rightMove()">
+        <img class="quiz-right" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 78.5%;top:50%;" onclick="rightMove()">
         <div class="quiz-2-container">
-        <%i = 0%>
-        <%while i < 15 do%>
+        <%i=1%>
+        <%a =
+        [
+        ["임신 가능한 배란기만 피하면 100% 피임을 할 수 있다.","png","00edff"],
+        ["콘돔의 피임 성공 확률은 90% 이상이다.","png","fe93bd"],
+        ["질외 사정을 하면 안심해도 된다.","gif", "ffffff"],
+        ["에이즈는 성병이다?","jpg","ecbff8"],
+        ["매독은 성관계로만 전염된다.","png","ff6666"],
+        ["임질은 여자가 걸린다.","jpg","ffffff"],
+        ["여자는 교사나 간호사, 남자는 군인이나 /경찰, 의사 등 더 적합한 직업이 존재한다.","gif","ff3149"],
+        ["무거운 물건을 드는 일은 남학생들에게만 시켜야 한다.","png","eeeeee"],
+        ["남자아이와 여자아이 사이에 다툼이 났을 때에는/ 남자아이가 양보하는 것이 낫다.","png","a0a0a0"]]%>
+        <%a.each do |a|%>
             <div class="quiz-2-container-content">
-                <div id="quiz-<%=i+1%>" class="quiz-2-container-content-box">
-                    <h2>콘돔의 피임 확률은 100%이다.</h2>
+                <div id="quiz-<%=i%>" class="quiz-2-container-content-box" style="background-color:#<%=a[2]%>">
+                <div style="height:15vw;overflow:hidden;position:relative;">
+                <img src="/assets/퀴즈<%=i%>.<%=a[1]%>">
+                </div>
+                    <h2 style="margin-top:2vw"><%=a[0].split("/")[0]%></h2>
+                    <%if a[0].split("/")[1] !=nil then%>
+                     <h2 style="margin-top:0.5vw"> <%=a[0].split("/")[1]%></h2>
+                     <%end%>
                 </div>
                 <div class="quiz-2-container-answer">
                     <div class="yes">
@@ -33,7 +50,7 @@
                     </div>
                 </div>
             </div>
-        <%i+=1%>
+       <%i+=1%>
         <%end%> 
         </div>
     </div>
@@ -63,16 +80,17 @@
     }
 
     function leftMove() {
-        if (quiz_number == 15) {
+        if (quiz_number == 9) {
             $(".quiz-right").css({"display": "block"});
         }
           if (quiz_number == 2) {
             $(".quiz-left").css({"display": "none"});
         }
         if (quiz_number > 1) {
-            quiz_number-=1
+             quiz_number-=1
             var offset = $(".quiz-2").offset();
-            $('.quiz-2-container').animate({left : `+=${scroll}`}, 600);
+            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+            
         }
     
     }
@@ -81,12 +99,13 @@
          if (quiz_number == 1) {
             $(".quiz-left").css({"display": "block"});
         }
-         if (quiz_number == 14) {
+         if (quiz_number == 8) {
             $(".quiz-right").css({"display": "none"});
         }
-        if (quiz_number < 15) {
-            quiz_number +=1
-            $('.quiz-2-container').animate({left : `-=${scroll}`}, 600);
+        if (quiz_number < 9) {
+         quiz_number +=1
+            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+               
         }
     }
     
