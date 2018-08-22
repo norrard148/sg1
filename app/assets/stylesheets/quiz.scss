@@ -139,7 +139,7 @@
    
 }
 .quiz-2-container-content {
-    padding-top: 9vh;
+    padding-top: 14vh;
     position: relative;
     align-items: center;
     height: 50vw;
@@ -153,6 +153,7 @@
 .quiz-2-container-content-box {
     width: 50vw;
     height: 30vw;
+    border-radius: 0.3vw;
     background-color: rgb(255, 255, 255);
     box-shadow: 1vh 1vh 4vh #2929293d;
     position:relative;
@@ -201,7 +202,7 @@
 .quiz-2-container-answer {
     width: 100%;
     margin-top: 3%;
-    height: 7vw;
+  
     display: flex;
     flex-direction: row;
     justify-content:  center;
