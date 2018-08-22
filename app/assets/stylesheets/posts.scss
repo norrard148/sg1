@@ -234,17 +234,17 @@
     overflow: hidden;
     white-space:normal;
     text-overflow: hidden;
-    h1 {
-        white-space:normal;
-        font-size: 3vh;
-    }
-    h2 {
-        font-size: 3vh;
-        white-space:normal;
-        
-    }
-}
+    
 
+}
+.post-show-content h1 {
+    white-space:normal;
+    font-size: 3vh;
+}
+.post-show-content h2 {
+    font-size: 3vh;
+    white-space:normal;
+}
 
 .post-show-new-comment {
     width: 100%;
@@ -330,4 +330,15 @@
 }
 .post-show {
     min-height: 50vh;
+}
+
+.post-show-content .like {
+    width: 4vh;
+    height: 2.5vh;
+    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.116);
+    background-color: rgb(250, 250, 250);
+    border-radius:0.4vh;
+    text-align:center;
+    font-size: 1.5vh;
+    padding-top: 0.5vh;
 }

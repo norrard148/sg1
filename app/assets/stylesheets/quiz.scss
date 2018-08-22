@@ -235,7 +235,11 @@
     font-weight: 500;
     color: white;
 }
-
+.yes h3 {
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: white;
+}
 .no {
     background-color:  blueviolet;
     color: rgb(11, 114, 11);
@@ -244,6 +248,12 @@
 .no h2 {
     font-size: 1.3vw;
     font-weight: 500;
+    color: white;
+}
+
+.no h3 {
+    font-size: 1.1vw;
+    font-weight: 400;
     color: white;
 }
 

@@ -6,6 +6,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.integer :author_id
       t.string :time
       t.integer :in
+      t.integer :like
+      t.string :likeauthor_id
       t.timestamps
     end
   end

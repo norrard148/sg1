@@ -65,7 +65,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    if user_signed_in?
+
       if @post.author_id == current_user.id
         @post.comments.destroy_all
         @post.destroy
@@ -74,8 +74,7 @@ class PostsController < ApplicationController
           format.json { head :no_content }
         end
       end
-    redirect_to "/posts"
-    end
+    
   end
 
   private

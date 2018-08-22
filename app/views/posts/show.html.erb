@@ -27,17 +27,19 @@
       <a href="/posts">메인으로</a>
       </div>
     </div>
-   
+  
     <%@post.in = @post.in + 1%>
     <%@post.save%>
 
     <div class="post-show-content">
       <h1><%= @post.title %></h1>
       <h2><%= @post.content %></h2>
+     <h1 class="like" id="like">
+            </h1>
     </div>
 
-    <span class="likebtn-wrapper" style="margin-left:3%; margin-bottom:3%;" data-theme="custom" data-icon_l="hrt1" data-icon_d="sml3-u" data-icon_l_c="#ffd5d8" data-icon_l_c_v="#fb053e" data-icon_d_c_v="#080089" data-lang="ko" data-identifier="likey_likelion"></span>
-    <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+    <%# <span class="likebtn-wrapper" style="margin-left:3%; margin-bottom:3%;" data-theme="custom" data-icon_l="hrt1" data-icon_d="sml3-u" data-icon_l_c="#ffd5d8" data-icon_l_c_v="#fb053e" data-icon_d_c_v="#080089" data-lang="ko" data-identifier="likey_likelion"></span>
+    <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script> %>
 
     <%# <a target="_blank"><img src="http://www.cutercounter.com/hit.php?id=23868&nd=6&style=27" border="0" alt="hit counter"></a> %>
 
@@ -57,11 +59,40 @@
     </div>
   </div>
 </div>
-
+ 
 <script>
+
  $("body").css({"background-color": "rgb(100, 33, 33)"});
-
-
+      $(".lb-count").attr("id","lb-count");
+      <% if @post.likeauthor_id == nil %>
+      document.getElementById('like').innerHTML = `${a}`;
+      <%else%>
+      <% b = @post.likeauthor_id.split("/")%>
+      var a = <%= b.length %> 
+      document.getElementById('like').innerHTML = `${a}`;
+      <%end%>
+     
+     
+     
+     $(".like").click(function(event) {
+      <% if @post.likeauthor_id == nil %>
+         <% @post.likeauthor_id = current_user.id.to_s() %>
+         <% @post.save %>
+      <% else %>
+      <% b = @post.likeauthor_id.split("/")%>
+      <% if b.include? (current_user.id.to_s()) %>
+      <%else%>
+      <% @post.likeauthor_id = @post.likeauthor_id + "/" + current_user.id.to_s()%>
+      <% @post.save %>
+      <% end %>
+      <% end%>
+       <% b = @post.likeauthor_id.split("/")%>
+      var a = <%= b.length %> 
+      document.getElementById('like').innerHTML = `${a}`;
+      event.stopPropagation();
+   
+    });
+ 
 
 
 </script>

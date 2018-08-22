@@ -43,7 +43,12 @@
 .main-1-title {
     display: flex;
     margin-top: 10vh;
-   
+    flex-direction:  column;
+    align-items: center;
+    img {
+        height: 10vh;
+        width: auto;
+    }
 }
 
 .main-1-title h1 {

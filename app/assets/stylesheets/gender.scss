@@ -328,7 +328,7 @@
     z-index: 1;
     left: 0;
     top: 0%;
-    width: 130%;
+    width: 140%;
     height: 130%;
     display:none;
 }
@@ -337,7 +337,7 @@
     z-index: 1;
     left:-30%;
     top:0%;
-    width: 130%;
+    width: 140%;
     height: 130%;
     display:none;
 }
@@ -346,6 +346,7 @@
     position: absolute;
     z-index: 1;
     left:-30%;
+    top: 0;
     width: 250%;
     height: 250%;
     display:none;
@@ -363,7 +364,7 @@
 .game-back6 {
     position: absolute;
     z-index: 1;
-    right: 0;
+    right: -2%;
     top: 0;
     width: 130%;
     height: 130%;

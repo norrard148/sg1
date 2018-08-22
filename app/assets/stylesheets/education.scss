@@ -302,7 +302,7 @@
         height: 7vh;
         border-radius: 5vh;
         border: none;
-        background-color: #266268;
+        background-color: #a7425c;
         font-size: 3vh;
         font-weighT: 500; 
         color: white;
@@ -323,11 +323,35 @@
         font-size: 5vh;
     }
     img {
-        width: 25vh;
-        height: 40vh;
+        width: 35vh;
+        height: 15vh;
+    }
+    button {
+        width: 42vh;
+        margin-top:1vh;
+        height: 7vh;
+        border-radius: 5vh;
+        border: none;
+        background-color: #a7425c;
+        font-size: 3vh;
+        font-weighT: 500; 
+        color: white;
+        box-shadow: 1vh 1vh 3vh rgba(39, 39, 39, 0.205);
+        cursor: pointer;
     }
 }
 
+#qna::before {
+    content: '';
+    width: 20vh;
+    height: 18vh;
+    position:absolute;
+    top:22%;
+    left:57%;
+    background-image: url("어떤.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
 #pin-6, #qna  {
     height: 91.4vh;
 }

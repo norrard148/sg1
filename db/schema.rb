@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20180819142749) do
     t.integer "author_id"
     t.string "time"
     t.integer "in"
+    t.integer "like"
+    t.string "likeauthor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
