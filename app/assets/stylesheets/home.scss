@@ -7,15 +7,15 @@
 .main-1 {
     padding-top: 9vh;
     position:  relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: #954ba2;
-    background: #954ba2 url("main-1-back.png") 50% 0 repeat
+    background: #954ba2 url("main-1-back.png") 100% 100% repeat
 }
 
 .main-1-container {
@@ -24,10 +24,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width:100vw;
+    position:relative;
 }
 .main-1 h1 {
     font-size:  4vh;
-    margin-top:2vh;
+    margin-top:12vh;
     color:white;
     font-weight: 300;
 }
@@ -44,14 +46,16 @@
 
 .main-1-title {
     display: flex;
-    margin-top: 10vh;
+    margin-top: 20vh;
     flex-direction:  column;
     align-items: center;
+    justify-content: center;
     position: relative;
     img {
+        position:absolute;
         margin-top: 4vh;
-        height: 35vh;
-        width: auto;
+        height: 20vh;
+        width: 35vh;
     // text-shadow: 1px 2px 4px black;
     }
 }
@@ -62,7 +66,7 @@
     width: 25vh;
     height: 25vh;
     position:absolute;
-    background: url("이럴때있다말풍선.svg") 100% 100% no-repeat;
+    background: url("물음표.svg") 100% 100% no-repeat;
    top: -13vh;
    left:9vh;
     opacity:1;
@@ -73,15 +77,13 @@
     width: 25vh;
     height: 25vh;
     position:absolute;
-    background: url("물음표.svg") 100% 100% no-repeat;
-   top: -7vh;
+    background: url("이럴때있다말풍선.svg") 100% 100% no-repeat;
+   top: -22vh;
    right:12vh;
     opacity:1;
 
 }
-.main-1-title h1 {
-    font-size: 10vh;
-}
+
 
 
 /*main-2*/

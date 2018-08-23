@@ -29,11 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-<<<<<<< HEAD
 gem 'figaro'
-=======
-
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -56,12 +52,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
-gem 'devise', '~> 4.4', '>= 4.4.3'
-=======
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'figaro'
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
