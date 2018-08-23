@@ -1,0 +1,26 @@
+        var a;
+      
+      <% if user_signed_in? %>
+        <% if @post.likeauthor_id == nil %>
+          <% @post.likeauthor_id = current_user.id.to_s() %>
+          <% @post.save %>
+          <% b = @post.likeauthor_id.split("/") %>
+          a = <%= b.length %> 
+          document.getElementById('like').innerHTML = a;
+          $("#likeimg").attr("src","/assets/fullheart.svg");
+        <% else %>
+          <% b = @post.likeauthor_id.split("/") %>
+          <% if b.include?(current_user.id.to_s()) %>
+          <%else%>
+            <% @post.likeauthor_id = @post.likeauthor_id + "/" + current_user.id.to_s()%>
+            <% @post.save %>
+             <% b = @post.likeauthor_id.split("/") %>
+            a = <%= b.length %> 
+            document.getElementById('like').innerHTML = a;
+             $("#likeimg").attr("src","/assets/fullheart.svg");
+          <% end %>
+        <% end %>
+      <% end %>
+   
+
+    

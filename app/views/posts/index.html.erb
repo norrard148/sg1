@@ -85,7 +85,7 @@
       </div>
       <div class="post-search" style="">
         <h1>검색 :</h1>
-        
+        <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
         <input id = "myInput" type = "text" placeholder = "Search..">
       </div>
     </div>
@@ -96,9 +96,8 @@
       <h1 class="category-name">성고민</h1>
       <h1 class="category-name">성생활</h1>
       </div>
-      <%= link_to '새글쓰기', new_post_path, :class => "new-post" %> 
+      <%= link_to '새글쓰기', new_post_path, :class => "new-post" %>
     </div>
-    
     
     <table class="post-index-container-box">
         <tr class="tr1">
@@ -112,13 +111,13 @@
         <% @posts.each do |post| %>
           <tr class="tr2">
             <td class="td1"><%= link_to post.title, post %></td>
-            <td class="td2"><%@usernumber=post.author_id%><%user=User.find_by_id(@usernumber)%><%=user.email%></td>
+            <td class="td2"><%@usernumber=post.author_id%>
+            <%=User.find_by_id(post.author_id).email %></td>
             <td class="td3"><%=post.time%></td> 
             <td class="td4"><%=post.in%></td>
             <%# <td class="td5"><%= link_to 'Show', post   %>
                <%# <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' }%>
               <%# # <%= link_to 'Edit', edit_post_path(post) %> 
-              
           </tr>
         <% end %>
       </tbody>

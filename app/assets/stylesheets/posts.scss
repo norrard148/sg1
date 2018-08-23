@@ -332,13 +332,31 @@
     min-height: 50vh;
 }
 
-.post-show-content .like {
-    width: 4vh;
-    height: 2.5vh;
-    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.116);
-    background-color: rgb(250, 250, 250);
-    border-radius:0.4vh;
-    text-align:center;
-    font-size: 1.5vh;
-    padding-top: 0.5vh;
+.post-show-content  {
+ font-size: 1.7vh;
+    margin-lefT: 0.4vh;
 }
+
+.like-box {
+    width: 10vh;
+    height: 4vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color:white;
+    border-radius:0.3vh;
+    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.116);
+    cursor: pointer;
+    h2,a {
+        font-size: 1.8vh;
+        position: relative;
+        
+    }
+    img {
+        width:3vh;
+        height: 3vh;
+        position: relative;
+        top: 0.2vh;
+    }
+}
+

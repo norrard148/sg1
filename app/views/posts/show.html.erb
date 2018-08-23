@@ -18,12 +18,13 @@
       <div class="post-search" style="">
      <%if user_signed_in? then if @post.author_id == current_user.id %>
       <%= link_to '수정', edit_post_path(@post), :class=>"holy"%> 
-      
+     
       <%= link_to '삭제', @post, method: 'delete',:class=>"holy", data: { confirm: 'Are you sure?' }%>
       <%end%>
       <%else%>
       
       <%end%>
+      
       <a href="/posts">메인으로</a>
       </div>
     </div>
@@ -34,8 +35,32 @@
     <div class="post-show-content">
       <h1><%= @post.title %></h1>
       <h2><%= @post.content %></h2>
-     <h1 class="like" id="like">
-            </h1>
+       <input type="hidden" value='1'>
+     
+        <div  class="like-box">
+        <%if user_signed_in? %>
+        <%if @post.likeauthor_id != nil%>
+          <% di=@post.likeauthor_id.split("/")%>
+          <%if di.include?(current_user.id.to_s())%>
+            <img id="likeimg" src="/assets/fullheart.svg">
+            <%else%>
+            <img id="likeimg" src="/assets/emptyheart.svg">
+          <%end%>
+          <%else%>
+          <img id="likeimg" src="/assets/emptyheart.svg">
+        <%end%>
+        <%else%>
+         <img id="likeimg" src="/assets/emptyheart.svg">
+        <%end%>
+         <%=link_to 'Like', posts_g_path(@post.id), remote: true %>
+        <h2 class="like" id="like">
+        <%if @post.likeauthor_id !=nil%>
+        <% di=@post.likeauthor_id.split("/")%>
+        <%=di.length%>
+        <%else%>
+        <%="0"%>
+        <%end%></h2>
+      </div>
     </div>
 
     <%# <span class="likebtn-wrapper" style="margin-left:3%; margin-bottom:3%;" data-theme="custom" data-icon_l="hrt1" data-icon_d="sml3-u" data-icon_l_c="#ffd5d8" data-icon_l_c_v="#fb053e" data-icon_d_c_v="#080089" data-lang="ko" data-identifier="likey_likelion"></span>
@@ -61,40 +86,10 @@
 </div>
  
 <script>
+      $("body").css({"background-color": "rgb(100, 33, 33)"});
 
- $("body").css({"background-color": "rgb(100, 33, 33)"});
-      $(".lb-count").attr("id","lb-count");
-      <% if @post.likeauthor_id == nil %>
-      document.getElementById('like').innerHTML = `${a}`;
-      <%else%>
-      <% b = @post.likeauthor_id.split("/")%>
-      var a = <%= b.length %> 
-      document.getElementById('like').innerHTML = `${a}`;
-      <%end%>
+      
      
-     
-     
-     $(".like").click(function(event) {
-       <% if user_signed_in? %>
-      <% if @post.likeauthor_id == nil %>
-         <% @post.likeauthor_id = current_user.id.to_s() %>
-         <% @post.save %>
-      <% else %>
-      <% b = @post.likeauthor_id.split("/")%>
-      <% if b.include? (current_user.id.to_s()) %>
-      <%else%>
-      <% @post.likeauthor_id = @post.likeauthor_id + "/" + current_user.id.to_s()%>
-      <% @post.save %>
-      <% end %>
-      <% end %>
-      <% end %>
-      <% b = @post.likeauthor_id.split("/")%>
-      var a = <%= b.length %> 
-      document.getElementById('like').innerHTML = `${a}`;
-   
-    });
- 
-
 
 </script>
   
