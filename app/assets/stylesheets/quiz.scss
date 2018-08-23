@@ -1,0 +1,270 @@
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.quiz-1-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.quiz-1 {
+    width: 100%;
+    height: 100vh;
+    padding-top: 9vh;
+    background: #c94a58 url("교육바탕.png") 0 0 repeat;
+    background-size: 70% 70%;
+}
+
+.quiz-1 img {
+    width: auto;
+    height: 30vh;
+    transform:scaleX(-1);
+}
+   
+.quiz-1 .dog {
+    position: relative;
+    margin-top: 5vh;
+}
+   
+.quiz-1 .dog::before {
+    content: '';
+    width: 12vh;
+    height: 10vh;
+    position:absolute;
+    top:-8%;
+    left:85%;
+    z-index:999;
+    background: url("dogsay.png") no-repeat;
+    transform: rotate(10deg);
+    background-size: 100% 100%;
+    animation: toggle-animation1 1.2s linear infinite;
+}
+
+@keyframes  toggle-animation1{
+    0%{transform:rotate(10deg)}
+    25%{transform:rotate(7deg)}
+    50%{transform:rotate(10deg)}
+    75%{transform:rotate(13deg)}
+    100%{transform:rotate(10deg)}
+}
+
+.quiz-1 .message {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        background-color: #c94a58;
+}
+
+.quiz-1 .message h1 {
+            font-size: 3.5vh;
+            font-weight: 600;
+            color: #a13b46;
+            color: #772a31;
+            margin-bottom: 2vh;
+            text-shadow: none;
+}
+
+.quiz-1 .message h2 {
+            margin-bottom: 1vh;
+            font-size: 1.7vh;
+            color: rgb(122, 30, 53);
+            font-weight:300;
+}
+
+.quiz-1 button {
+    margin-top: 3vh;
+    position:relative;
+    border: none;
+    width: 20vh;
+    height: 6vh;
+    border-radius: 5vh;
+    background-color: rgb(255, 94, 0);
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(95, 77, 77, 0.205);
+}
+
+.quiz-1 button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 5vh;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: pulse-animation1 1s ease-in infinite;
+    background-color:rgb(255, 94, 0);
+    
+}
+
+@keyframes  pulse-animation1{
+    0%{opacity:0.4;transform:scale(1)}
+    50%{opacity:0;transform:scale(1.3)}
+    100%{opacity:0;transform:scale(1.5)}
+}
+
+.quiz-1 button h1 {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: 500;
+    z-index: 999;
+    position: relative;
+}
+
+
+
+
+.quiz-2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url("빗금.png") 0 0 repeat;
+    background-size: 20% auto; 
+    z-index:0;
+}
+
+.quiz-2-container {
+    padding-left: 15vw; 
+    width: 900%;
+    height: 100%;
+    position:absolute;
+    display:flex;
+    align-items: center;
+   
+}
+.quiz-2-container-content {
+    padding-top: 14vh;
+    position: relative;
+    align-items: center;
+    height: 50vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+}
+
+.quiz-2-container-content-box {
+    width: 50vw;
+    height: 30vw;
+    border-radius: 0.3vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1vh 1vh 4vh #2929293d;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    img {
+        height: 15vw;
+        
+        width: auto;
+       
+    }
+    h2 {
+        font-size: 1.7vw;
+        font-weight: 400;
+    }
+}
+
+.quiz-2-container-content-box::after {
+    display: block;
+    text-align: center;
+    padding-top: 0.4vw;
+    position: absolute;
+    font-size: 1.5vw;
+    border-radius: 50%;
+    font-weight: 500;
+    color: white;
+    width: 5vw;
+    height: 5vw;
+    top: -2.5vw;
+    left: 23vw;
+    z-index: -1;
+    background-color:rgb(180, 39, 39);
+} 
+
+.quiz-left, .quiz-right {
+    cursor: pointer;
+}
+
+.left, .right {
+    z-index: 999;
+    cursor: pointer;
+}
+
+.quiz-2-container-answer {
+    width: 100%;
+    margin-top: 3%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items:  center;
+}
+
+
+
+.yes, .no {
+    box-shadow: 5px 7px 20px #2929293d;
+    border-radius: 5vw;
+    width: 15vw;
+    height: 4vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items:  center;
+    margin: 0 2% 0 2%;
+   
+}
+
+.yes {
+    background-color: rgb(252, 91, 86);
+    color: white;
+}
+
+.yes h2 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: white;
+}
+
+.no {
+    background-color:  blueviolet;
+    color: rgb(11, 114, 11);
+}
+
+.no h2 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: white;
+}
+
+
+#quiz-3 {
+    img {
+        bottom: -1vw;
+        position:relative;
+   
+    }
+}
+
+
+#quiz-7 {
+    img {
+        top: -1vw;
+        position:relative;
+   
+    
+    }
+    h2 {
+        color: white;
+    }
+}

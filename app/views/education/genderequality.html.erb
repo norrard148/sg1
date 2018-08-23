@@ -1,0 +1,310 @@
+
+<%# <img src="/assets/whale1.gif" style="width: 400px; height: 400px;"> %>
+
+
+<div class="gender-main">
+    <div class="gender-game-menu-box">
+        <div class="gender-game-menu">
+        <h1 class="category" >게임 목록</h1>
+            <div class="gender-game-menu-category on1">
+            <h1>학교</h1>
+            <h2 class="on"><img src="/assets/arrow4.svg"> 1. 아침 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            
+
+            </div>
+               <div class="gender-game-menu-category">
+               <h1>학원</h1>
+            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            
+            </div>
+             <div class="gender-game-menu-category">
+            <h1>집</h1>
+            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
+            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            </div>
+            
+        </div>
+    </div>
+    <div class="gender-game-content">
+         <div class="gender-top">
+            <img class="game-logo" src="/assets/game.svg">
+            <div class="game-top-text" style="">
+            <h1>연애 시뮬레이션 게임</h1>
+            <h2>게임을 통해 젠더평등 배워보자</h2>
+            <h3>Made By @KU Seung Aae</h3>
+            <h4> parctie needed!parctie needed!</h4>
+            </div>
+            <img src="/assets/share.svg" style="position:absolute;top: 1.5vh;right:2vh;">
+            <img src="/assets/세팅.svg" style="position:absolute;top: 2vh;right:7vh;width:3vh;height:3vh">
+        </div>
+        <div class="gender-main-game">
+        <img class="back" src="/assets/play.gif">
+            <img class="game-back" src="/assets/학교.png">
+            <h1 onclick="play_scene_1()" >Click To Play!</h1>
+
+            <img class="game-back2" src="/assets/교정1.png">
+            <img class="game-back3" src="/assets/교정1.png">
+            <img class="game-back4" src="/assets/교정2.png">
+            <img class="game-back5" src="/assets/교정2.png">
+            <img class="game-back6" src="/assets/교정3.png">
+            <img class="student1" src="/assets/걸어가는여자.png">
+            <img class="student2" src="/assets/놀란표정.png">
+            <img class="student3"src="/assets/혼나는표정.png">
+            <img class="student0" src="/assets/혼나는표정.png">
+            <img class="student4"src="/assets/지나가는 남학생.png">
+            <img class="student4-1"src="/assets/지나가는 남학생2.png">        
+            <img class="student4-2"src="/assets/지나가는 남학생3.png">
+            <img class="teacher" src="/assets/학주.png">
+            <img class="talk talk0" src="/assets/거기.png">
+            <img class="talk talk1" src="/assets/거기학생.png">
+            <img class="talk talk2" src="/assets/네.png">
+            <img class="talk talk3" src="/assets/넌치마.png">
+            <img class="talk talk4" src="/assets/수치.png">
+            <img class="talk talk5" src="/assets/넌속옷.png">
+            <img class="talk talk6" src="/assets/검은색.png">
+            <img class="talk talk7" src="/assets/누구.png">
+            <img class="talk talk8" src="/assets/됐고.png">
+            <img class="talk talk9" src="/assets/놀람.png">
+            <img class="talk talk10" src="/assets/무언.png">
+            <img class="talk talk11" src="/assets/이새끼.png">
+            <img class="talk talk12" src="/assets/김주혁.png">
+            <img class="talk talk13" src="/assets/여보.png">
+            <img class="play" src="/assets/play.svg" onclick="play_scene_1()">
+            <div class="shadow">
+            </div>
+            <div class="game-nav" >
+                <h1>1. 아침 등교 시간! 그런데...</h1>
+                <img src="/assets/3dot1.svg">
+            </div>
+        </div>
+        <div class="next-play" onclick="play_scene_1()" ><h1>Start!</h1></div>   
+    </div>
+   
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    $("body").css({"background-color": "#f4d6bc"});
+
+    var toggle =false;
+    var playtoggle = false;
+    var audio = new Audio('/assets/등교사운드.mp3');
+    var audio1 = new Audio('/assets/브금.mp3');
+        audio1.volume = 0.15;
+        audio1.addEventListener('ended',function(){this.currentTime=0;this.play();},false);
+        audio1.play();
+         
+    function play_scene_1 () {
+        if (!playtoggle) {
+            playtoggle = true;
+            play_scene_1_1().then(play_scene_1_2()).then(play_scene_1_3()).then(play_scene_1_4()).then(play_scene_1_5()).then(play_scene_1_6()).then(play_scene_1_7()).then(play_scene_1_8()).then(play_scene_1_8_1()).then(play_scene_1_8_2()).then(play_scene_1_9()).then(play_scene_1_10()).then(play_scene_1_10_1()).then(play_scene_1_11()).then(play_scene_1_11_1()).then(play_scene_1_11_2()).then(play_scene_1_12()).then(play_scene_1_13())
+     }
+    }
+
+     function play_scene_1_1 () {
+        return new Promise(function(resolve, reject) {
+          
+  
+            audio.play();
+             $(".game-nav").addClass("opacity");
+               $(".play").attr("src","/assets/pause.svg");
+            $(".game-back").css({"display": "block"});
+            $(".game-back").addClass("game-back-move");
+           
+           $(".game-back5").css({"display": "none"});
+             $(".game-back4").css({"display": "none"})
+          $ (".student4-2").css({"display": "none"});
+            $(".student1").css({"display": "none"});
+             $(".talk13").css({"display":"none"}) 
+         
+          
+            
+        });
+    }
+            
+        function play_scene_1_2 () {
+                return new Promise(function(resolve, reject) {
+                    setTimeout(function () {
+                        
+                        $(".student0").css({"display": "block"});
+                        $(".student0").addClass("move-left");
+                       
+                        $(".game-back6").css({"display": "block"});
+                    }, 3000)
+                });
+        }
+        
+    function play_scene_1_3 () {
+        setTimeout(function () {
+            $(".student0").css({"display": "none"});
+            $(".game-back6").css({"display": "none"});
+            $(".game-back5").css({"display": "block"});
+            $(".student3").css({"display": "none"});
+            $(".student2").css({"display": "block"});
+            $(".talk0").css({"display":"block"})
+           
+        },6000)
+    };
+
+    
+    function play_scene_1_4 () {
+        setTimeout(function () {
+             $(".game-back5").css({"display": "none"});
+             $(".student2").css({"display": "none"});
+            $(".teacher").css({"display": "block"});
+            $(".student3").css({"display": "block"});
+            $(".student3").css({"left": "70%"});
+            $(".game-back2").css({"display": "block"});
+            $(".talk1").css({"display":"block"})
+              $(".talk0").css({"display":"none"})   
+        },8000)
+    };
+    function play_scene_1_5 () {
+        setTimeout(function () {
+            $(".teacher").css({"display": "none"});
+            $(".student3").css({"left": "40%"});
+            $(".game-back3").css({"display": "block"});
+            $(".game-back2").css({"display": "none"});
+            $(".talk2").css({"display":"block"})
+            $(".talk1").css({"display":"none"})
+        },10000)
+    };
+       function play_scene_1_6 () {
+        setTimeout(function () {
+            $(".teacher").css({"display": "block"});
+            $(".student3").css({"left": "70%"});
+            $(".game-back3").css({"display": "none"});
+            $(".game-back2").css({"display": "block"});
+            $(".talk3").css({"display":"block"})
+            $(".talk2").css({"display":"none"})
+        },12000)
+    };
+       function play_scene_1_7 () {
+        setTimeout(function () {
+            $(".teacher").css({"display": "none"});
+            $(".student3").css({"left": "40%"});
+           $(".game-back3").css({"display": "block"});
+            $(".game-back2").css({"display": "none"});
+            $(".talk4").css({"display":"block"})
+            $(".talk3").css({"display":"none"})
+        },14000)
+    };
+        function play_scene_1_8 () {
+        setTimeout(function () {
+            $(".teacher").css({"display": "block"});
+             $(".game-back2").css({"display": "block"});
+             $(".student3").css({"left": "70%"});
+           $(".game-back3").css({"display": "none"});
+           $(".talk5").css({"display":"block"})
+            $(".talk4").css({"display":"none"})
+    
+        },16000)
+    };
+     function play_scene_1_8_1 () {
+        setTimeout(function () {
+          
+           $(".talk6").css({"display":"block"})
+            $(".talk5").css({"display":"none"})
+    
+        },18000)
+    };
+     function play_scene_1_8_2 () {
+        setTimeout(function () {
+           $(".talk7").css({"display":"block"})
+            $(".talk6").css({"display":"none"})
+    
+        },20000)
+    };
+    function play_scene_1_9 () {
+            setTimeout(function () {
+                $(".teacher").css({"display": "none"});
+                $(".student1").css({"display": "block"});
+                 $(".student3").css({"display": "none"});
+                $(".game-back4").css({"display": "block"});
+                $(".game-back2").css({"display": "none"})
+                $(".talk7").css({"display":"none"})
+            },22000)
+        };
+    function play_scene_1_10 () {
+            setTimeout(function () {
+                $(".talk8").css({"display":"block"})
+                $(".game-back4").css({"display": "none"});
+                $(".student4").css({"display": "block"});   
+                $(".student1").css({"display": "none"});
+                  $(".game-back4").css({"display": "none"})
+                $(".game-back5").css({"display": "block"});
+                 $(".talk8").css({"display":"block"})
+            },24000)
+        };
+          function play_scene_1_10_1 () {
+            setTimeout(function () {
+                $(".talk9").css({"display":"block"})
+                $(".talk8").css({"display":"none"})
+            },25000)
+        };
+        
+          
+    function play_scene_1_11 () {
+        setTimeout(function () {
+            $(".student4").css({"display": "none"});
+            $(".student4-1").css({"display": "block"}); 
+            $(".talk10").css({"display":"block"})
+            $(".talk9").css({"display":"none"})    
+    
+        },25050)
+    };
+    function play_scene_1_11_1 () {
+            setTimeout(function () {
+                $(".talk11").css({"display":"block"})
+              
+            },26500)
+        };
+     function play_scene_1_11_2 () {
+            setTimeout(function () {
+                $(".talk12").css({"display":"block"})
+              
+            },27500)
+        };    
+    function play_scene_1_12 () {
+        setTimeout(function () {
+          $ (".student4-1").css({"display": "none"});
+            $(".student4-2").css({"display": "block"}); 
+            $(".talk12").css({"display":"none"})    
+            $(".talk11").css({"display":"none"})        
+            $(".talk10").css({"display":"none"})    
+            $(".talk13").css({"display":"block"})
+        },28500)
+    };
+     function play_scene_1_13 () {
+        setTimeout(function () {
+             $(".game-back5").css({"display": "none"});
+             $(".game-back4").css({"display": "block"})
+          $ (".student4-2").css({"display": "none"});
+            $(".student1").css({"display": "block"});
+             $(".talk13").css({"display":"none"}) 
+            $(".game-nav").removeClass("opacity");
+             $(".play").attr("src","/assets/play.svg");
+            playtoggle=false;
+            
+        },30000)
+    };
+    
+
+</script>
