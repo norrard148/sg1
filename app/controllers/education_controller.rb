@@ -10,4 +10,10 @@ class EducationController < ApplicationController
 
   def genderequality
   end
+
+  def go
+  end
+
+  def go1
+  end
 end

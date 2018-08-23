@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
     def quiz
     end
+
+    def go
+    end
 end

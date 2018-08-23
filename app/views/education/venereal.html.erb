@@ -14,29 +14,27 @@
         </div>
 
         <div class="vene-select">
-            <h1 class="render-vene1">성별로 보기</h1>
-            <h1>이름별로 보기</h1>
+            <%=link_to '성별로 보기',education_go_path , remote: true, :class=>"render-vene1", :id=>"render1" %>
+            <%=link_to '이름별로 보기',education_go1_path , remote: true, :class=>"render-vene1", :d => "render2" %>
+           
+           
         </div>
     </div>
       
-      <%= render "human" %>
+     
     
-      <%= render "symtom" %>    
-       
-     <div class="education-gend">
-        <img src="/assets/whale1.gif" style="width: 400px; height: 400px;">
-        <h1>콘텐츠 준비중</h1>
-    </div>  
 </div> 
 
 
 <script>
 
-
+var a = 0;
     $("body").css({"background-color": "#f8e4cc"});
     function movetop() {
         $('html, body').animate({scrollTop : 0}, 900);
     }
-   
+    
 
+
+    
 </script>

@@ -27,7 +27,7 @@
 }
 .main-1 h1 {
     font-size:  4vh;
-    
+    margin-top:2vh;
 }
 
 .main-1 h2 {
@@ -108,7 +108,7 @@
     height: 27vh;
     background-color: aquamarine;
     overflow: hidden;
-    border: 13px solid rgb(255, 255, 255);
+    border: 1.3vh solid rgb(255, 255, 255);
 }
 
 .circle img {
@@ -145,7 +145,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 110vh;
     height: 15vh;  
     margin-bottom: 5vh;
 }
@@ -313,7 +313,7 @@
     width: 12vh;
     height: 4vh;
     border-radius: 3vh;
-    border: 2px solid rgb(103, 28, 107);
+    border: 0.2vh solid rgb(103, 28, 107);
     margin-bottom: 2.5vh;
     display: flex;
     align-items: center;
@@ -341,7 +341,7 @@
 }
 
 .main-4-1-button h1 {
-    font-size: 16px;
+    font-size: 1.5vh;
     text-align: center;
     font-weight: 700;
     color: rgb(103, 28, 107);
@@ -475,3 +475,23 @@
     -webkit-box-orient: vertical; 
 }
 
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 1vh;
+}
+
+.mCSB_container {
+    width: 90%;
+    position: absolute;
+}
+
+.mCSB_scrollTools {
+    width: 0.5vh;
+}
+
+#mCSB_1_container {
+    margin-right: 0.4vh;
+}
+
+#mCSB_1_container {
+    position:absolute;
+}
