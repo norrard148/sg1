@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get 'home/quiz'
 
   get 'user/index'
+
+  get 'education/reference'
   
   root "home#index"
  
