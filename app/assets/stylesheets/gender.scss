@@ -243,7 +243,7 @@
 
     opacity: 1;
 }
-.student0, .student1, .student2, .student3, .student4, .student4-1, .student4-2 {
+.student0, .student1, .student2, .student3, .student3-1, .student4, .student4-1, .student4-2, .student2-1 {
     position:absolute;
     left:40%;
     bottom: 0%;
@@ -256,10 +256,19 @@
   left:40%;
   width: 35%;
 }
+.student2-1 {
+    width: 24%;
+    height: 56%;
+}
 .student3 {
     height: 55%;
     width: 20%;
 
+}
+
+.studnet3-1 {
+    width: 22%;
+    height: 55%;
 }
 .student0{ 
     height: 55%;
@@ -309,7 +318,7 @@
     width: 103%;
     height: 110%;
     display: none;
-
+    transition: top 3s linear 0s;
 }
 .game-back2 {
     position: absolute;
@@ -359,7 +368,6 @@
     display:none;
 }
 .game-back-move {
-    transition: top 3s linear 0s;
     top: 0%;
    
 
@@ -389,7 +397,12 @@
     right: 25%;
     top:30%;
 }
-
+.talk4 {
+    right: 18%;
+}
+.talk2 {
+    right: 20%;
+}
 .talk5, .talk6, .talk7 {
     width: 35vh;
     height: 35vh;

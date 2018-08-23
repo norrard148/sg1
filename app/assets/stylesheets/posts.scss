@@ -234,7 +234,7 @@
     overflow: hidden;
     white-space:normal;
     text-overflow: hidden;
-    
+    position: relative;
 
 }
 .post-show-content h1 {
@@ -338,13 +338,16 @@
 }
 
 .like-box {
-    width: 10vh;
+    width: 15vh;
     height: 4vh;
     display:flex;
     align-items:center;
     justify-content: center;
     background-color:white;
     border-radius:0.3vh;
+    bottom: 3vh;
+    right: 8vh;
+    position: absolute;
     box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.116);
     cursor: pointer;
     h2,a {
@@ -358,5 +361,9 @@
         position: relative;
         top: 0.2vh;
     }
+    a {
+        margin-right: 0.3vh;
+    }
 }
+
 

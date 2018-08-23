@@ -55,7 +55,9 @@
             <img class="game-back6" src="/assets/교정3.png">
             <img class="student1" src="/assets/걸어가는여자.png">
             <img class="student2" src="/assets/놀란표정.png">
+            <img class="student2-1" src="/assets/응.png">
             <img class="student3"src="/assets/혼나는표정.png">
+            <img class="student3-1" src="/assets/시무룩.png">
             <img class="student0" src="/assets/혼나는표정.png">
             <img class="student4"src="/assets/지나가는 남학생.png">
             <img class="student4-1"src="/assets/지나가는 남학생2.png">        
@@ -179,7 +181,9 @@
     function play_scene_1_5 () {
         setTimeout(function () {
             $(".teacher").css({"display": "none"});
-            $(".student3").css({"left": "40%"});
+            $(".student2-1").css({"display": "block"});
+             $(".student3").css({"display": "none"});
+            $(".student2-1").css({"left": "40%"});
             $(".game-back3").css({"display": "block"});
             $(".game-back2").css({"display": "none"});
             $(".talk2").css({"display":"block"})
@@ -190,16 +194,20 @@
         setTimeout(function () {
             $(".teacher").css({"display": "block"});
             $(".student3").css({"left": "70%"});
+             $(".student3").css({"display": "block"});
             $(".game-back3").css({"display": "none"});
             $(".game-back2").css({"display": "block"});
             $(".talk3").css({"display":"block"})
             $(".talk2").css({"display":"none"})
+             $(".student2-1").css({"display": "none"});
         },12000)
     };
        function play_scene_1_7 () {
         setTimeout(function () {
             $(".teacher").css({"display": "none"});
             $(".student3").css({"left": "40%"});
+               $(".student3").css({"display": "none"});
+                  $(".student3-1").css({"display":"block"})
            $(".game-back3").css({"display": "block"});
             $(".game-back2").css({"display": "none"});
             $(".talk4").css({"display":"block"})
@@ -211,6 +219,8 @@
             $(".teacher").css({"display": "block"});
              $(".game-back2").css({"display": "block"});
              $(".student3").css({"left": "70%"});
+            $(".student3").css({"display": "block"});
+                  $(".student3-1").css({"display":"none"})
            $(".game-back3").css({"display": "none"});
            $(".talk5").css({"display":"block"})
             $(".talk4").css({"display":"none"})
