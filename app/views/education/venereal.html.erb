@@ -1,0 +1,42 @@
+<div class="top-button" onclick="movetop()">
+    <img src="/assets/up.svg"  style="width: 6vh;height:6vh;z-index:1000;">
+    <h1 style=" font-weight:400; top:-2vh; position:relative;">Top</h1>
+</div>
+
+<div class="venereal">
+    <div class="vene-top">
+        <div class="vene-title">
+            <h1>멀고도 가까운 성병 알아보기</h1>
+        </div>
+        <div class=vene-subtitle>
+            <h1>나와는 거리가 멀어보이는 성병! 지금 당신과 함께 하고 있을 수도 있습니다.<br>
+            마우스를 올려보세요.</h1>
+        </div>
+
+        <div class="vene-select">
+            <h1 class="render-vene1">성별로 보기</h1>
+            <h1>이름별로 보기</h1>
+        </div>
+    </div>
+      
+      <%= render "human" %>
+    
+      <%= render "symtom" %>    
+       
+     <div class="education-gend">
+        <img src="/assets/whale1.gif" style="width: 400px; height: 400px;">
+        <h1>콘텐츠 준비중</h1>
+    </div>  
+</div> 
+
+
+<script>
+
+
+    $("body").css({"background-color": "#f8e4cc"});
+    function movetop() {
+        $('html, body').animate({scrollTop : 0}, 900);
+    }
+   
+
+</script>
