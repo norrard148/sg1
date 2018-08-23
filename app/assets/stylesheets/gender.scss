@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 
+=======
+.education-gend {
+    width: 100%;
+    height: 100%;
+    background-color: #1874d2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    h1 {
+        color: white;
+        font-weight: 500;
+    }
+}
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 
 .shadow {
     width: 100%;
@@ -243,7 +259,11 @@
 
     opacity: 1;
 }
+<<<<<<< HEAD
 .student0, .student1, .student2, .student3, .student3-1, .student4, .student4-1, .student4-2, .student2-1 {
+=======
+.student0, .student1, .student2, .student3, .student4, .student4-1, .student4-2 {
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     position:absolute;
     left:40%;
     bottom: 0%;
@@ -256,20 +276,26 @@
   left:40%;
   width: 35%;
 }
+<<<<<<< HEAD
 .student2-1 {
     width: 24%;
     height: 56%;
 }
+=======
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .student3 {
     height: 55%;
     width: 20%;
 
 }
+<<<<<<< HEAD
 
 .studnet3-1 {
     width: 25%;
     height: 55%;
 }
+=======
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .student0{ 
     height: 55%;
     width: 20%;
@@ -318,14 +344,22 @@
     width: 103%;
     height: 110%;
     display: none;
+<<<<<<< HEAD
     transition: top 3s linear 0s;
+=======
+
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 }
 .game-back2 {
     position: absolute;
     z-index: 1;
     left: 0;
     top: 0%;
+<<<<<<< HEAD
     width: 140%;
+=======
+    width: 130%;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     height: 130%;
     display:none;
 }
@@ -334,7 +368,11 @@
     z-index: 1;
     left:-30%;
     top:0%;
+<<<<<<< HEAD
     width: 140%;
+=======
+    width: 130%;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     height: 130%;
     display:none;
 }
@@ -343,7 +381,10 @@
     position: absolute;
     z-index: 1;
     left:-30%;
+<<<<<<< HEAD
     top: 0;
+=======
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     width: 250%;
     height: 250%;
     display:none;
@@ -361,13 +402,21 @@
 .game-back6 {
     position: absolute;
     z-index: 1;
+<<<<<<< HEAD
     right: -2%;
+=======
+    right: 0;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     top: 0;
     width: 130%;
     height: 130%;
     display:none;
 }
 .game-back-move {
+<<<<<<< HEAD
+=======
+    transition: top 3s linear 0s;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     top: 0%;
    
 
@@ -397,12 +446,16 @@
     right: 25%;
     top:30%;
 }
+<<<<<<< HEAD
 .talk4 {
     right: 18%;
 }
 .talk2 {
     right: 20%;
 }
+=======
+
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .talk5, .talk6, .talk7 {
     width: 35vh;
     height: 35vh;

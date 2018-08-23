@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     height: 100vh;
 }
 .main-1 h1 {
@@ -30,13 +31,26 @@
     margin-top:2vh;
     color:white;
     font-weight: 300;
+=======
+    height: 90vh;
+}
+.main-1 h1 {
+    font-size:  4vh;
+    
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 }
 
 .main-1 h2 {
     margin-top: 2vh;
+<<<<<<< HEAD
     font-size:  2.5vh;
     line-height:  4vh;
     font-weight: 300;
+=======
+    font-size:  2vh;
+    line-height: 200%;
+    font-weight: 200;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     text-align: center;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 3px rgb(110, 110, 110);
@@ -45,6 +59,7 @@
 .main-1-title {
     display: flex;
     margin-top: 10vh;
+<<<<<<< HEAD
     flex-direction:  column;
     align-items: center;
     position: relative;
@@ -79,6 +94,11 @@
     opacity:1;
 
 }
+=======
+   
+}
+
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .main-1-title h1 {
     font-size: 10vh;
 }
@@ -98,8 +118,13 @@
 }
 
 .pursuit {
+<<<<<<< HEAD
     width: 23vh;
     height:25vh;
+=======
+    width: 12%;
+    height:50%;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     
 }
 
@@ -136,7 +161,11 @@
     height: 27vh;
     background-color: aquamarine;
     overflow: hidden;
+<<<<<<< HEAD
     border: 1.3vh solid rgb(255, 255, 255);
+=======
+    border: 13px solid rgb(255, 255, 255);
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 }
 
 .circle img {
@@ -173,7 +202,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     width: 110vh;
+=======
+    width: 100%;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     height: 15vh;  
     margin-bottom: 5vh;
 }
@@ -239,11 +272,15 @@
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
 .main-4-0 {
     display:flex;
     justify-content: center;
     align-items: center;
 }
+=======
+
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .main-4-container {
     width: 70%;
     height: 90%;
@@ -345,7 +382,11 @@
     width: 12vh;
     height: 4vh;
     border-radius: 3vh;
+<<<<<<< HEAD
     border: 0.2vh solid rgb(103, 28, 107);
+=======
+    border: 2px solid rgb(103, 28, 107);
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     margin-bottom: 2.5vh;
     display: flex;
     align-items: center;
@@ -373,7 +414,11 @@
 }
 
 .main-4-1-button h1 {
+<<<<<<< HEAD
     font-size: 1.5vh;
+=======
+    font-size: 16px;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     text-align: center;
     font-weight: 700;
     color: rgb(103, 28, 107);
@@ -507,6 +552,7 @@
     -webkit-box-orient: vertical; 
 }
 
+<<<<<<< HEAD
 .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     width: 0.6vh;
 }
@@ -537,3 +583,5 @@
 .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail {
     width: 0.6vh;
 }
+=======
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9

@@ -14,6 +14,7 @@
 
 <div class="user">
     <div class="user-profile">
+<<<<<<< HEAD
         <img class="user-profile-backimg" src="https://mediaslide-europe.storage.googleapis.com/eastwest/pictures/2038/8528/large-1511786157-bdf535c0ed070ecb167f0936503bd22a.jpg">
         
         
@@ -22,12 +23,30 @@
             
             <h2><%=if current_user.age ==nil then "Young Jae"  else current_user.sumnail end%></h2>
             <h3><%=if current_user.age ==nil then "norrard@naver.com"  else current_user.email end%></h3>
+=======
+        <%= if current_user.avatar ==nil then
+          image_tag(current_user.avatar.fallback)
+        else
+          image_tag(current_user.avatar.url(:thumb))
+        end %>
+        
+        
+        <div class="user-profile-content">
+            <h1><%=if current_user.age ==nil then "미입력"  else current_user.age end%></h1>
+            
+            <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%></h2>
+            <h3><%=if current_user.email ==nil then "미입력"  else current_user.email end%></h3>
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
         
         
         </div>
         <div class="user-profile-content-box">
             <div class="modi">
+<<<<<<< HEAD
                 <h1>Settings</h1>
+=======
+                <%= link_to "수정하기", edit_user_registration_path %>
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
             </div>
             <div class="like">
             <img src="/assets/heart.svg">

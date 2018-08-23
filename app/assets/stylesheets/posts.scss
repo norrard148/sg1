@@ -126,7 +126,11 @@
     padding: 0 2vh 4vh 2vh;
     left: 23vw;
     width:70vw;
+<<<<<<< HEAD
     min-height: 116vw;
+=======
+    min-height: 150vh;
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     background-color: rgb(248, 248, 248);
     border-radius:0.5vh;
     box-shadow: 3vh 4vh 8vh rgba(19, 1, 1, 0.342);
@@ -234,6 +238,7 @@
     overflow: hidden;
     white-space:normal;
     text-overflow: hidden;
+<<<<<<< HEAD
     position: relative;
 
 }
@@ -246,6 +251,20 @@
     white-space:normal;
 }
 
+=======
+    h1 {
+        white-space:normal;
+        font-size: 3vh;
+    }
+    h2 {
+        font-size: 3vh;
+        white-space:normal;
+        
+    }
+}
+
+
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
 .post-show-new-comment {
     width: 100%;
     min-height: 5vh;
@@ -330,6 +349,7 @@
 }
 .post-show {
     min-height: 50vh;
+<<<<<<< HEAD
 }
 
 .post-show-content  {
@@ -367,3 +387,6 @@
 }
 
 
+=======
+}
+>>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
