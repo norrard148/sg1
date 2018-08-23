@@ -476,7 +476,7 @@
 }
 
 .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    width: 1vh;
+    width: 0.6vh;
 }
 
 .mCSB_container {
@@ -494,4 +494,14 @@
 
 #mCSB_1_container {
     position:absolute;
+}
+
+
+
+.mCSB_scrollTools {
+    right: 1.3vh;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail {
+    width: 0.6vh;
 }
