@@ -32,12 +32,9 @@ ActiveRecord::Schema.define(version: 20180823093426) do
     t.integer "author_id"
     t.string "time"
     t.integer "in"
-<<<<<<< HEAD
     t.integer "like"
     t.string "likeauthor_id"
     t.string "hashtag"
-=======
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,11 +47,7 @@ ActiveRecord::Schema.define(version: 20180823093426) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-<<<<<<< HEAD
-    t.string "sumnail"
-=======
     t.string "name"
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     t.string "age"
     t.string "sex"
     t.string "reset_password_token"

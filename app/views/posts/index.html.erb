@@ -35,7 +35,6 @@
             <h1>데이트</h1>
           </div>
         </div>
-<<<<<<< HEAD
         <div class="post-index-celebrate" style="height: 12vh;">
           
           <div class="post-index-celebrate-content" > 
@@ -43,8 +42,6 @@
             <h2>Team : KU 성애</h2>
           </div>
         </div>
-=======
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
         <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -52,7 +49,6 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-<<<<<<< HEAD
           <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -81,8 +77,6 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-=======
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
         <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -110,15 +104,12 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-<<<<<<< HEAD
         <div class="post-index-menu">
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
-=======
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
          <div class="post-index-menu">
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
@@ -126,10 +117,7 @@
           </div>
         </div>
         
-<<<<<<< HEAD
         
-=======
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
   </div>
   <div class="post-index-container">
     <div class="post-index-container-top">
@@ -139,11 +127,7 @@
       </div>
       <div class="post-search" style="">
         <h1>검색 :</h1>
-<<<<<<< HEAD
         <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
-=======
-        
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
         <input id = "myInput" type = "text" placeholder = "Search..">
       </div>
     </div>
@@ -154,16 +138,9 @@
       <h1 class="category-name">성고민</h1>
       <h1 class="category-name">성생활</h1>
       </div>
-<<<<<<< HEAD
       <%= link_to '새글쓰기', new_post_path, :class => "new-post" %>
     </div>
     
-=======
-      <%= link_to '새글쓰기', new_post_path, :class => "new-post" %> 
-    </div>
-    
-    
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     <table class="post-index-container-box">
         <tr class="tr1">
           <th class="td1">제목</th>
@@ -176,21 +153,13 @@
         <% @posts.each do |post| %>
           <tr class="tr2">
             <td class="td1"><%= link_to post.title, post %></td>
-<<<<<<< HEAD
             <td class="td2"><%@usernumber=post.author_id%>
             <%=User.find_by_id(post.author_id).email %></td>
-=======
-            <td class="td2"><%@usernumber=post.author_id%><%user=User.find_by_id(@usernumber)%><%=user.email%></td>
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
             <td class="td3"><%=post.time%></td> 
             <td class="td4"><%=post.in%></td>
             <%# <td class="td5"><%= link_to 'Show', post   %>
                <%# <td class="td5"><%= link_to 'Destroy', post, method: 'delete', data: { confirm: 'Are you sure?' }%>
               <%# # <%= link_to 'Edit', edit_post_path(post) %> 
-<<<<<<< HEAD
-=======
-              
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
           </tr>
         <% end %>
       </tbody>

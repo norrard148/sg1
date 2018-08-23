@@ -82,19 +82,10 @@ class PostsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
-
-
-  # DELETE /posts/1
-  # DELETE /posts/1.json
-  def destroy
-
-=======
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
     if user_signed_in?
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
       if @post.author_id == current_user.id
         @post.comments.destroy_all
         @post.destroy
@@ -103,12 +94,8 @@ class PostsController < ApplicationController
           format.json { head :no_content }
         end
       end
-<<<<<<< HEAD
-    
-=======
     redirect_to "/posts"
     end
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
   end
 
   private
@@ -120,10 +107,6 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
 
-<<<<<<< HEAD
       params.require(:post).permit(:title, :content, :user_id, :hashtag)
-=======
-      params.require(:post).permit(:title, :content, :user_id)
->>>>>>> 68a445cba24cb6a6e671184dba0366d95c4a09e9
     end
 end
