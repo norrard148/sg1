@@ -23,12 +23,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 .main-1 h1 {
     font-size:  4vh;
     margin-top:2vh;
-    font-weight: 400;
+    color:white;
+    font-weight: 300;
 }
 
 .main-1 h2 {
@@ -46,12 +47,38 @@
     margin-top: 10vh;
     flex-direction:  column;
     align-items: center;
+    position: relative;
     img {
-        height: 10vh;
+        margin-top: 4vh;
+        height: 35vh;
         width: auto;
+    // text-shadow: 1px 2px 4px black;
     }
 }
 
+
+.main-1-title:before {
+    content: '';
+    width: 25vh;
+    height: 25vh;
+    position:absolute;
+    background: url("이럴때있다말풍선.svg") 100% 100% no-repeat;
+   top: -13vh;
+   left:9vh;
+    opacity:1;
+
+}
+.main-1-title:after {
+    content: '';
+    width: 25vh;
+    height: 25vh;
+    position:absolute;
+    background: url("물음표.svg") 100% 100% no-repeat;
+   top: -7vh;
+   right:12vh;
+    opacity:1;
+
+}
 .main-1-title h1 {
     font-size: 10vh;
 }
@@ -212,7 +239,11 @@
     justify-content: center;
     align-items: center;
 }
-
+.main-4-0 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-4-container {
     width: 70%;
     height: 90%;
