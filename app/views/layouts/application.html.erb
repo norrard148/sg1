@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>성교 </title>
+    <%= csrf_meta_tags %>
+    
+  
+    
+    <%# <script src="https://apis.google.com/js/platform.js" async defer></script> %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+     <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="google-signin-client_id" content="336256666389-timddavdks14cnn1jhqv6qqpcjuo4s37.apps.googleusercontent.com">
+   
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/peach.ico" />
+   
+     <style>
+    @media only screen and (min-width:0) {
+        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+            width: 140vh;
+        }
+        .nav {
+          position: fixed;
+        }
+    }
+    @media only screen and (min-width: 140vh) {
+        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+            width: 100%;
+        }
+         .nav {
+          position: fixed;
+        }
+    }
+   
+  </style>
+
+  </head>
+ 
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <a href="/"><img src="/assets/성교한글1.svg" style="height: 15vh;width: auto;top:0.3vh;position:relative;"></a>
+        <a href="/" class="small">性스러운 가르침</a>
+     
+      </div>
+      <div class="nav-menu-box">
+          <a class="nav-menu" href="/" style="top:-0.2vh;height: 6.5vh;">
+            <img src="/assets/main.svg" >
+            <h1 style="top:-0.7vh">Main</h1>
+          </a>
+          <a class="nav-menu" href="/education/index">
+            <img src="/assets/book.svg">
+            <h1>Education</h1>
+          </a>
+          <a class="nav-menu" href="/posts" >
+            <img src="/assets/community1.svg" style="top:0vh;height: 6.5vh;">
+            <h1 style="top:-2.3vh">Community</h1>
+          </a>
+           <a class="nav-menu" href="/counsel/index" >
+            <img src="/assets/counsel.svg" style="top:-0.2vh;height:5.2vh">
+            <h1 style="top:-1.4vh">Counsel</h1>
+          </a>
+          <% if user_signed_in? %>
+          
+            <a class="nav-menu" href="/user/index" >
+              <img src="/assets/account.svg" style="top:0vh;height:4vh">
+              <h1 style="top:-0.8vh">Account</h1>     
+            </a>
+            <%= link_to destroy_user_session_path, method: :delete, :class => "nav-menu" do%>
+              <img src="/assets/logout.svg" style="top:0vh;height:4vh">
+              <h1 style="top:-0.8vh">Logout</h1>   
+            <%end%>
+          <% else %>
+           <a class="nav-menu" href="/users/sign_in" >
+            <img src="/assets/account.svg" style="top:0vh;height:4vh">
+            <h1 style="top:-0.8vh">Login</h1>     
+          </a>
+          <% end %>
+      </div>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  
+  </body>
+</html>
+

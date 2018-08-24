@@ -1,0 +1,44 @@
+<div class="top-button" onclick="movetop()">
+    <img src="/assets/up.svg"  style="width: 6vh;height:6vh;z-index:1000;">
+    <h1 style=" font-weight:400; top:-2vh; position:relative;">Top</h1>
+</div>
+
+    <div class="vene-top">
+    
+    
+        <div class="vene-title">
+        <div style="width: 30vh;height: 30vh;overflow:hidden;display:Flex;position:relative;justify-content:center;align-items:center;overflow:hidden;">
+        <img src="/assets/칸채우기.svg" style="width:40vh;height: 40vh;position:Absolute;">
+        </div>
+            <h1>멀고도 가까운 성병 알아보기</h1>
+        </div>
+        <div class=vene-subtitle>
+            <h1>나와는 거리가 멀어보이는 성병! 지금 당신과 함께 하고 있을 수도 있습니다.<br>
+            마우스를 올려보세요.</h1>
+        </div>
+
+        <div class="vene-select">
+            <%=link_to '성별로 보기',education_go_path , remote: true, :class=>"render-vene1", :id=>"render1" %>
+            <%=link_to '이름별로 보기',education_go1_path , remote: true, :class=>"render-vene1", :d => "render2" %>
+           
+           
+        </div>
+    </div>
+      
+     
+    
+</div> 
+
+
+<script>
+
+var a = 0;
+    $("body").css({"background-color": "#f8e4cc"});
+    function movetop() {
+        $('html, body').animate({scrollTop : 0}, 900);
+    }
+    
+
+
+    
+</script>
