@@ -24,7 +24,7 @@
            
         </div>
     </div>
-    </div>
+    
      
     
 </div> 
@@ -42,3 +42,38 @@ var a = 0;
 
     
 </script>
+
+
+<script>
+    function leftMove() {
+        if (quiz_number == 9) {
+            $(".quiz-right").css({"display": "block"});
+        }
+          if (quiz_number == 2) {
+            $(".quiz-left").css({"display": "none"});
+        }
+        if (quiz_number > 1) {
+             quiz_number-=1
+            var offset = $(".quiz-2").offset();
+            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+            
+        }
+    
+    }
+
+    function rightMove() {
+         if (quiz_number == 1) {
+            $(".quiz-left").css({"display": "block"});
+        }
+         if (quiz_number == 8) {
+            $(".quiz-right").css({"display": "none"});
+        }
+        if (quiz_number < 9) {
+         quiz_number +=1
+            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+               
+        }
+    }
+
+
+</script> 
