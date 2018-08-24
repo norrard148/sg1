@@ -79,21 +79,22 @@ align-items: center;
     background-color : #0e2335;
 }
 .warning {
+    margin-top: 6vh;
     width: 95vh;
-    height: 70vh;
+    height: 40vh;
     padding: 5vh;
     background-color:#fa5663;
-    box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.123);
-    border-radius: 0.5vh;
+    box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.411);
+    border-radius: 0.7vh;
     flex-direction:column;
     display: flex;
-    margin-bottom: 6vh;
-
+    margin-bottom: 3vh;
+    align-items:center;
 }
 
 
 .vene-bottom .warning img {
-
+        margin-top:-3vh;
         width: 20vh;
         height: 20vh;
     
