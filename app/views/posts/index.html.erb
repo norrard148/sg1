@@ -3,7 +3,12 @@
 
   $("body").css({"background-color": "rgb(100, 33, 33)"});
 
-      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+
+</script>
+
+
+      <%# var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       var labelIndex = 0;
 
       function initialize() {
@@ -33,12 +38,7 @@
         });
       }
 
-      google.maps.event.addDomListener(window, 'load', initialize);
-
-
-</script>
-
-
+      google.maps.event.addDomListener(window, 'load', initialize); %>
 
 
 
@@ -57,27 +57,28 @@
           </div>
           <div class="popular">
             <h1>1</h1>
-            <h1></h1>
+            <h1 class="pol1"></h1>
           </div>
           <div class="popular">
             <h1>2</h1>
-            <h1></h1>
+            <h1 class="pol2"></h1>
+            
           </div>
           <div class="popular">
             <h1>3</h1>
-            <h1></h1>
+            <h1 class="pol3"></h1>
           </div>
           <div class="popular">
             <h1>4</h1>
-            <h1></h1>
+            <h1 class="pol4"></h1>
           </div>
           <div class="popular">
             <h1>5</h1>
-            <h1></h1>
+            <h1 class="pol5"></h1>
           </div>
           <div class="popular">
             <h1>6</h1>
-            <h1></h1>
+            <h1 class="pol6"></h1>
           </div>
         </div>
         <div class="post-index-celebrate" style="height: 12vh;">
@@ -150,7 +151,7 @@
           </div>
         </div>
         
-         <div class="post-index-menu">
+         <div class="post-index-menu" style="height: 15vw">
           <div id="map" style="margin-left:-1vw; margin-top:-1.8vh;"></div>
         </div>
         
@@ -164,13 +165,14 @@
       </div>
       <div class="post-search" style="">
 
-
         <h1>검색 :</h1>
         <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
-        <form action="/posts/index" method="post">
-          <input name="key" id="myInput" type="text" placeholder="Search...">
-          <input id="mySearch" type="submit" value="OK!" class="searchbutton">
+        
+    <form action="/posts/gg" method="post" data-remote="true">
+          <input name="key" id="myInput" type="text" placeholder="Search..." >
+          <input id="mySearch" type="submit" value="Find" class="searchbutton" style="width: 4vw;text-align:center;padding-right:0.5vw">
         </form>
+        
 
       </div>
     </div>
@@ -216,10 +218,20 @@
 
   $(document).ready(function(){
     $("#mySearch").on("click", function(){
-      var value = $("#myInput").val();
-        $("#myTable > tr").filter(function(){
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
+     
+
+
     });
   });
+
+
+
+setInterval(function() {
+ $.ajax({
+          url:  "/posts/ggg",
+          method: "POST"
+         
+        });
+
+},1000);
 </script>

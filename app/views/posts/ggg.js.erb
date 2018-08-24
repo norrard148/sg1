@@ -1,0 +1,14 @@
+<% @db = Keyword.find_by_sql("SELECT * FROM Keywords ORDER BY number DESC")%>
+
+$(".pol1").html("<%=@db[0].keyword%>")
+
+$(".pol2").html("<%=@db[1].keyword%>")
+
+$(".pol3").html("<%=@db[2].keyword%>")
+
+$(".pol4").html("<%=@db[3].keyword%>")
+
+$(".pol5").html("<%=@db[4].keyword%>")
+
+$(".pol6").html("<%=@db[5].keyword%>")
+
