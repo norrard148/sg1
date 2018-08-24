@@ -58,3 +58,44 @@ align-items: center;
  align-items: center;
  margin-top: -25vh;   
 }
+
+
+.warning {
+    width: 95vh;
+}
+
+.stage1 {
+    background-color : #1d4b74;
+}
+
+
+.stage2 {
+    background-color : #1b4264;
+}
+.stage3 {
+    background-color : #132e47;
+}
+.stage4 {
+    background-color : #0e2335;
+}
+.warning {
+    margin-top: 6vh;
+    width: 95vh;
+    height: 40vh;
+    padding: 5vh;
+    background-color:#fa5663;
+    box-shadow: 1vh 1vh 4vh rgba(0, 0, 0, 0.411);
+    border-radius: 0.7vh;
+    flex-direction:column;
+    display: flex;
+    margin-bottom: 3vh;
+    align-items:center;
+}
+
+
+.vene-bottom .warning img {
+        margin-top:-3vh;
+        width: 20vh;
+        height: 20vh;
+    
+    }
