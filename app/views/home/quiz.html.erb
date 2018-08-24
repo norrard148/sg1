@@ -40,18 +40,27 @@
                      <%end%>
                 </div>
                 <div class="quiz-2-container-answer">
-                    <div class="yes">
+                    <button class="yes" onclick="rightMove()">
                         <h2>Yes!</h2>
                         <h3>100% 맞다!</h3>
-                    </div>
-                    <div class="no">
+                    </button>
+                    <button class="no" onclick="rightMove()">
                         <h2>No!</h2>
                         <h3>100%는 아니다!</h3>
-                    </div>
+                    </button>
                 </div>
             </div>
        <%i+=1%>
-        <%end%> 
+        <%end%>
+        <div class="quiz-2-container-content">
+                <div id="quiz-10" class="quiz-2-container-content-box" style="background-color:#<%=a[2]%>">
+                <div style="height:15vw;overflow:hidden;position:relative;">
+                <img src="/assets/hurray">
+                </div>
+                    <h2 id="answeris" style="margin-top:2vw"> 결과 </h2>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </div>
@@ -99,16 +108,23 @@
          if (quiz_number == 1) {
             $(".quiz-left").css({"display": "block"});
         }
-         if (quiz_number == 8) {
+         if (quiz_number == 9) {
             $(".quiz-right").css({"display": "none"});
         }
-        if (quiz_number < 9) {
+        if (quiz_number < 10) {
          quiz_number +=1
             $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
                
         }
     }
+
+    var n = 0;
+    var yess = querySelector(".yes")
+
+
+    var answer = document.getElementById("answeris")
     
+    answer.textContent = "당신은 " + n + "개의 문제를 맞췄습니다!";
 </script>
     
     
