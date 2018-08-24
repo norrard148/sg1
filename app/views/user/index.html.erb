@@ -15,19 +15,21 @@
 <div class="user">
     <div class="user-profile">
         <%= if current_user.avatar ==nil then
-          image_tag(current_user.avatar.fallback)
+        #   image_tag(current_user.avatar.fallback)
         else
-          image_tag(current_user.avatar.url(:thumb))
+        #   image_tag(current_user.avatar.url(:thumb))
         end %>
         
         
         <div class="user-profile-content">
-            <h1><%=if current_user.age ==nil then "미입력"  else current_user.age end%></h1>
+            <%# <h1><%=if current_user.age ==nil then "미입력"  else current_user.age end%>
             
-            <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%></h2>
-            <h3><%=if current_user.email ==nil then "미입력"  else current_user.email end%></h3>
-        
-        
+            <%# <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%> 
+            <%# <h3><%=if current_user.email ==nil then "미입력"  else current_user.email end%>
+        <h1>Age</h1>
+         <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%>
+   UserName</h2>
+         <h3><%==if current_user.email ==nil then "미입력"  else current_user.email end%></h3>
         </div>
         <div class="user-profile-content-box">
             <div class="modi">
@@ -38,11 +40,17 @@
             </div>
         </div>
     </div>
-    <div class="user-profile-action">
+    <div class="user-profile-action" style="display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#1874d2">
+    <img src="/assets/whale1.gif" style="height: 30vh;width:30vh;">
+    <h1 style="color:white;font-size:3vh;font-weight:400;">콘텐츠 준비중!</h1>
     </div>
-    <div class="user-profile-mypost">
+    <div class="user-profile-mypost" style="display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#1874d2">
+    <img src="/assets/whale1.gif" style="height: 30vh;width:30vh;">
+    <h1 style="color:white;font-size:3vh;font-weight:400;">콘텐츠 준비중!</h1>
     </div>
-    <div class="user-profile-tagpost">
+    <div class="user-profile-tagpost" style="display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#1874d2">
+    <img src="/assets/whale1.gif" style="height: 30vh;width:30vh;">
+    <h1 style="color:white;font-size:3vh;font-weight:400;">콘텐츠 준비중!</h1>
     </div>
 </div>
 

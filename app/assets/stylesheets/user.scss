@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: flex-end;
     box-shadow: 1vh 2vh 2vh rgba(0, 0, 0, 0.192);
- 
+    background-color:rgb(80, 11, 11);
 }
 
 .user-profile-backimg {
@@ -57,6 +57,7 @@
     width: 100%;
     padding:0 2vw 1vw 2vw;
     z-index:1;
+   
     h1 {
         font-size: 3vw;
         margin-bottom: 0.5vw;
@@ -110,10 +111,10 @@
     align-items: center;
     flex-direction: column;
     box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.103);
-    h1 {
-        font-size: 1.3vw;
+    a {
+        font-size: 1.1vw;
         color:white;
-        font-weight: 300;
+        font-weight: 400;
     }
    
 } 

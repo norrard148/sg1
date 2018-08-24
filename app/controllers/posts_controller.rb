@@ -9,12 +9,35 @@ class PostsController < ApplicationController
       format.html
       format.json
     end
-
-    @a = Keyword.new
-    @a.keyword = params[:key].to_s()
-    @a.save
-
+   
   end
+  def ggg
+  end
+  def gg
+      
+      @b = Keyword.all
+      @c = 0
+      @b.each do |b|
+        if b.keyword == params[:key].to_s()
+         b.number +=1
+         b.save()
+         @c = 1
+        break
+        end
+      end
+      if @c ==1
+         
+      else
+        @a = Keyword.new
+        @a.keyword = params[:key].to_s()
+        @a.number = 0;
+        @a.save()
+      end
+    
+end
+
+ 
+  
 
 
   def go

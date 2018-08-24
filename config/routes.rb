@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   get 'education/venereal'
 
-  post 'posts/index'
-  
+  post 'posts/gg'
+  post 'posts/ggg'
   get 'education/contraception'
   get 'education/go'
   get 'education/go1'
