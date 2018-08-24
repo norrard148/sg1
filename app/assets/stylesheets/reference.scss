@@ -1,5 +1,5 @@
 .reference {
-    position: fixed;
+   position:absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -10,18 +10,18 @@
     background-color: #1e1e1e;
     width :100%;
     height:100%;
-    margin-left: 10%;
+   
 }
 
 .reference:hover{
     width :100%;
     height:100%;
-    position: fixed;
+    position: absolute;
     background-color: darkgray;
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
-    margin-left: 10%;
+  
     top: 0;
     left: 0;
     display:flex;

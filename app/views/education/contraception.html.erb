@@ -76,32 +76,32 @@ var a = 0;
         }
     }
 
-     var quiz_number=1;
-    function leftMove() {
-        if (quiz_number == 4) {
+    var quiz_numbers =1;
+    function leftMove1() {
+        if (quiz_numbers == 4) {
             $(".quiz-right1").css({"display": "block"});
         }
-          if (quiz_number == 2) {
+          if (quiz_numbers == 2) {
             $(".quiz-left1").css({"display": "none"});
         }
-        if (quiz_number > 1) {
-             quiz_number-=1
-            $('.gg1').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+        if (quiz_numbers > 1) {
+             quiz_numbers-=1
+            $('.gg-1').animate({left : `-${(quiz_numbers-1)*95}vh`}, 600);
             
         }
     
     }
 
-    function rightMove() {
-         if (quiz_number == 1) {
+    function rightMove1() {
+         if (quiz_numbers == 1) {
             $(".quiz-left1").css({"display": "block"});
         }
-         if (quiz_number == 3) {
+         if (quiz_numbers == 3) {
             $(".quiz-right1").css({"display": "none"});
         }
-        if (quiz_number < 4) {
-            quiz_number+=1
-            $('.gg1').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+        if (quiz_numbers < 4) {
+            quiz_numbers+=1
+            $('.gg-1').animate({left : `-${(quiz_numbers-1)*95}vh`}, 600);
                
         }
     }
