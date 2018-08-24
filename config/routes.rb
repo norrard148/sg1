@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   get 'education/contraception'
   get 'education/go'
   get 'education/go1'
-  post 'posts/index'
+  get 'education/go2'
+  get 'education/go3'
   devise_for :users
-  get 'posts/go/:id', to: 'posts#go', as: 'posts_g'
   resources :posts
   get 'home/index'
   

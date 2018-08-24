@@ -131,9 +131,7 @@
         <h1>검색 :</h1>
         <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
         <%= form_tag(posts_path, method: :post) do %>
-          <%= text_field_tag :keywords, params[:term] %>
-          
-          <input id="myInput" type = "text" placeholder = "Search.." name="keywords">
+          <div id="myInput"> <%= text_field_tag :keywords, params[:term] %> </div>
           <input id="mySearch" type="submit" value="OK!">
         </form>
 
@@ -178,7 +176,6 @@
 <script>
 
   $("body").css({"background-color": "rgb(100, 33, 33)"});
-
 
   $(document).ready(function(){
     $("#mySearch").on("click", function(){

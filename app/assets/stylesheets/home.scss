@@ -7,15 +7,15 @@
 .main-1 {
     padding-top: 9vh;
     position:  relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: #954ba2;
-    background: #954ba2 url("main-1-back.png") 50% 0 repeat
+    background: #954ba2 url("main-1-back.png") 100% 100% repeat
 }
 
 .main-1-container {
@@ -23,18 +23,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    width:100vw;
+    position:relative;
 }
 .main-1 h1 {
     font-size:  4vh;
-    margin-top:2vh;
+    margin-top:12vh;
+    color:white;
+    font-weight: 300;
 }
 
 .main-1 h2 {
     margin-top: 2vh;
-    font-size:  2vh;
-    line-height: 200%;
-    font-weight: 200;
+    font-size:  2.5vh;
+    line-height:  4vh;
+    font-weight: 300;
     text-align: center;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 3px rgb(110, 110, 110);
@@ -42,18 +46,44 @@
 
 .main-1-title {
     display: flex;
-    margin-top: 10vh;
+    margin-top: 20vh;
     flex-direction:  column;
     align-items: center;
+    justify-content: center;
+    position: relative;
     img {
-        height: 10vh;
-        width: auto;
+        position:absolute;
+        margin-top: 4vh;
+        height: 20vh;
+        width: 35vh;
+    // text-shadow: 1px 2px 4px black;
     }
 }
 
-.main-1-title h1 {
-    font-size: 10vh;
+
+.main-1-title:before {
+    content: '';
+    width: 25vh;
+    height: 25vh;
+    position:absolute;
+    background: url("물음표.svg") 100% 100% no-repeat;
+   top: -13vh;
+   left:9vh;
+    opacity:1;
+
 }
+.main-1-title:after {
+    content: '';
+    width: 25vh;
+    height: 25vh;
+    position:absolute;
+    background: url("이럴때있다말풍선.svg") 100% 100% no-repeat;
+   top: -22vh;
+   right:12vh;
+    opacity:1;
+
+}
+
 
 
 /*main-2*/
@@ -70,8 +100,8 @@
 }
 
 .pursuit {
-    width: 12%;
-    height:50%;
+    width: 23vh;
+    height:25vh;
     
 }
 
@@ -211,7 +241,11 @@
     justify-content: center;
     align-items: center;
 }
-
+.main-4-0 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-4-container {
     width: 70%;
     height: 90%;
@@ -476,7 +510,7 @@
 }
 
 .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    width: 1vh;
+    width: 0.6vh;
 }
 
 .mCSB_container {
@@ -494,4 +528,14 @@
 
 #mCSB_1_container {
     position:absolute;
+}
+
+
+
+.mCSB_scrollTools {
+    right: 1.3vh;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail {
+    width: 0.6vh;
 }

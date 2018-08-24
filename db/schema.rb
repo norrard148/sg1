@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180823214328) do
     t.integer "in"
     t.integer "like"
     t.string "likeauthor_id"
+    t.string "hashtag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 20180823214328) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "sumnail"
+    t.string "name"
     t.string "age"
     t.string "sex"
     t.string "reset_password_token"
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 20180823214328) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

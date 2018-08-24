@@ -8,6 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.integer :in
       t.integer :like
       t.string :likeauthor_id
+      t.string :hashtag
       t.timestamps
     end
   end

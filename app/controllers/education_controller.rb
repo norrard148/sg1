@@ -16,4 +16,9 @@ class EducationController < ApplicationController
 
   def go1
   end
+  def go2
+  end
+  def go3
+  end
+  
 end

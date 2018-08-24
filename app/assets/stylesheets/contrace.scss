@@ -1,0 +1,60 @@
+.vene-box-img {
+width: 25vh;
+height: 25vh;
+background-color: #ff7f9b;
+border-radius: 0.4vh;
+display:flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.title {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#stage {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vh;
+    height: 20vh;
+   
+    border-radius: 0.5vh;
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.411);
+    justify-content: center;
+    h1 {
+        font-size: 3.2vh;
+        font-weight:400;
+       margin-bottom: 0;
+       color: white;
+    }
+    h2  {
+        color: white;
+      margin-top: 0;
+        font-size: 2.5vh;
+    }
+
+    h3 {
+        color: white;
+        font-size: 2vh;
+    }
+}
+.color-blue {
+    background-color:#153450;
+}
+
+#stage {
+    margin-top: 5vh;
+}
+
+.vene-title {
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-top: -25vh;   
+}
