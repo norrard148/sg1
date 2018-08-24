@@ -3,16 +3,6 @@
 
   $("body").css({"background-color": "rgb(100, 33, 33)"});
 
-
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function(){
-      var value = $(this).val();
-        $("#myTable > tr").filter(function(){
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-    });
-  });
-
       var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       var labelIndex = 0;
 
@@ -67,27 +57,27 @@
           </div>
           <div class="popular">
             <h1>1</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
           <div class="popular">
             <h1>2</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
           <div class="popular">
             <h1>3</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
           <div class="popular">
             <h1>4</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
           <div class="popular">
             <h1>5</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
           <div class="popular">
             <h1>6</h1>
-            <h1>데이트</h1>
+            <h1></h1>
           </div>
         </div>
         <div class="post-index-celebrate" style="height: 12vh;">
@@ -177,9 +167,9 @@
 
         <h1>검색 :</h1>
         <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
-        <%= form_tag(posts_path, method: :post) do %>
-          <div id="myInput"> <%= text_field_tag :keywords, params[:term] %> </div>
-          <input id="mySearch" type="submit" value="OK!">
+        <form action="/posts/index" method="post">
+          <input name="key" id="myInput" type="text" placeholder="Search...">
+          <input id="mySearch" type="submit" value="OK!" class="searchbutton">
         </form>
 
       </div>

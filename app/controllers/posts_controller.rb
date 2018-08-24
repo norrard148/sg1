@@ -10,8 +10,10 @@ class PostsController < ApplicationController
       format.json
     end
 
-    @keywords = Keyword.new
-    @keywords = params[:keyword]
+    @a = Keyword.new
+    @a.keyword = params[:key].to_s()
+    @a.save
+
   end
 
 
@@ -99,7 +101,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-
       params.require(:post).permit(:title, :content, :user_id, :hashtag)
     end
   end

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'education/genderequality'
 
   get 'education/venereal'
+
+  post 'posts/index'
   
   get 'education/contraception'
   get 'education/go'
