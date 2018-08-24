@@ -8,81 +8,94 @@
         <h1 class="category" >게임 목록</h1>
             <div class="gender-game-menu-category on1">
             <h1>학교</h1>
-            <h2 class="on"><img src="/assets/arrow4.svg"> 1. 아침 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            <h2 class="on">
+            <%= image_tag("arrow4.svg") %>
+             1. 아침 등교 시...</h2>
+                
+
+            <h2><%= image_tag("arrow4.svg")%> 1. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 2. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 3. 아침 학교 등교 시...</h2>
             
 
             </div>
                <div class="gender-game-menu-category">
                <h1>학원</h1>
-            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 1. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 2. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%>> 3. 아침 학교 등교 시...</h2>
             
             </div>
              <div class="gender-game-menu-category">
             <h1>집</h1>
-            <h2><img src="/assets/arrow4.svg"> 1. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 2. 아침 학교 등교 시...</h2>
-            <h2><img src="/assets/arrow4.svg"> 3. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 1. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 2. 아침 학교 등교 시...</h2>
+            <h2><%= image_tag("arrow4.svg")%> 3. 아침 학교 등교 시...</h2>
             </div>
             
         </div>
     </div>
     <div class="gender-game-content">
          <div class="gender-top">
-            <img class="game-logo" src="/assets/game.svg">
+             <%= image_tag("game.svg", :class => "game-logo") %>
             <div class="game-top-text" style="">
             <h1>연애 시뮬레이션 게임</h1>
             <h2>게임을 통해 젠더평등 배워보자</h2>
             <h3>Made By @KU Seung Aae</h3>
             <h4>@ Copyright : 네이버 웹툰 연놈</h4>
             </div>
-            <img src="/assets/share.svg" style="position:absolute;top: 1.5vh;right:2vh;">
-            <img src="/assets/세팅.svg" style="position:absolute;top: 2vh;right:7vh;width:3vh;height:3vh">
+
+            <%= image_tag("share.svg", {:style=> "position:absolute;top: 1.5vh;right:2vh;"}) %>
+            <%= image_tag("세팅.svg", {:style=> "position:absolute;top: 2vh;right:7vh;width:3vh;height:3vh;"}) %>
+
         </div>
         <div class="gender-main-game">
-        <img class="back" src="/assets/play.gif">
-            <img class="game-back" src="/assets/학교.png">
+        <div class="back">
+            <%= image_tag("play.gif")%>
+                <div class="game-back">
+                    <%= image_tag("학교.png")%>
+                </div>
+        </div>
             <h1 onclick="play_scene_1()" >Click To Play!</h1>
+            <%= image_tag("교정1.png", :class => "game-back2") %>
+            <%= image_tag("교정1.png", :class => "game-back3") %>
+            <%= image_tag("교정2.png", :class => "game-back4") %>
+            <%= image_tag("교정2.png", :class => "game-back5") %>
+            <%= image_tag("교정3.png", :class => "game-back6") %>
+            <%= image_tag("걸어가는여자.png", :class => "student1") %>
+            <%= image_tag("놀란표정.png", :class => "student2") %>
+            <%= image_tag("응.png", :class => "student2-1") %>
+            <%= image_tag("혼나는표정.png", :class => "student3") %>
+            <%= image_tag("시무룩.png", :class => "student3-1") %>
+            <%= image_tag("혼나는표정.png", :class => "student0") %>
+            <%= image_tag("지나가는 남학생.png", :class => "student4") %>            
+            <%= image_tag("지나가는 남학생2.png", :class => "student4-1") %>
+            <%= image_tag("지나가는 남학생3.png", :class => "student4-2") %>
+            <%= image_tag("학주.png", :class => "teacher") %>
+            <%= image_tag("거기.png", :class => "talk talk0") %>
+            <%= image_tag("거기학생.png", :class => "talk talk1") %>
+            <%= image_tag("네.png", :class => "talk talk2") %>
+            <%= image_tag("넌치마.png", :class => "talk talk3") %>
+            <%= image_tag("수치.png", :class => "talk talk4") %>
+            <%= image_tag("넌속옷.png", :class => "talk talk5") %>
+            <%= image_tag("검은색.png", :class => "talk talk6") %>
+            <%= image_tag("누구.png", :class => "talk talk7") %>
+            <%= image_tag("됐고.png", :class => "talk talk8") %>
+            <%= image_tag("놀람.png", :class => "talk talk9") %>
+            <%= image_tag("무언.png", :class => "talk talk10") %>
+            <%= image_tag("이새끼.png", :class => "talk talk11") %>
+            <%= image_tag("김주혁.png", :class => "talk talk12") %>
+            <%= image_tag("여보.png", :class => "talk talk13") %>
 
-            <img class="game-back2" src="/assets/교정1.png">
-            <img class="game-back3" src="/assets/교정1.png">
-            <img class="game-back4" src="/assets/교정2.png">
-            <img class="game-back5" src="/assets/교정2.png">
-            <img class="game-back6" src="/assets/교정3.png">
-            <img class="student1" src="/assets/걸어가는여자.png">
-            <img class="student2" src="/assets/놀란표정.png">
-            <img class="student2-1" src="/assets/응.png">
-            <img class="student3"src="/assets/혼나는표정.png">
-            <img class="student3-1" src="/assets/시무룩.png">
-            <img class="student0" src="/assets/혼나는표정.png">
-            <img class="student4"src="/assets/지나가는 남학생.png">
-            <img class="student4-1"src="/assets/지나가는 남학생2.png">        
-            <img class="student4-2"src="/assets/지나가는 남학생3.png">
-            <img class="teacher" src="/assets/학주.png">
-            <img class="talk talk0" src="/assets/거기.png">
-            <img class="talk talk1" src="/assets/거기학생.png">
-            <img class="talk talk2" src="/assets/네.png">
-            <img class="talk talk3" src="/assets/넌치마.png">
-            <img class="talk talk4" src="/assets/수치.png">
-            <img class="talk talk5" src="/assets/넌속옷.png">
-            <img class="talk talk6" src="/assets/검은색.png">
-            <img class="talk talk7" src="/assets/누구.png">
-            <img class="talk talk8" src="/assets/됐고.png">
-            <img class="talk talk9" src="/assets/놀람.png">
-            <img class="talk talk10" src="/assets/무언.png">
-            <img class="talk talk11" src="/assets/이새끼.png">
-            <img class="talk talk12" src="/assets/김주혁.png">
-            <img class="talk talk13" src="/assets/여보.png">
-            <img class="play" src="/assets/play.svg" onclick="play_scene_1()">
+            <div class="play" onclick="play_scene_1()">
+                 <%= image_tag("play.svg")%>
+            </div>
+ 
             <div class="shadow">
             </div>
             <div class="game-nav" >
                 <h1>1. 아침 등교 시간! 그런데...</h1>
-                <img src="/assets/3dot1.svg">
+                 <%= image_tag("3dot1.svg")%>
             </div>
         </div>
         <div class="next-play" onclick="play_scene_1()" ><h1>Start!</h1></div>   

@@ -1,5 +1,5 @@
 <div class="top-button" onclick="movetop()">
-    <img src="/assets/up.svg"  style="width: 6vh;height:6vh;z-index:1000;">
+    <%= image_tag("up.svg", {:style=> "width:6vh;height:6vh;z-index:1000;"}) %>
     <h1 style=" font-weight:400; top:-2vh; position:relative;">Top</h1>
 </div>
 
@@ -7,7 +7,7 @@
     <div class="vene-top">
         <div class="vene-title">
             <div style="width: 30vh;height: 30vh;overflow:hidden;display:Flex;position:relative;justify-content:center;align-items:center;overflow:hidden;">
-                <img src="/assets/칸채우기.svg" style="width:40vh;height: 40vh;position:Absolute;">
+                <%= image_tag("칸채우기.svg", {:style=> "width:40vh;height: 40vh;position:Absolute;"}) %>
             </div>
             <h1>생각보다 많고 까다로운 피임 알아보기</h1>
         </div>

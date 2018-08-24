@@ -3,27 +3,31 @@
 <div class="vene-human">
         <div class='vene-man'>
             <div class="human-shadow"></div>
-            <img src="/assets/man.png">
+            <%= image_tag("man.png") %>
             <h1 class="human-text">Male</h1>
             <h2 class="human-text">남자</h2>
         </div>
         <div class='vene-woman'>
             <div class="human-shadow"></div>
-            <img src="/assets/woman.jpg">
-            <h1 class="human-text">Male</h1>
+            <%= image_tag("woman.jpg") %>
+            <h1 class="human-text">Female</h1>
             <h2 class="human-text">여자</h2>
         </div>
 </div>
-<div  style="position:relative;" >
-    <img class="quiz-left" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:5vw;top:18vh;display:none;" onclick="leftMove()">
-    <img class="quiz-right" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 90vw;top:18vh;" onclick="rightMove()">
+<div style="position:relative;" >
+    <div class="quiz-left" onclick="leftMove()">
+        <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:5vw;top:18vh;"}) %>
+    </div>
+    <div class="quiz-right" onclick="rightMove()">
+        <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 90vw;top:18vh;"}) %> 
+    </div>
 <div class="vene-car" style="display:flex;flex-direction:row;position:absolute;">
 <div style="width: 100vw;height:30vh;position:relative;">
 
 <div class="vene-human-box">
     <div class="vene-human-see">
         <div class="vene-human-see-pic">
-            <img src="/assets/질.png">
+           <%= image_tag("질.png") %>
             <div class="vene-circle"></div>
         </div>
         <div class="vene-human-see-content">
@@ -40,7 +44,7 @@
 <div class="vene-human-box">
     <div class="vene-human-see">
         <div class="vene-human-see-pic">
-            <img src="/assets/질.png">
+            <%= image_tag("질.png") %>
             <div class="vene-circle"></div>
         </div>
         <div class="vene-human-see-content">
@@ -57,7 +61,7 @@
 <div class="vene-human-box">
     <div class="vene-human-see">
         <div class="vene-human-see-pic">
-            <img src="/assets/질.png">
+            <%= image_tag("질.png") %>
             <div class="vene-circle"></div>
         </div>
         <div class="vene-human-see-content">

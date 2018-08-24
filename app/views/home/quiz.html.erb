@@ -1,7 +1,7 @@
 <div class="quiz-1-box">
     <div class="quiz-1 flex-column-center">
         <div class="dog">
-            <img src="/assets/dog.gif">
+            <%= image_tag("dog.gif")%>
         </div>
         <div class="message">
             <h1>성지식 어디까지?</h1>
@@ -13,8 +13,14 @@
         <button onclick="startMove()"><h1>Let's Start!</h1></button>
     </div>
     <div class="quiz-2">
-        <img class="quiz-left" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:20%;top:50%;display:none;" onclick="leftMove()">
-        <img class="quiz-right" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 78.5%;top:50%;" onclick="rightMove()">
+        <div class="quiz-left" oncick="leftMove()">
+        <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:20%;top:50%;display:none;"}) %>
+        </div>
+
+        <div class="quiz-right" onclick="rightMove()">
+         <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;left: 78.5%;top:50%;"}) %>
+        </div>
+
         <div class="quiz-2-container">
         <%i=1%>
         <%a =
@@ -32,7 +38,7 @@
             <div class="quiz-2-container-content">
                 <div id="quiz-<%=i%>" class="quiz-2-container-content-box" style="background-color:#<%=a[2]%>">
                 <div style="height:15vw;overflow:hidden;position:relative;">
-                <img src="/assets/퀴즈<%=i%>.<%=a[1]%>">
+                <%= image_tag("퀴즈<%=i%>.<%=a[1]%>")%>
                 </div>
                     <h2 style="margin-top:2vw"><%=a[0].split("/")[0]%></h2>
                     <%if a[0].split("/")[1] !=nil then%>

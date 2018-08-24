@@ -5,7 +5,7 @@
 <div class="post-new">
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
-        <img class="post-index-profile-img" src="/assets/banana.gif">
+      <%= image_tag("banana.gif", {:class=> "post-index-profile-img"}) %>
         <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
         <h1>환영합니다!</h1>
   </div>
@@ -43,15 +43,15 @@
         <%if @post.likeauthor_id != nil%>
           <% di=@post.likeauthor_id.split("/")%>
           <%if di.include?(current_user.id.to_s())%>
-            <img id="likeimg" src="/assets/fullheart.svg">
+            <%= image_tag("fullheart.svg", {:id=> "likeimg"}) %>
             <%else%>
-            <img id="likeimg" src="/assets/emptyheart.svg">
+           <%= image_tag("emptyheart.svg", {:id=> "likeimg"}) %>
           <%end%>
           <%else%>
-          <img id="likeimg" src="/assets/emptyheart.svg">
+          <%= image_tag("emptyheart.svg", {:id=> "likeimg"}) %>
         <%end%>
         <%else%>
-         <img id="likeimg" src="/assets/emptyheart.svg">
+        <%= image_tag("emptyheart.svg", {:id=> "likeimg"}) %>
         <%end%>
          <%=link_to 'Like', posts_g_path(@post.id), remote: true %>
         <h2 class="like" id="like">

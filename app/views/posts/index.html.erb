@@ -47,13 +47,13 @@
 <div class="post-index">
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
-        <img class="post-index-profile-img" src="/assets/banana.gif">
+         <%= image_tag("banana.gif", {:class=> "post-index-profile-img"}) %>
           <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
         <h1>환영합니다!</h1>
         <div class="post-index-profile-box">
           <div class="post-index-popular"> 
             <h1>인기 검색어</h1>
-            <img src="/assets/3dot.svg">
+             <%= image_tag("3dot.svg")%>
           </div>
           <div class="popular">
             <h1>1</h1>
@@ -88,56 +88,56 @@
           </div>
         </div>
         <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+         <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
           <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+             <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
           <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+            <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
           <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+            <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
           <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+            <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
         <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+             <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
         <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+            <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
         <div class="post-index-celebrate">
-          <img src="/assets/banana.gif">
+            <%= image_tag("banana.gif")%>
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>

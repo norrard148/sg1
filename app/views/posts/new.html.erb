@@ -2,7 +2,7 @@
 <div class="post-new">
   <p id="notice"><%= notice %></p>
   <div class="post-index-profile">
-        <img class="post-index-profile-img" src="/assets/banana.gif">
+        <%= image_tag("banana.gif", {:class=> "post-index-profile-img"}) %>
          <h1 class="post-username" ><%=if user_signed_in? then User.find_by_id(current_user.id).email end%></h1>
         <h1>환영합니다!</h1>
   </div>

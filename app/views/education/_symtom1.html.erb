@@ -4,14 +4,14 @@
 <div class="vene-human" style="margin-top: 45vh;height: 10vh;">
         <div class='vene-man'>
             <div class="human-shadow"></div>
-            <img src="/assets/man.png">
+            <%= image_tag("man.png") %>
             <h1 class="human-text">Male</h1>
             <h2 class="human-text">남자</h2>
         </div>
         <div class='vene-woman'>
             <div class="human-shadow"></div>
-            <img src="/assets/woman.jpg">
-            <h1 class="human-text">Male</h1>
+            <%= image_tag("woman.jpg") %>
+            <h1 class="human-text">Female</h1>
             <h2 class="human-text">여자</h2>
         </div>
 </div>
@@ -20,12 +20,12 @@
             <div class="vene-bottom-box-top">
             <h1>01</h1>
             </div>
-            <img src="/assets/x.svg" style="position:absolute;top: 2vh;right:2vh;">
-            <img src="/assets/mini.svg" style="position:absolute;top: 1.8vh;right:5vh;width:2.4vh;height:2.4vh;">
+            <%= image_tag("x.svg", {:style=> "position:absolute;top: 2vh;right:2vh;"}) %>
+            <%= image_tag("mini.svg", {:style=> "position:absolute;top: 1.8vh;right:5vh;width:2.4vh;height:2.4vh;"}) %>
             <div class="vene-bottom-box" style="width:100%;display:Flex;flex-direction:column;align-items:center;">
                 <div style="display:Flex;align-items:center;width:100%;display:flex;justify-content:flex-start;margin-bottom:4vh;">
                     <div class="vene-box-img" style="margin-right: 8vh;margin-left:20vh;">
-                    <img src="/assets/콘돔.gif" style="height: 17vh; width: 25vh">
+                    <%= image_tag("콘돔.gif", {:style=> "height: 17vh; width: 25vh;"}) %>
                     </div>
                     <div class="title">
                     <h1 class="vene3" style="font-size: 5vh">콘돔</h1>
@@ -40,8 +40,12 @@
                 <h2 style="font-size: 3.5vh;">사용 순서</h2>
                 <div style="width:7vh;border-bottom:0.2vh solid grey;text-align:center;"></div>
            <div style="width: 95vh;position:relative;overflow:hidden;margin-top: 8vh;border-radius:0.4vh;height: 20vh;">
-           <img class="quiz-left1" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:0;top:8vh;display:none;" onclick="leftMove1()">
-            <img class="quiz-right1" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;right:0;top:8vh;" onclick="rightMove1()">
+           <div class="quiz-left1" onclick="leftMove1()">
+                <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:0;top:8vh;display:none;"}) %>
+            </div>
+            <div class="quiz-right1" onclick="rightMove1()">
+                <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;right:0;top:8vh;"}) %>
+            </div>
 
            <div style="display:flex;width: 1000vw;position:absolute;" class="gg-1">
             <div id= "stage" class="color-blue stage1">
@@ -76,12 +80,19 @@
             <h2 style="font-size: 3.5vh;margin-top:5vh;">주 의 사 항</h2>
             <div style="width:7vh;border-bottom:0.2vh solid grey;text-align:center;"></div>
            <div style="width: 95vh;position:relative;overflow:hidden;margin-top: 8vh;border-radius:0.4vh;height: 40vh;margin-bottom:6vh;">
-           <img class="quiz-left" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:0;top:18vh;display:none;" onclick="leftMove()">
-            <img class="quiz-right" src="/assets/arrow3.svg" style="width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;right:0;top:18vh;" onclick="rightMove()">
+
+           <div class="quiz-left" onclick="leftMove()">
+                <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(90deg);position:absolute;z-index:999;left:0;top:18vh;"}) %>
+            </div>
+            <%# 왼쪽 버튼 안나옴 ㅜ %>
+            <div class="quiz-right" onclick="rightMove()">
+                <%= image_tag("arrow3.svg", {:style=> "width:5vh;height:5vh;transform:rotate(270deg);position:absolute;z-index:999;right:0;top:18vh;"}) %>
+            </div>
+
             <div style="display:flex;width: 1000vw;position:absolute;" class="gg">
             <div class="warning">
                 <div>
-                <img src="/assets/warning.svg">
+                  <%= image_tag("warning.svg") %>
                 <h1 style="margin-top: -4vh;color:yellow;font-weighT: 400">Warning!</h1>
                 </div>
                 <div style="height: 4vh;width:50vh;display:Flex;flex-direction:column;align-items:center;margin-bottom:4vh;">   
@@ -95,7 +106,7 @@
             </div>
                 <div class="warning">
                 <div>
-                <img src="/assets/warning.svg">
+                <%= image_tag("warning.svg") %>
                 <h1 style="margin-top: -4vh;color:yellow;font-weighT: 400">Warning!</h1>
                 </div>
                 <div style="height: 4vh;width:50vh;display:Flex;flex-direction:column;align-items:center;margin-bottom:4vh;">   
@@ -109,7 +120,7 @@
             </div>
                 <div class="warning">
                 <div>
-                <img src="/assets/warning.svg">
+                <%= image_tag("warning.svg") %>
                 <h1 style="margin-top: -4vh;color:yellow;font-weighT: 400">Warning!</h1>
                 </div>
                 <div style="height: 4vh;width:50vh;display:Flex;flex-direction:column;align-items:center;margin-bottom:4vh;">   
@@ -123,7 +134,7 @@
             </div>
             <div class="warning">
                 <div>
-                <img src="/assets/warning.svg">
+                <%= image_tag("warning.svg") %>
                 <h1 style="margin-top: -4vh;color:yellow;font-weighT: 400">Warning!</h1>
                 </div>
                 <div style="height: 4vh;width70vh;display:Flex;flex-direction:column;align-items:center;margin-bottom:4vh;">   
