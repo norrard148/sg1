@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'education/contraception'
   get 'education/go'
   get 'education/go1'
+  post 'posts/index'
   devise_for :users
   get 'posts/go/:id', to: 'posts#go', as: 'posts_g'
   resources :posts
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
 
   get 'user/index'
 
+  get 'education/reference2'
   get 'education/reference'
   
   root "home#index"

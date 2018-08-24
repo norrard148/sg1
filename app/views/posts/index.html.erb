@@ -35,7 +35,6 @@
             <h1>데이트</h1>
           </div>
         </div>
-<<<<<<< HEAD
         <div class="post-index-celebrate" style="height: 12vh;">
           
           <div class="post-index-celebrate-content" > 
@@ -43,8 +42,6 @@
             <h2>Team : KU 성애</h2>
           </div>
         </div>
-=======
->>>>>>> 98883376472298fa5374826a669aff76e030578c
         <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -52,7 +49,6 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-<<<<<<< HEAD
           <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -81,8 +77,6 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-=======
->>>>>>> 98883376472298fa5374826a669aff76e030578c
         <div class="post-index-celebrate">
           <img src="/assets/banana.gif">
           <div class="post-index-celebrate-content"> 
@@ -110,15 +104,12 @@
             <h2>She is awesome!</h2>
           </div>
         </div>
-<<<<<<< HEAD
         <div class="post-index-menu">
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
             <h2>She is awesome!</h2>
           </div>
         </div>
-=======
->>>>>>> 98883376472298fa5374826a669aff76e030578c
          <div class="post-index-menu">
           <div class="post-index-celebrate-content"> 
             <h1>Choi yeoun hyee</h1>
@@ -126,10 +117,7 @@
           </div>
         </div>
         
-<<<<<<< HEAD
         
-=======
->>>>>>> 98883376472298fa5374826a669aff76e030578c
   </div>
   <div class="post-index-container">
     <div class="post-index-container-top">
@@ -138,9 +126,17 @@
         <a style="font-size: 3vh" href="/posts">Main</a>
       </div>
       <div class="post-search" style="">
+
+
         <h1>검색 :</h1>
         <div id="task-form" style="display:none;width:100px; height:100px;background-color:black;"></div>
-        <input id = "myInput" type = "text" placeholder = "Search..">
+        <%= form_tag(posts_path, method: :post) do %>
+          <%= text_field_tag :keywords, params[:term] %>
+          
+          <input id="myInput" type = "text" placeholder = "Search.." name="keywords">
+          <input id="mySearch" type="submit" value="OK!">
+        </form>
+
       </div>
     </div>
     <div class="post-index-container-top2">
@@ -185,14 +181,11 @@
 
 
   $(document).ready(function(){
-    $("#myInput").on("keyup", function(){
-      var value = $(this).val();
+    $("#mySearch").on("click", function(){
+      var value = $("#myInput").val();
         $("#myTable > tr").filter(function(){
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
   });
-
-
-
 </script>

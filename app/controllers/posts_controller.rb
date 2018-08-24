@@ -9,7 +9,11 @@ class PostsController < ApplicationController
       format.html
       format.json
     end
+
+    @keywords = Keyword.new
+    @keywords = params[:keyword]
   end
+
 
   def go
     
@@ -37,6 +41,7 @@ class PostsController < ApplicationController
       redirect_to_"/posts"
     end  
   end
+
 
   # POST /posts
   # POST /posts.json
@@ -98,4 +103,5 @@ class PostsController < ApplicationController
 
       params.require(:post).permit(:title, :content, :user_id)
     end
-end
+  end
+  
