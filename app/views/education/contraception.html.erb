@@ -18,7 +18,7 @@
 
         <div class="vene-select">
             <%=link_to '성(性)별로 보기',education_go2_path , remote: true, :class=>"render-vene1", :id=>"render1" %>
-            <%=link_to '순서대로 보기',education_go3_path , remote: true, :class=>"render-vene1", :d => "render2" %>
+            <%=link_to '순서대로 보기',education_go3_path , remote: true, :class=>"render-vene1", :id => "render2" %>
            
            
         </div>
@@ -44,3 +44,66 @@ var a = 0;
 </script>
 
 
+
+<script>
+ var quiz_number=1;
+    function leftMove() {
+        if (quiz_number == 4) {
+            $(".quiz-right").css({"display": "block"});
+        }
+          if (quiz_number == 2) {
+            $(".quiz-left").css({"display": "none"});
+        }
+        if (quiz_number > 1) {
+             quiz_number-=1
+            $('.gg').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+            
+        }
+    
+    }
+
+    function rightMove() {
+         if (quiz_number == 1) {
+            $(".quiz-left").css({"display": "block"});
+        }
+         if (quiz_number == 3) {
+            $(".quiz-right").css({"display": "none"});
+        }
+        if (quiz_number < 4) {
+            quiz_number+=1
+            $('.gg').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+               
+        }
+    }
+
+     var quiz_number=1;
+    function leftMove() {
+        if (quiz_number == 4) {
+            $(".quiz-right1").css({"display": "block"});
+        }
+          if (quiz_number == 2) {
+            $(".quiz-left1").css({"display": "none"});
+        }
+        if (quiz_number > 1) {
+             quiz_number-=1
+            $('.gg1').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+            
+        }
+    
+    }
+
+    function rightMove() {
+         if (quiz_number == 1) {
+            $(".quiz-left1").css({"display": "block"});
+        }
+         if (quiz_number == 3) {
+            $(".quiz-right1").css({"display": "none"});
+        }
+        if (quiz_number < 4) {
+            quiz_number+=1
+            $('.gg1').animate({left : `-${(quiz_number-1)*95}vh`}, 600);
+               
+        }
+    }
+
+</script> 

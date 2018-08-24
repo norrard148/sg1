@@ -292,9 +292,9 @@
 }
 
 .vene-human-box {
-   
+    margin-bottom: 3vh;
     width: 100vw;
-    height: 70vh;
+    height: 55vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -327,7 +327,7 @@ width: 75vh;
 height: 60vh;
 border-radius: 0.4vh 0 0vh 0.4vh ;
 position: absolute;
-top: -30vh;
+top: -25vh;
 left: 0;
 z-index:3;
 overflow: hidden;
@@ -351,7 +351,7 @@ img {
     background-color: #153450;
     border-radius:0.5vh;
     position: absolute;
-    top: -35vh;
+    top: -30vh;
     right: 0;
     z-index: 4;
     box-shadow: 1vh 1vh 5vh rgba(0, 0, 0, 0.322);
