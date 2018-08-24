@@ -40,11 +40,11 @@
                      <%end%>
                 </div>
                 <div class="quiz-2-container-answer" onclick="rightMove()">
-                    <button class="yes" onclick="countingYes()">
+                    <button class="yes">
                         <h2>Yes!</h2>
                         <h3>100% 맞다!</h3>
                     </button>
-                    <button class="no">
+                    <button class="no"  onclick="countingCorrect()">
                         <h2>No!</h2>
                         <h3>100%는 아니다!</h3>
                     </button>
@@ -59,6 +59,9 @@
                 </div>
                     <h2 id="answeris" style="margin-top:2vw"> 결과 </h2>
                 </div>
+                <button class="yes">
+                  <h2><a href="/education/index" class="button" style="color: white">교육 받으러 가기</a></h2>
+                </button>
             </div>
         </div>
         </div>
@@ -120,7 +123,7 @@
 
     var clicks = 0;
 
-    function countingYes() {
+    function countingCorrect() {
         clicks += 1;
         document.getElementById("answeris").textContent = "당신은 " + clicks + "개의 문제를 맞췄습니다!"
     };
