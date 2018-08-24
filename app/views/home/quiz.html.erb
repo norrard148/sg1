@@ -39,12 +39,12 @@
                      <h2 style="margin-top:0.5vw"> <%=a[0].split("/")[1]%></h2>
                      <%end%>
                 </div>
-                <div class="quiz-2-container-answer">
-                    <button class="yes" onclick="rightMove()">
+                <div class="quiz-2-container-answer" onclick="rightMove()">
+                    <button class="yes" onclick="countingYes()">
                         <h2>Yes!</h2>
                         <h3>100% 맞다!</h3>
                     </button>
-                    <button class="no" onclick="rightMove()">
+                    <button class="no">
                         <h2>No!</h2>
                         <h3>100%는 아니다!</h3>
                     </button>
@@ -118,13 +118,12 @@
         }
     }
 
-    var n = 0;
-    var yess = querySelector(".yes")
+    var clicks = 0;
 
-
-    var answer = document.getElementById("answeris")
-    
-    answer.textContent = "당신은 " + n + "개의 문제를 맞췄습니다!";
+    function countingYes() {
+        clicks += 1;
+        document.getElementById("answeris").textContent = "당신은 " + clicks + "개의 문제를 맞췄습니다!"
+    };
 </script>
     
     
