@@ -28,13 +28,17 @@
     position:relative;
 }
 .main-1 h1 {
+    position: absolute;
     font-size:  4vh;
     margin-top:12vh;
     color:white;
     font-weight: 300;
+    top: 20vh;
 }
 
 .main-1 h2 {
+    position:absolute;
+    top: 35vh;
     margin-top: 2vh;
     font-size:  2.5vh;
     line-height:  4vh;
@@ -50,8 +54,10 @@
     flex-direction:  column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    top: 0vh;
     img {
+        
         position:absolute;
         margin-top: 4vh;
         height: 20vh;
