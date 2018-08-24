@@ -22,8 +22,7 @@ align-items: center;
     align-items: center;
     width: 95vh;
     height: 20vh;
-   
-    border-radius: 0.5vh;
+
     box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.411);
     justify-content: center;
     h1 {
@@ -47,9 +46,6 @@ align-items: center;
     background-color:#153450;
 }
 
-#stage {
-    margin-top: 5vh;
-}
 
 .vene-title {
  display:flex;
@@ -79,7 +75,7 @@ align-items: center;
     background-color : #0e2335;
 }
 .warning {
-    margin-top: 6vh;
+   
     width: 95vh;
     height: 40vh;
     padding: 5vh;

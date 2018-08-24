@@ -5,7 +5,7 @@
     <div class="venereal">
     <div class="vene-top">
     
-    
+        
         <div class="vene-title">
         <div style="width: 30vh;height: 30vh;overflow:hidden;display:Flex;position:relative;justify-content:center;align-items:center;overflow:hidden;">
         <img src="/assets/칸채우기.svg" style="width:40vh;height: 40vh;position:Absolute;">
@@ -45,6 +45,7 @@ var a = 0;
 
 
 <script>
+ var quiz_number=1;
     function leftMove() {
         if (quiz_number == 9) {
             $(".quiz-right").css({"display": "block"});
@@ -54,8 +55,7 @@ var a = 0;
         }
         if (quiz_number > 1) {
              quiz_number-=1
-            var offset = $(".quiz-2").offset();
-            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+            $('.vene-car').animate({left : `-${(quiz_number-1)*100}vw`}, 600);
             
         }
     
@@ -69,8 +69,8 @@ var a = 0;
             $(".quiz-right").css({"display": "none"});
         }
         if (quiz_number < 9) {
-         quiz_number +=1
-            $('.quiz-2-container').animate({left : `-${(quiz_number-1)*70}vw`}, 600);
+            quiz_number+=1
+            $('.vene-car').animate({left : `-${(quiz_number-1)*100}vw`}, 600);
                
         }
     }
