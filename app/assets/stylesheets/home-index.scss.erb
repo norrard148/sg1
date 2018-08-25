@@ -131,6 +131,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;  
+    background-image: url(<%= asset_path 'home-index/check.png'%>);
+    background-size: auto 60%;
 }
 
 .main-2-back {
@@ -138,7 +140,7 @@
     height: 100%;
     position: absolute;
     z-index:0;
-    opacity:0.5;
+    opacity:0.3;
 }
 
 .main-2-left-container {
@@ -439,7 +441,9 @@
     display:Flex;
     align-items:center;
     justify-content: center;
-    background: #54345f;
+    background: #54345f url(<%= asset_path 'home-index/check.png'%>) 0 0 repeat;
+    background-size: 20% auto;
+    transform:scalex(-1); 
 }
 
 .main-4-1-back {
@@ -454,6 +458,7 @@
 .main-4-1-container {
     width: 60vh;
     height: 37vh;
+      transform:scalex(-1); 
 }
 
 /*main-4-2*/

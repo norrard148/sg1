@@ -22,13 +22,10 @@
         
         
         <div class="user-profile-content">
-            <%# <h1><%=if current_user.age ==nil then "미입력"  else current_user.age end%>
+            <h1><%=if current_user.age ==nil then "미입력"  else current_user.age end%><h1>
             
-            <%# <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%> 
-            <%# <h3><%=if current_user.email ==nil then "미입력"  else current_user.email end%>
-        <h1>Age</h1>
-         <h2><%=if current_user.name ==nil then "미입력"  else current_user.name end%>
-   UserName</h2>
+             <h2><%=if User.find_by_id(current_user.id).name ==nil then "미입력"  else current_user.name end%> </h2>
+
          <h3><%==if current_user.email ==nil then "미입력"  else current_user.email end%></h3>
         </div>
         <div class="user-profile-content-box">

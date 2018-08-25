@@ -117,7 +117,7 @@
 
 
 #contraception {
-    background: #ffe26f url('교육바탕.png') 100% 100% repeat;
+    background: #ffe26f url(<%= asset_path '교육바탕.png' %>) 100% 100% repeat;
     height: 100vh;
     padding-top: 9vh;
     position:relative;
@@ -141,6 +141,14 @@
     }
 }
 
+.contraception-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:0;
+}
+
+
 #contraception::before {
     content: '';
     width: 20vh;
@@ -148,13 +156,13 @@
     position:absolute;
     top:27%;
     left:55%;
-    background-image: url("피임질문.png");
+    background-image: url(<%= asset_path '피임질문.png' %>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
 #venereal {
-    background: #f3825f url("교육바탕.png") 30% 30% repeat;
+    background: #f3825f url(<%= asset_path '교육바탕.png'%>) 30% 30% repeat;
     height: 91.4vh;
     img {   
         width: 34vh;
@@ -177,6 +185,12 @@
     }
 }
 
+.venereal-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:0;
+}
 
 #venereal::before {
     content: '';
@@ -185,7 +199,7 @@
     position:absolute;
     top:18%;
     left:55%;
-    background-image: url("성병.png");
+    background-image: url(<%= asset_path '성병.png' %>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -195,7 +209,7 @@
 }
 
 #genderequality {
-    background: #a7425c url("빗금.png") 0 0 repeat;
+    background: #a7425c url(<%= asset_path 'home-index/check.png' %>) 0 0 repeat;
     background-size: 35% auto;
     a {
         color: #ffe26f;
@@ -229,7 +243,7 @@
     position:absolute;
     top:22%;
     left:58%;
-    background-image: url("예민.png");
+    background-image: url(<%= asset_path '예민.png'%>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -242,7 +256,7 @@
     position:absolute;
     top:28%;
     left:27%;
-    background-image: url("이해.png");
+    background-image: url(<%=asset_path '이해.png' %>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -285,7 +299,7 @@
     position:absolute;
     top:21%;
     left:54%;
-    background-image: url("자극적.png");
+    background-image: url(<%= asset_path '자극적.png' %>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -364,7 +378,7 @@
     position:absolute;
     top:22%;
     left:57%;
-    background-image: url("어떤.png");
+    background-image: url(<%= asset_path '어떤.png' %>);
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -374,7 +388,7 @@
 
 
 #category-1:hover, #category-2:hover, #category-3:hover, #category-4:hover,#category-5:hover,#category-6:hover {
-    background: #221c38 url("블루.png") repeat;
+    background: #221c38 url(<%= asset_path '블루.png'%>) repeat;
     h1 {
         font-size: 2.2vh;
         color: rgb(248, 255, 183);
