@@ -145,61 +145,40 @@
                         <div class="post-profile">
 
                         </div>
+                            <% @bc = Post.find_by_sql("SELECT * FROM Posts ORDER BY like DESC")%>
+                            <% @cd = defined? User.find_by_id(@bc[0].author_id)%>
                         <div class="post-author">
-                            <h1>Jang Young Jae</h1>
+                            <h1><%if @cd != nil then @de = User.find_by_id(@bc[0].author_id) end%><%=@de.email%></h1>
                             <div style="display:flex; flex-direction:row; align-items:center;">
-                                <h1>10시간 전</h1>
+                                <h1><%=@de.created_at%></h1>
                                 <img src="/assets/earth.svg" alt="" style="width:2vh; height:2vh; margin-left:0.3vh; position:relative; top:0.3vh;">
                             </div>   
                         </div>
                     </div>
                     <img src="/assets/3dot.svg" alt="" class="dot">
                 </div>
-                
-                 <h1 class="post-content">Excellent!Excllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellent!</h1>
+            
+                 <h1 class="post-content"><%=if defined? @bc != nil then @bc[0].content end%></h1>
                
             </div>
             <div class="main-5-container-comment">
-                <div class="comment-box" onclicked="toggle_comment()">
-                    <div class="post-profile">
-
-                    </div>
-                    <div class="comment">
-                        <h1>Jang Young Jae Excellent!Excellent!Excelt!Excellent!Excellent!Excellet!Excellent!Excellent!Excellelent!Excellent!Excellent!Excellent!Excellent!Excellent!</h1>
-                    </div>
-                
-                </div>
-                <div class="comment-box" onclicked="toggle_comment()">
-                        <div class="post-profile">
-
+                <%if @de != nil%>
+                    <%then%>
+                    <% @ef = Post.find(@bc[0].id)%>
+                    <%  @ef.comments.each do |a| %>
+                        <div class="comment-box" onclicked="toggle_comment()">
+                            <div class="post-profile">
+                            </div>
+                            <div class="comment">
+                                <h1><%=User.find_by_id(a.author_id).email%>&nbsp;&nbsp;<%=a.content%></h1>
+                            </div> 
                         </div>
-                        <div class="comment">
-                            <h1>Jang Young Jae Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!</h1>
-                        </div>
-                    
-                </div>
-                <div class="comment-box" onclicked="toggle_comment()">
-                        <div class="post-profile">
-
-                        </div>
-                        <div class="comment">
-                            <h1>Jang Young Jae Excellent!Excellent!Excellent!Excellent!!</h1>
-                        </div>
-                    
-                </div>
-                <div class="comment-box" onclicked="toggle_comment()">
-                        <div class="post-profile">
-
-                        </div>
-                        <div class="comment">
-                            <h1>Jang Young Jae Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!Excellent!</h1>
-                        </div>
-                    
-                </div>
+                    <%end%>
+                <%end%>   
             </div>
             </div>
         </div>    
-    <img src="/assets/left.svg" alt="" style="width:5vh; height:5vh; margin-right:1.5vh">
+    <img src="/assets/left.svg" alt="" style="width:5vh; height:5vh; margin-right:1.5vh;z-index:1000;">
 </div>
 
 
