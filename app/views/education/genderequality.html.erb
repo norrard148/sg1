@@ -120,8 +120,8 @@
 
     var toggle =false;
     var playtoggle = false;
-    var audio = new Audio(`<% =asset_path '등교사운드.mp3'%>`);
-    var audio1 = new Audio(`<%= asset_path '브금.mp3' %>`);
+    var audio = new Audio("<% =asset_path '등교사운드.mp3'%>");
+    var audio1 = new Audio("<%= asset_path '브금.mp3' %>");
         audio1.volume = 0.15;
         audio1.addEventListener('ended',function(){this.currentTime=0;this.play();},false);
         audio1.play();
