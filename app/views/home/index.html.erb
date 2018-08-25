@@ -1,14 +1,13 @@
 <div class="top-button" onclick="movetop()">
-    <%= image_tag("up.svg", {:style=> "width: 6vh;height:6vh;z-index:1000;"}) %>
+   <%=image_tag("up.svg", {:alt=>"", :style=>"width: 6vh;height:6vh;z-index:1000;"})%>
     <h1 style=" font-weight:400; top:-2vh; position:relative;">Top</h1>
 </div>
   
 <div class="main-1">
+    <%=image_tag("main-1-back.png", {:class=>"main-1-back"})%>
     <div class="main-1-container">
         <div class="main-1-title">
-            <%= image_tag("메인보드글자.svg")%>
-            <%# <h1>성교</h1><h1 style="color: rgb(255, 255, 214)">할래</h1> %>
-             <%# <img src="/assets/성교한자.svg"> %>
+            <img src='/assets/메인보드글자.svg'>
         </div>
         <h1>그런적 있지 않아?</h1>
         <h2>가끔씩 이렇지 않아? 나만 그래? 라고<br>
@@ -16,52 +15,49 @@
             여러분과 같은 사람을 만나고<br>
             서로 알아갈 수 있는 기회입니다!
         </h2>
-        
-            <%= image_tag("공감start.png", {:style=> "width: 35vh;position:Absolute;top:52vh;height: 26vh;margin-top:2vh;cursor:pointer;", :onclick=>"movequiz()"}) %>
-       
-   
-            <%= image_tag("arrow.svg", {:style=> "width: 6vh;height: 6vh;fill:white;position:absolute;top:77vh;",:onclick=>"movequiz()"}) %>
-     
-        <%= image_tag("arrow.svg", {:style=> "width: 6vh;height: 6vh;fill:white;position:absolute;top: 80vh;"}) %>
+        <%=image_tag("공감start.png", {:class=>"main-1-sympathy", :alt=>"", :onclick=>"movequiz()"})%>
+        <%=image_tag("arrow.svg", {:class=>"main-1-arrow1", :alt=>""})%>
+        <%=image_tag("arrow.svg", {:class=>"main-1-arrow2", :alt=>""})%>
     </div>
 </div>
 
 <div class="main-2">
-    <div class="pursuit">
-            <div style="display:flex;"><h1 style="font-size: 4vh;">성교육</h1>
-            <%= image_tag("think.svg", {:style=> "margin-left:0.5vh;width:4.5vh;height:4.5vh;"}) %>
-        </div>
-        <h1 style="font-size: 3vh;font-weight:300;font-weight: 500;margin-top: 0.3vh;">생각하면</h1>
-        <div style="display:flex;margin-top: 0.4vh"
-        ><h1 style="font-size: 3.5vh;color: red;">떠</h1><h1 style="font-size: 3.5vh;color: red;">오르는 것?</h1>
+    <%=image_tag("home-index/빗금.png", {:class=>"main-2-back"})%>
+    <div class="main-2-left-container">
+            <div class="main-2-left-container-top">
+                <h1>성교육</h1>
+                <%=image_tag("think.svg")%>
             </div>
-            <div>
-                <div style="width: 90%;height:2.5px;background-color: rgba(170, 170, 170, 0.507);margin-top: 50%;display:flex;">
-                        <div style="width:0.9vh;height:0.9vh;background-color:white;border: 2px solid rgb(226, 4, 4);border-radius:50%;position:relative;top:-0.3vh;left:3vh;" ></div>
-                        <div style="width:3vh;height:0.2vh;background-color:rgb(228, 0, 0);position:absolute"></div>
+            <h1 class="main-2-left-container-middle">생각하면</h1>
+            <div class="main-2-left-container-bottom1">
+                <h1>떠오르는 것?</h1>
+            </div>
+            <div class="main-2-left-container-bottom2">
+                <div class="main-2-left-container-bottom2-1">
+                        <div></div>
+                        <div></div>
                 </div>
-
-                <h1 style="margin-top:1.5vh;font-size:1.7vh;afont-weight: 300;">남은 시간 1:50:12</h1>
+                <h1 style="margin-top:1.5vh;font-size:1.7vh;font-weight: 300;">남은 시간 1:50:12</h1>
             </div>
     </div>
-    <div class="main-2-container">
-        <div class="main-2-container-circle">
-            <div class="circle">
-                <%= image_tag("재미없어.gif")%>
+    <div class="main-2-right-container">
+        <div class="main-2-right-container-each">
+            <div class="main-2-right-container-each-circle">
+                 <%=image_tag("home-index/재미없어.gif")%>
             </div>
             <h1>밀려오는 지루함;;</h1>
             <h2>언제 끝나는 걸까?</h2>
         </div>
-        <div class="main-2-container-circle">
-            <div class="circle">
-                <%= image_tag("fuck.png", {:style=> "width: 110%;"}) %>
+        <div class="main-2-right-container-each">
+            <div class="main-2-right-container-each-circle">
+                 <%=image_tag("home-index/어쩌라고.png")%>
             </div>
             <h1>말도 안되는 내용?!</h1>
             <h2>저걸 가르쳐서 무슨 소용?</h2>
         </div>
-        <div class="main-2-container-circle">
-            <div class="circle">
-                <%= image_tag("재미없어.gif")%>
+        <div class="main-2-right-container-each">
+            <div class="main-2-right-container-each-circle">
+                 <%=image_tag("home-index/실질적이지않아.jpg")%>
             </div>
             <h1>이미 다 아는걸...</h1>
             <h2>내가 정말 궁금한건 달라!</h2>
@@ -70,34 +66,34 @@
 </div>
 
 <div class="main-3">    
+    <%=image_tag("home-index/main-3-back.png", {:class=>"main-3-back"})%>
     <div class="main-3-container">
-        <div class="main-3-container-top-box">
-        
+        <div class="main-3-container-top">
             <h1>성교로 이제 단번에 해결!</h1>
-            <div class="main-3-container-top">
+            <div class="main-3-container-top-box">
                 <h1> [ 性 성 성 | 敎 가르칠 교 ] 우리는, 서로가 성에 대해 가르칠 수 있도록 하는 '성교육 플랫폼'입니다!</h1>
             </div>
         </div>
-<div class="main-3-container-bottom">
+        <div class="main-3-container-bottom">
             <div class="main-3-container-bottom-explain">
-            <img src="/assets/재미없어.gif">
-                <div class="strength-explain">
+                <%=image_tag("home-index/재미없어.gif")%>
+                <div class="main-3-container-bottom-explain-box">
                     <h1>노잼 성교육은 안녕!</h1>
-                    <h4>요즘 누가 긴 줄글로 가득한 책 읽니? 내가 궁금한 것만 뽑아서 볼 수 있는 맞춤형 서비스부터 실생활에서 노출되었던 젠더 경험에 대한 게임 서비스까지! 성교 클라스~~bb</h4>
+                    <h2>요즘 누가 긴 줄글로 가득한 책 읽니? 내가 궁금한 것만 뽑아서 볼 수 있는 맞춤형 서비스부터 실생활에서 노출되었던 젠더 경험에 대한 게임 서비스까지! 성교 클라스~~bb</h2>
                 </div>
             </div>
             <div class="main-3-container-bottom-explain">
-               <img src="/assets/fuck.png">
-                <div class="strength-explain">
+                <%=image_tag("home-index/어쩌라고.png")%>
+                <div class="main-3-container-bottom-explain-box">
                     <h1>아니 그래서 어쩌라고? 실질적인 성교육 좀!!</h1>
-                    <h4>정자와 난자의 움직임보다는 나의 성생활이 먼저인데, 정작 내가 궁금한 점에 대한 답은 어디에? 바로 성교에! 피임, 성병, 젠더문제 등 우리가 찾게 되는 성지식만 속속들이 모아져있다구!</h4>
+                    <h2>정자와 난자의 움직임보다는 나의 성생활이 먼저인데, 정작 내가 궁금한 점에 대한 답은 어디에? 바로 성교에! 피임, 성병, 젠더문제 등 우리가 찾게 되는 성지식만 속속들이 모아져있다구!</h2>
                 </div>
             </div>
             <div class="main-3-container-bottom-explain">
-               <img src="/assets/부끄러워.jpg">
-                <div class="strength-explain">
+               <%=image_tag("home-index/실질적이지않아.jpg")%>
+                <div class="main-3-container-bottom-explain-box">
                     <h1>나만 궁금한거 천지야? 다른 사람들의 질문도 궁금해!</h1>
-                    <h4>다들 쉬쉬하니까 내가 물어볼 곳이 없잖아..?ㅠㅠ 상담서비스 말고 다른 사람들의 이야기도 듣고 싶고, 궁금한 것도 편하게 물어보고 싶어! 우리들의 이야기를 해보는거얏!!</h4>
+                    <h2>다들 쉬쉬하니까 내가 물어볼 곳이 없잖아..?ㅠㅠ 상담서비스 말고 다른 사람들의 이야기도 듣고 싶고, 궁금한 것도 편하게 물어보고 싶어! 우리들의 이야기를 해보는거얏!!</h2>
                 </div>
             </div>
         </div>   
@@ -105,33 +101,37 @@
 </div>
 
 <div class="main-4">
+    <%=image_tag("home-index/main-4-back.png", {:class=>"main-4-back"})%>
     <div class="main-4-container">
             <a class="main-4-container-circle" href="/home/quiz">
-                
+                <%=image_tag("home-index/test.png")%>
             </a>
             <h1>나는 성지식을 얼마나 많이 알고 있을까?<br>테스트로 나의 '성진성'을 측정해보아요!</h1>
             <div class="main-4-container-explain">
                 <h1>자격 요건 | 성지식에 능통한 당신이라면!</h1>
             </div>
-            <h4 style="font-size: 1.7vh; margin-top: 20px; color:#28939c;">* 아이디 가입하지 않아도 돼요!</h4>
+            <h2 style="">* 아이디 가입하지 않아도 돼요!</h2>
     </div>
 </div>
 
 
-<div class="main-4-0">
-<%= image_tag("빈칸채우기.svg", {:style=> "width: 60vh;height: 37vh;"}) %>
+<div class="main-4-1">
+    <%=image_tag("home-index/빗금.png", {:class=>"main-4-1-back"})%>
+    <%=image_tag("home-index/빈칸채우기.svg", {:class=>"main-4-1-container"})%> 
 </div>
 
-<div class="main-4-1">
-    <div class="main-4-1-button">
+<div class="main-4-2">
+    <div class="main-4-2-button">
         <h1>Point !</h1>
     </div>
     <h1>성에 대한 우리의 지식과 생각</h1>
     <h2>같을 수도 다를 수도 틀릴 수도 있다는 것!</h2>
-    <div style="width: 4vh;border-bottom:2px solid rgb(103, 28, 107);"></div>
+    <div class="main-4-2-line"></div>
 </div>
+
 <div class="main-5">
-    <%= image_tag("left.svg", {:style=> "width:5vh; height:4vh; transform:rotate(180deg); margin-left:1.5vh;"})%>
+    <%=image_tag("home-index/main-5-back.png", {:class=>"main-5-back"})%>
+    <img src="/assets/left.svg" alt="" style="width:5vh; height:4vh; transform:rotate(180deg); margin-left:1.5vh;">
     <div class="main-5-container">  
         <div style="margin-bottom:2vh;">
             <h2 style="color:white;font-size:3vh">가장 핫한 성교글!</h2>
@@ -149,13 +149,11 @@
                             <h1>Jang Young Jae</h1>
                             <div style="display:flex; flex-direction:row; align-items:center;">
                                 <h1>10시간 전</h1>
-                                <%= image_tag("earth.svg", {:style=> "width:2vh; height:2vh; margin-left:0.3vh; position:relative; top:0.3vh;"})%>
+                                <img src="/assets/earth.svg" alt="" style="width:2vh; height:2vh; margin-left:0.3vh; position:relative; top:0.3vh;">
                             </div>   
                         </div>
                     </div>
-                     <%= image_tag("3dot.svg", {:class=> "dot"})%>
-                    <%= image_tag("3dot.svg", {:class=> "dot"}) %>
-
+                    <img src="/assets/3dot.svg" alt="" class="dot">
                 </div>
                 
                  <h1 class="post-content">Excellent!Excllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenllent!Excellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellenellent!ExcellenExcellent!ExcellenExcellent!Excellent!Excellent!</h1>
@@ -201,8 +199,7 @@
             </div>
             </div>
         </div>    
-     <%= image_tag("left.svg", {:style=> "idth:5vh; height:5vh; margin-right:1.5vh;"})%>
-
+    <img src="/assets/left.svg" alt="" style="width:5vh; height:5vh; margin-right:1.5vh">
 </div>
 
 
