@@ -29,8 +29,8 @@ Rails.application.routes.draw do
 
   get 'user/index'
 
-  get 'education/reference2'
   get 'education/reference'
+  get 'education/reference2'
   
   root "home#index"
  
