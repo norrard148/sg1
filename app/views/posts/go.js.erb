@@ -7,7 +7,7 @@
           <% b = @post.likeauthor_id.split("/") %>
           a = <%= b.length %> 
           document.getElementById('like').innerHTML = a;
-          $("#likeimg").attr("src","/assets/fullheart.svg");
+          $("#likeimg").attr("src","<%=asset_path 'fullheart.svg'%>");
         <% else %>
           <% b = @post.likeauthor_id.split("/") %>
           <% if b.include?(current_user.id.to_s()) %>
@@ -17,7 +17,7 @@
              <% b = @post.likeauthor_id.split("/") %>
             a = <%= b.length %> 
             document.getElementById('like').innerHTML = a;
-             $("#likeimg").attr("src","/assets/fullheart.svg");
+             $("#likeimg").attr("src","<%= asset_path 'emptyheart.svg'%>");
           <% end %>
         <% end %>
       <% end %>
