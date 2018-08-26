@@ -112,7 +112,7 @@ end
           format.json { head :no_content }
         end
       end
-    redirect_to "/posts"
+  
     end
   end
 
