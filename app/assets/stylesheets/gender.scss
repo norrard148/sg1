@@ -160,7 +160,11 @@
         
     }
 }
-
+.back {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .next-play {
@@ -266,8 +270,8 @@
 
 }
 
-.studnet3-1 {
-    width: 25%;
+.student3-1 {
+    width: 35%;
     height: 55%;
 }
 .student0{ 

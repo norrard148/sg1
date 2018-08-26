@@ -51,12 +51,13 @@
         </div>
         <div class="gender-main-game">
         <div class="back">
-            <%= image_tag("play.gif")%>
+            <%= image_tag("play.gif", {:style=>"width:45vh;height:40vh;"})%>
                 <div class="game-back">
                     <%= image_tag("학교.png")%>
                 </div>
         </div>
             <h1 onclick="play_scene_1()" >Click To Play!</h1>
+            <%= image_tag("학교.png", :class => "game-back") %>
             <%= image_tag("교정1.png", :class => "game-back2") %>
             <%= image_tag("교정1.png", :class => "game-back3") %>
             <%= image_tag("교정2.png", :class => "game-back4") %>
