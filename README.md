@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,4 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+>>>>>>> 2b9190175065f308aa348dd805a20e92c88d7df6
 # norrard.github.io
