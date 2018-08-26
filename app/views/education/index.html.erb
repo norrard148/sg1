@@ -138,21 +138,27 @@ body::-webkit-resizer {
         $("#category-1").css({"background-color":"#292445"});
     }
     // $("body").css({"overflow-x": "hidden"})
-    
+   
+
     $(window).scroll(function() {
         scroll_position =  $(window).scrollTop();
+        scroll_position1 = $(window).scrollLeft();
+        $(".education-main-chart").css({left:`-${scroll_position1}px`})
+        $(".nav").css({left:`-${scroll_position1}px`})
+        // $(".nav").css({"position":"absolute"})
+           $("#contraception").css({"position":"relative", left:""});
         if ($("#pin-1").length) {
             if (scroll_position >= $("#pin-1").offset().top && scroll_position  < $("#pin-2").offset().top-$(".nav").height()) {
-                $("#contraception").css({"position":"fixed"});
+                $("#contraception").css({"position":"fixed", left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-1").css({"background-color":"#292445"});
                 $("#category-1").parent().css({"background-color":"#211d38 "});
                 $("#category-3").parent().css({"background-color":"initial "});
                 $("#category-1").parent().parent().css({"background-color":"#25203e "});
                 $("#category-3").parent().parent().css({"background-color":"initial"});
                 $("#category-2").css({"background-color":"transparent"});
-                $("#venereal").css({"position":"relative", top: "0"});
+                $("#venereal").css({"position":"relative", top: "0", left: ""});
             } else if (scroll_position > $("#pin-2").offset().top-$(".nav").height() && scroll_position  < $("#pin-3").offset().top-$(".nav").height()) {
-                $("#venereal").css({"position":"fixed", top: "9vh"});
+                $("#venereal").css({"position":"fixed", top: "9vh",left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-2").css({"background-color":"#292445"});
                 $("#category-1").css({"background-color":"transparent"});
                 $("#category-3").css({"background-color":"transparent"});
@@ -160,9 +166,9 @@ body::-webkit-resizer {
                 $("#category-3").parent().css({"background-color":"initial "});
                 $("#category-1").parent().parent().css({"background-color":"#25203e "});
                 $("#category-3").parent().parent().css({"background-color":"initial"});
-                $("#genderequality").css({"position":"relative",top: "0"});
+                $("#genderequality").css({"position":"relative",top: "0",left:""});
             }  else if (scroll_position > $("#pin-3").offset().top-$(".nav").height() && scroll_position < $("#pin-4").offset().top-$(".nav").height()) {
-                $("#genderequality").css({"position":"fixed", top: "9vh"});
+                $("#genderequality").css({"position":"fixed", top: "9vh",left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-3").css({"background-color":"#292445"});
                 $("#category-2").css({"background-color":"transparent"});
                 $("#category-4").css({"background-color":"transparent"});
@@ -172,9 +178,9 @@ body::-webkit-resizer {
                 $("#category-3").parent().parent().css({"background-color":"#25203e "});
                 $("#category-1").parent().parent().css({"background-color":"initial"});
                 $("#category-5").parent().parent().css({"background-color":"initial"});
-                $("#media").css({"position":"relative",top: "0"});
+                $("#media").css({"position":"relative",top: "0",left:""});
             } else if (scroll_position >= $("#pin-4").offset().top-$(".nav").height() && scroll_position < $("#pin-5").offset().top-$(".nav").height()) {
-                $("#media").css({"position":"fixed", top: "9vh"});
+                $("#media").css({"position":"fixed", top: "9vh",left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-4").css({"background-color":"#292445"});
                 $("#category-3").css({"background-color":"inherit"});
                 $("#category-5").css({"background-color":"inherit"});
@@ -184,9 +190,9 @@ body::-webkit-resizer {
                 $("#category-3").parent().parent().css({"background-color":"#25203e "});
                 $("#category-1").parent().parent().css({"background-color":"initial"});
                 $("#category-5").parent().parent().css({"background-color":"initial"});
-                $("#browsing").css({"position":"relative",top: "0"});
+                $("#browsing").css({"position":"relative",top: "0",left:""});
             } else if (scroll_position >= $("#pin-5").offset().top-$(".nav").height() && scroll_position < $("#pin-6").offset().top-$(".nav").height()) {
-                $("#browsing").css({"position":"fixed", top: "9vh"});
+                $("#browsing").css({"position":"fixed", top: "9vh",left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-5").css({"background-color":"#292445 "});
                 $("#category-5").parent().parent().css({"background-color":"#25203e "});
                 $("#category-3").parent().parent().css({"background-color":"initial"});
@@ -194,9 +200,9 @@ body::-webkit-resizer {
                 $("#category-3").parent().css({"background-color":"initial "});
                 $("#category-4").css({"background-color":"inherit"});
                 $("#category-6").css({"background-color":"inherit"});
-                $("#qna").css({"position":"relative",top: "0"});
+                $("#qna").css({"position":"relative",top: "0",left:""});
             } else if (scroll_position >= $("#pin-6").offset().top-$(".nav").height()) {
-                $("#qna").css({"position":"fixed", top: "9vh"});
+                $("#qna").css({"position":"fixed", top: "9vh",left:`calc(35vh - ${scroll_position1}px)`});
                 $("#category-6").css({"background-color":"#292445 "});
                 $("#category-5").css({"background-color":"transparent"});
             }

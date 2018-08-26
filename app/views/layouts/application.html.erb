@@ -3,37 +3,33 @@
   <head>
     <title>성교 </title>
     <%= csrf_meta_tags %>
-    
-  
-    
     <%# <script src="https://apis.google.com/js/platform.js" async defer></script> %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-     <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <meta name="google-signin-client_id" content="336256666389-timddavdks14cnn1jhqv6qqpcjuo4s37.apps.googleusercontent.com">
-   
     <link rel="shortcut icon" type="image/x-icon" href="/assets/peach.ico" />
    
-     <style>
+    <style>
     @media only screen and (min-width:0) {
-        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+        body, html, .nav, .main-1, .main-2, .main-3, .main-4, .main-4-1, .main-4-2, .main-5  {
             width: 140vh;
         }
-        .nav {
-          position: fixed;
+        .education-main-box, .education-main-box-content{
+         width: 105vh;
+      
         }
     }
     @media only screen and (min-width: 140vh) {
-        .nav, .main-1, .main-2, .main-3, .main-4, .main-4-0, .main-4-1, .main-5 {
+        body, html, .nav, .main-1, .main-2, .main-3, .main-4, .main-4-1, .main-4-2, .main-5  {
             width: 100%;
         }
-         .nav {
-          position: fixed;
+        .education-main, .education-main-box-content {
+          width: -webkit-calc(100vw - 37vh);
         }
     }
-   
-  </style>
+    </style>
 
   </head>
  

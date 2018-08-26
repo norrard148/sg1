@@ -131,7 +131,7 @@
 
 <div class="main-5">
     <%=image_tag("home-index/main-5-back.png", {:class=>"main-5-back"})%>
-    <img src="/assets/left.svg" alt="" style="width:5vh; height:4vh; transform:rotate(180deg); margin-left:1.5vh;">
+    <%=image_tag("left.svg", {:style=>"width:5vh; height:5vh; transform:rotate(180deg);margin-right:3vh;margin-top:10vh"})%>
     <div class="main-5-container">  
         <div style="margin-bottom:2vh;">
             <h2 style="color:white;font-size:3vh">가장 핫한 성교글!</h2>
@@ -180,12 +180,17 @@
                 <%end%>   
             
             </div>
+        <%=image_tag("left.svg", {:style=>"width:5vh; height:5vh; margin-left: 3vh;z-index:1000;margin-top: 10vh"})%>
         </div>    
-    <img src="/assets/left.svg" alt="" style="width:5vh; height:5vh; margin-right:1.5vh;z-index:1000;">
 </div>
 
 
 <script>
+$(window).scroll(function() {
+        // scroll_position =  $(window).scrollTop();
+        scroll_position1 = $(window).scrollLeft();
+        $(".nav").css({left:`-${scroll_position1}px`});
+});
 
 $(".mCSB_container").css({"position":"absolute"})
 function movetop() {
@@ -198,14 +203,9 @@ function movequiz() {
 function toggle_comment() {
     $('.comment-box h1').css({'white-space': 'initial' })
 }
-
-
-        $(".post-content").mCustomScrollbar({
-            axis: "y",
-            theme: "dark-3"
-        });
- 
-
-
+$(".post-content").mCustomScrollbar({
+    axis: "y",
+    theme: "dark-3"
+});
 
 </script>

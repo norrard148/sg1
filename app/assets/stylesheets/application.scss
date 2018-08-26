@@ -49,11 +49,11 @@ a {
 .nav {
     height: 9vh;
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
+    position: fixed;
     background-color: white;
-    z-index: 999;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
