@@ -38,7 +38,7 @@
             <div class="quiz-2-container-content">
                 <div id="quiz-<%=i%>" class="quiz-2-container-content-box" style="background-color:#<%=a[2]%>">
                 <div style="height:15vw;overflow:hidden;position:relative;">
-                <%= image_tag("퀴즈<%=i%>.<%=a[1]%>")%>
+                <%= image_tag("퀴즈"+i.to_s())%>
                 </div>
                     <h2 style="margin-top:2vw"><%=a[0].split("/")[0]%></h2>
                     <%if a[0].split("/")[1] !=nil then%>
@@ -80,11 +80,11 @@
     var quiz_css = [];
     while ( i < 16 ) {
         quiz_css.push(`#quiz-${i}:after { content: '${i}' }`);
-        console.log(quiz_css);
+      
         i +=1;
     }
     var quiz_css_submit = "<style>" + quiz_css.join(' ') + "</style>";
-    console.log(quiz_css_submit);
+   
     $(`${quiz_css_submit}`).appendTo("head");
        
     var scroll = $(".quiz-2-container-content").width();
